@@ -1,6 +1,6 @@
 @import "../common/variables";
 
-$offset: 26*3.1416; //r(-gap)*2*3.14
+$offset: 22px*3.1416; //r(-gap)*2*3.14
 $duration: 1.7s;
 $ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
 
@@ -65,18 +65,16 @@ $ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
 
 @keyframes dash {
 
+  // +offset because safari doesn't like negative values
   0% {
-    stroke-dashoffset: $offset;
-    transform: rotate(90deg);
+    stroke-dashoffset: $offset + $offset;
   }
 
   50% {
-    stroke-dashoffset: $offset/4;
-    transform: rotate(100deg);
+    stroke-dashoffset: $offset + $offset/4;
   }
 
   100% {
-    stroke-dashoffset: $offset;
-    transform: rotate(450deg);
+    stroke-dashoffset: 0px;
   }
 }
