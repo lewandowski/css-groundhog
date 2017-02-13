@@ -8,7 +8,8 @@ $nav-secondary-background: $gray-900;
 $nav-height: 2.75rem;
 $nav-height-secondary: 1.5rem;
 
-$nav-breakpoint: 760px;
+// $nav-breakpoint: 760px;
+$nav-breakpoint: 980px;
 
 .nav {
   display: block;
@@ -217,7 +218,26 @@ $nav-breakpoint: 760px;
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 11;
+  z-index: 12;
+}
+
+.nav__buttongroup .nav__search {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+  border: none;
+  height: $nav-height;
+  color: #fff;
+  width: 200px;
+}
+.nav__buttongroup .nav__search:hover {
+  background-color: $gray-700;
+}
+.nav__buttongroup .nav__search:focus {
+  background-color: $gray-700;
+  outline: none;
+  box-shadow: none;
 }
 
 .nav__cta {
@@ -236,8 +256,13 @@ $nav-breakpoint: 760px;
 
   .nav__buttongroup {
     margin-top: $nav-height-secondary;
+
+    .nav__search {
+      width: 200px;
+    }
   }
 }
+
 
 /*
 * Brand logo
