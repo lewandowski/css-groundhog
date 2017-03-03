@@ -1,22 +1,22 @@
 {
   "options": [
     {
-      "value": "Papaya"
+      "value": "Test-Papaya"
     },
     {
-      "value": "Banana"
+      "value": "Test-Banana"
     },
     {
-      "value": "Ananas"
+      "value": "Test-Ananas"
     },
     {
-      "value": "Apple"
+      "value": "Test-Apple"
     },
     {
-      "value": "Kiwi"
+      "value": "Test-Kiwi"
     },
     {
-      "value": "Orange"
+      "value": "Test-Orange"
     }
   ]
 }
