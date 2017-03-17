@@ -1,8 +1,9 @@
 @import "../common/variables";
+@import "../button/button";
 
 $column-width: 180px;
 $two-times-column-width: $column-width * 2;
-$vertical-line-breakpoint: $two-times-column-width + 32px + 88px;
+$vertical-line-breakpoint: $two-times-column-width + 48px + 88px;
 
 
 .footer {
@@ -26,7 +27,7 @@ $vertical-line-breakpoint: $two-times-column-width + 32px + 88px;
   flex: 1 1 $column-width;
   margin-right: 3rem;
   margin-bottom: 2rem;
-  max-width: $column-width;
+  // max-width: $column-width;
 }
 
 .footer__column__group {
@@ -90,23 +91,18 @@ $vertical-line-breakpoint: $two-times-column-width + 32px + 88px;
   border-top: 1px solid #fff;
 }
 
-.btn.btn--secondary.theme--dark.footer__sociallink {
+.footer__sociallink {
+  @extend .btn;
+  @extend .btn--secondary;
+
   display: inline-block;
   width: 2.5rem;
   height: 2.5rem;
-  // padding-top: 1rem;
+  padding: 0.25rem;
   fill: #fff;
   margin-top: 1rem;
   margin-right: 1rem;
   transition: background-color 100ms ease-in-out, fill 100ms ease-in-out;
-}
-
-.btn.btn--secondary.theme--dark.footer__sociallink svg {
-  position: absolute;
-  top: 0.4rem;
-  right: 0.4rem;
-  width: 24px;
-  height: 24px;
 }
 
 .footer__sociallink:focus {
