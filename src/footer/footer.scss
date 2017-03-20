@@ -2,19 +2,16 @@
 @import "../button/button";
 
 $column-width: 180px;
-$two-times-column-width: $column-width * 2;
-$vertical-line-breakpoint: $two-times-column-width + 48px + 88px;
-
 
 .footer {
   background-color: $gray-800;
   color: #fff;
   padding-bottom: 3rem;
   padding: 44px;
+  font-size: 0.8rem;
 }
 
 .footer__columns,
-.footer__socials.footer__legal,
 .footer__column__linklists {
   display: flex;
   justify-content: flex-start;
@@ -27,7 +24,6 @@ $vertical-line-breakpoint: $two-times-column-width + 48px + 88px;
   flex: 1 1 $column-width;
   margin-right: 3rem;
   margin-bottom: 2rem;
-  // max-width: $column-width;
 }
 
 .footer__column__group {
@@ -38,23 +34,16 @@ $vertical-line-breakpoint: $two-times-column-width + 48px + 88px;
   flex: 1 1 $column-width;
 }
 
-.footer__column.footer__column__separated {
-  border: none;
-  border-bottom: 2px solid $gray-500;
-}
-
-@media (min-width: $vertical-line-breakpoint) {
-
-  .footer__column.footer__column__separated {
-    border: none;
-    border-right: 2px solid $gray-500;
-  }
-}
-
-.footer__column h2 {
+.footer__column h2,
+.footer__legal {
   color: $gray-500;
   font-size: 0.75rem;
   margin-bottom: 0.5rem;
+}
+
+.footer__legal {
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .footer__linklist {
@@ -62,14 +51,7 @@ $vertical-line-breakpoint: $two-times-column-width + 48px + 88px;
 }
 
 .footer__socials {
-  padding-top: 1rem;
   text-align: center;
-  display: block;
-}
-
-
-.footer__socials .footer__legal {
-  margin-top: 1.5rem;
 }
 
 .footer__linkitem {
@@ -78,17 +60,12 @@ $vertical-line-breakpoint: $two-times-column-width + 48px + 88px;
   margin-bottom: 0.75rem;
 }
 
-.footer__linkitem a,
-.footer__legallink {
+.footer__linkitem a {
   color: #fff;
 }
 
-.footer__legallink:hover {
-  color: #fff;
-}
-
-.footer__socials--separated {
-  border-top: 1px solid #fff;
+.footer__linkitem a:hover {
+  cursor: pointer;
 }
 
 .footer__sociallink {
@@ -103,9 +80,4 @@ $vertical-line-breakpoint: $two-times-column-width + 48px + 88px;
   margin-top: 1rem;
   margin-right: 1rem;
   transition: background-color 100ms ease-in-out, fill 100ms ease-in-out;
-}
-
-.footer__sociallink:focus {
-  box-shadow: 0 0 0 2px $focuscolor;
-  outline: none;
 }
