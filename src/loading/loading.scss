@@ -4,7 +4,7 @@ $offset: 22px*3.1416; //r(-gap)*2*3.14
 $duration: 1.7s;
 $ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
 
-.loading {
+.loading__distractor {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
@@ -74,6 +74,6 @@ $ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 
   100% {
-    stroke-dashoffset: 0px;
+    stroke-dashoffset: 0;
   }
 }
