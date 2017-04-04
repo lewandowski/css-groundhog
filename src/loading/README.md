@@ -40,4 +40,4 @@ The Groundhog loading distractor appears in a two versions:
 | class name | effect |
 |------------|--------|
 | `.loading__distractor` | Base class for the loading distractor |
-| `.loading--small` | Small version of loading distractor for input fields and buttons |
+| `.loading__distractor--small` | Small version of loading distractor for input fields and buttons |
