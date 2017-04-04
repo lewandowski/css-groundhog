@@ -33,6 +33,18 @@ a:hover {
   text-decoration: underline;
 }
 
+.theme--dark {
+
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
 img {
   max-width: 100%;
 }
