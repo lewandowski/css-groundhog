@@ -1,18 +1,16 @@
 import $ from '../js-common-components/dollar';
-
-// const toggleClass = 'is-expanded';
+import { debounce } from '../js-common-components/utils';
 
 function fetchData(select) {
   const rq = { url: '/assets/data/search_results.json',
     onLoad: (e) => {
-      if (select.children.length <= 0) {
-        console.log('fetch data');
-        const options = (JSON.parse(e.target.responseText)).options;
+      console.log('fetch data');
+      const options = (JSON.parse(e.target.responseText)).options;
+      if (options.length > 0) {
         for (let i = 0; i < options.length; i++) {
           const opt = document.createElement('li');
           opt.value = options[i].value;
           opt.innerHTML = options[i].value;
-          console.log('append opt');
           select.appendChild(opt);
         }
         select.classList.remove('expandable');
@@ -34,15 +32,15 @@ const initData = () => {
     const ul = el.parentNode.appendChild(document.createElement('ul'));
     ul.classList.add('search__results');
     ul.classList.add('expandable');
-    el.addEventListener('keyup', (ev) => {
+    el.addEventListener('keyup', debounce((ev) => {
+      ul.innerHTML = '';
       console.log(ev);
       fetchData(ul);
-    });
+    }, 250));
     el.addEventListener('blur', (e) => {
-      console.log('test');
       console.log(e);
-      // ul.innerHTML = '';
-      // ul.classList.remove('is-expanded');
+      ul.innerHTML = '';
+      ul.classList.remove('is-expanded');
     });
   });
 };

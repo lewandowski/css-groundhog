@@ -190,7 +190,7 @@ $nav-search-results-width: 276px;
   height: $nav-height;
   padding-left: 1rem;
   padding-right: 1rem;
-  vertical-align: middle;
+  vertical-align: top;
   display: inline-block;
 }
 
@@ -226,6 +226,10 @@ $nav-search-results-width: 276px;
   top: 0;
   right: 0;
   z-index: 12;
+
+  form {
+    display: inline-block;
+  }
 }
 
 /*
@@ -233,7 +237,6 @@ $nav-search-results-width: 276px;
 */
 
 .nav__buttongroup .nav__search {
-  display: inline-block;
   position: relative;
   background-color: transparent;
   border: none;
@@ -279,7 +282,7 @@ $nav-search-results-width: 276px;
   height: $nav-height;
   line-height: $nav-height;
   padding: 0 1rem;
-  vertical-align: middle;
+  vertical-align: top;
   border-radius: 0;
 }
 
@@ -342,8 +345,23 @@ $nav-search-results-width: 276px;
 @media (min-width: $nav-breakpoint) {
 
   .nav__brand {
-    top: #{0.7rem + $nav-height-secondary};
     padding-right: 0;
+    top: 2.25rem;
+  }
+
+  .has-no-secondary {
+
+    > .nav__bar {
+      height: 2.75rem;
+    }
+
+    > .nav__brand {
+      top: 0.7rem;
+    }
+
+    .nav__list {
+      top: 0;
+    }
   }
 }
 
@@ -351,16 +369,7 @@ $nav-search-results-width: 276px;
 
 @media (min-width: $nav-breakpoint) {
 
-  .nav.has-no-secondary {
-    overflow: hidden;
-  }
-
   .has-no-secondary > {
-
-    .nav__bar,
-    .nav__brand {
-      margin-top: -1.5rem;
-    }
 
     .nav__buttongroup {
       margin-top: 0;
