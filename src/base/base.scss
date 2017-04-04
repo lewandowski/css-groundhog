@@ -33,16 +33,15 @@ a:hover {
   text-decoration: underline;
 }
 
-.theme--dark {
+.theme--dark a,
+a.theme--dark {
+  color: $white;
+  text-decoration: underline;
+}
 
-  a {
-    color: $white;
-    text-decoration: underline;
-  }
-
-  a:hover {
-    text-decoration: none;
-  }
+.theme--dark a:hover,
+a.theme--dark:hover {
+  text-decoration: none;
 }
 
 img {
