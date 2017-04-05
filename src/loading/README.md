@@ -14,7 +14,7 @@ The Groundhog **loading distractor** is an element, representing a saving or loa
 ## Button versions
 The Groundhog loading distractor appears in a two versions:
 
-* Standard loading distractor `loading`
+* Standard loading distractor `loading__distractor`
 * Loading distractor for input fields and buttons `loading--small`
 
 
@@ -28,7 +28,7 @@ The Groundhog loading distractor appears in a two versions:
 
 2. Add the necessary Groundhog classes to the elements class attribute.
 ```html
-<svg class="loading">
+<svg class="loading__distractor">
    <circle class="loading__path"></circle>
 </svg>
 ```
@@ -39,5 +39,5 @@ The Groundhog loading distractor appears in a two versions:
 ## Available classes for button
 | class name | effect |
 |------------|--------|
-| `.loading` | Base class for the loading distractor |
-| `.loading--small` | Small version of loading distractor for input fields and buttons |
+| `.loading__distractor` | Base class for the loading distractor |
+| `.loading__distractor--small` | Small version of loading distractor for input fields and buttons |
