@@ -30,26 +30,26 @@ $breakpoint: 920px;
 
   @media (max-width: $breakpoint) {
 
-    .table {
+    .table--responsive {
       display: block;
       width: 100%;
     }
 
-    .table thead {
+    .table--responsive thead {
       display: none;
     }
 
-    .table tbody {
+    .table--responsive tbody {
       display: block;
       width: 100%;
     }
 
-    .table tr {
+    .table--responsive tr {
       display: block;
       width: 100%;
     }
 
-    .table td {
+    .table--responsive td {
       display: block;
       border-top: 1px solid $gray-200;
       position: relative;
@@ -58,7 +58,7 @@ $breakpoint: 920px;
       overflow: hidden;
     }
 
-    .table td:before {
+    .table--responsive td:before {
       content: attr(data-th) " ";
       text-align: left;
       font-weight: 700;
@@ -74,6 +74,7 @@ $breakpoint: 920px;
     }
   }
 
+  .table th,
   .table thead th,
   .table thead td {
     text-align: left;
@@ -85,6 +86,8 @@ $breakpoint: 920px;
     padding-bottom: 0;
   }
 
+
+  .table th:after,
   .table thead th:after,
   .table thead td:after {
     content: " ";
@@ -96,6 +99,8 @@ $breakpoint: 920px;
     background-color: $gray-200;
   }
 
+
+  .table th:before,
   .table thead th:before,
   .table thead td:before {
     content: " ";
@@ -108,6 +113,7 @@ $breakpoint: 920px;
     z-index: 2;
   }
 
+  .table th:last-child:before,
   .table thead th:last-child:before,
   .table thead td:last-child:before {
     display: none;
