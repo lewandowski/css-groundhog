@@ -112,7 +112,7 @@ markdown.marked.Renderer.prototype.table = (header, body) => `<table class="tabl
   <tbody>
     ${body}
   </tbody>
-</>`;
+</table>`;
 
 
 gulp.task('doc', (taskDone) => {
