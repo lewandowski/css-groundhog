@@ -105,14 +105,14 @@ gulp.task('serve', (done) => {
   done();
 });
 
-markdown.marked.Renderer.prototype.table = (header, body) => `<table class="table">
+markdown.marked.Renderer.prototype.table = (header, body) => `<table class="table table--responsive">
   <thead>
     ${header}
   </thead>
   <tbody>
     ${body}
   </tbody>
-</table>`;
+</>`;
 
 
 gulp.task('doc', (taskDone) => {
