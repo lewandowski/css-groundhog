@@ -16,7 +16,6 @@ $nav-search-results-width: 276px;
 
 .nav {
   display: block;
-  font-weight: 500;
   height: $nav-height;
   background-color: $nav-primary-background;
   position: relative;
@@ -145,7 +144,6 @@ $nav-search-results-width: 276px;
   outline: 0;
   display: block;
   padding: 0.5rem 1rem;
-  font-weight: 300;
 }
 
 .nav__link:hover,
@@ -180,7 +178,6 @@ $nav-search-results-width: 276px;
   color: #fff;
   font-size: 1em;
   font-family: inherit;
-  font-weight: 300;
   appearance: none;
   background-color: transparent;
   border: 0;

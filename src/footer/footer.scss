@@ -1,43 +1,89 @@
 @import "../common/variables";
+@import "../button/button";
+
+$column-width: 180px;
 
 .footer {
   background-color: $gray-800;
   color: #fff;
+  padding: 44px;
   padding-bottom: 3rem;
-  line-height: 1.4rem;
+  font-size: 0.8rem;
 }
 
-.footer__socials--separated {
-  border-top: 1px solid #fff;
+.footer__columns,
+.footer__column__linklists {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  line-height: 2;
+}
+
+.footer__column {
+  flex: 1 1 $column-width;
+  margin-right: 3rem;
+  margin-bottom: 2rem;
+}
+
+.footer__column__group {
+  flex: 0 1 $column-width;
+}
+
+.footer__column__group.footer__column__linklists {
+  flex: 1 1 $column-width;
+}
+
+.footer__column h2,
+.footer__legal {
+  color: $gray-500;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer__legal {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.footer__linklist {
+  margin: 0;
 }
 
 .footer__socials {
-  padding-top: 2rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
   text-align: center;
 }
 
+.footer__linkitem {
+  list-style: none;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+}
+
+.footer__linkitem a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer__linkitem a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .footer__sociallink {
+
+  @extend .btn;
+  @extend .btn--secondary;
+
   display: inline-block;
-  width: 3.5rem;
-  height: 3.5rem;
-  padding: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.25rem;
   fill: #fff;
-  margin-top: 2rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  border: 3px solid #fff;
-  border-radius: 50%;
+  margin-top: 1rem;
   transition: background-color 100ms ease-in-out, fill 100ms ease-in-out;
 }
 
-.footer__sociallink:hover {
-  background-color: #fff;
-  fill: $gray-800;
-}
-
-.footer__sociallink:focus {
-  box-shadow: 0 0 0 2px $focuscolor;
-  outline: none;
+.footer__sociallink + .footer__sociallink {
+  margin-left: 1rem;
 }
