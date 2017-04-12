@@ -261,22 +261,25 @@ $nav-search-results-width: 276px;
   margin: 0;
   padding: 12px 0 12px 0;
   background-color: $gray-700;
-  color: #fff;
   list-style: none;
   line-height: 32px;
-  width: 100%;
-
-  li {
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+  max-width: $nav-search-width;
 }
 
-.nav .search__results.is-expanded li:hover {
+.nav .search__results a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding-left: 20px;
+  padding-right: 20px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.nav .search__results a:hover {
   background-color: $gray-640;
 }
-
 
 .nav__cta {
   height: $nav-height;
