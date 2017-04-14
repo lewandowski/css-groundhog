@@ -18,8 +18,8 @@ function createListElement(result) {
   return opt;
 }
 
-function fetchResults(select) {
-  fetch('/assets/data/search_results.json')
+function fetchResults(select, searchData, params) {
+  fetch(`${searchData}?${params}`)
     .catch(() => '{ results: [] }')
     .then(res => res.json())
     .then((searchResults) => {
@@ -36,10 +36,15 @@ function fetchResults(select) {
 
 const initData = () => {
   $('.js-search').forEach(el => {
-    const ul = el.parentNode.appendChild(document.createElement('ul'));
+    const form = el.parentNode;
+    const ul = form.appendChild(document.createElement('ul'));
+    const searchData = form.action;
     ul.classList.add('search__results', 'expandable');
     el.addEventListener('keyup', debounce(() => {
-      fetchResults(ul);
+      const params = $('input', form)
+        .map(input => `${input.name}=${input.value}`)
+        .join('&');
+      fetchResults(ul, searchData, params);
     }, 150));
     el.addEventListener('blur', () => {
       clearResults(ul);
