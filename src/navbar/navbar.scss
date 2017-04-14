@@ -8,7 +8,10 @@ $nav-secondary-background: $gray-900;
 $nav-height: 2.75rem;
 $nav-height-secondary: 1.5rem;
 
-$nav-breakpoint: 760px;
+$nav-breakpoint: 980px;
+
+$nav-search-width: 200px;
+$nav-search-results-width: 276px;
 
 .nav {
   display: block;
@@ -17,11 +20,8 @@ $nav-breakpoint: 760px;
   position: relative;
 }
 
-@media (min-width: $nav-breakpoint) {
-
-  .nav {
-    height: auto;
-  }
+.nav.has-no-secondary {
+  height: $nav-height;
 }
 
 /*
@@ -179,7 +179,7 @@ $nav-breakpoint: 760px;
   height: $nav-height;
   padding-left: 1rem;
   padding-right: 1rem;
-  vertical-align: middle;
+  vertical-align: top;
   display: inline-block;
 }
 
@@ -214,19 +214,96 @@ $nav-breakpoint: 760px;
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 11;
+  z-index: 12;
+
+  form {
+    display: inline-block;
+  }
+}
+
+/*
+* search
+*/
+
+.nav__buttongroup .nav__search {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  height: $nav-height;
+  border-radius: 0;
+  color: #fff;
+  width: $nav-search-width;
+}
+
+.nav__buttongroup .nav__search:hover {
+  background-color: $gray-700;
+}
+
+.nav__buttongroup .nav__search:focus {
+  background-color: $gray-700;
+  outline: none;
+  box-shadow: none;
+}
+
+.nav .search__results.is-expanded {
+  position: relative;
+  margin: 0;
+  padding: 12px 0 12px 0;
+  background-color: $gray-700;
+  list-style: none;
+  line-height: 32px;
+  max-width: $nav-search-width;
+}
+
+.nav .search__results a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding-left: 20px;
+  padding-right: 20px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.nav .search__results a:hover {
+  background-color: $gray-640;
 }
 
 .nav__cta {
   height: $nav-height;
   line-height: $nav-height;
   padding: 0 1rem;
-  vertical-align: middle;
+  vertical-align: top;
   border-radius: 0;
 }
 
 .nav__cta {
   color: #fff;
+}
+
+.expandable__content {
+  color: #fff;
+  list-style: none;
+  line-height: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-left: 11px;
+
+  li:hover {
+    background-color: $gray-600;
+  }
+}
+
+.expandable__content.is-expanded {
+  z-index: 10;
+  max-width: $nav-search-results-width;
+  display: block;
+  position: absolute;
+  right: 0;
+  margin-top: 44px;
+  width: 100%;
+  background-color: $nav-primary-background;
 }
 
 @media (min-width: $nav-breakpoint) {
@@ -235,6 +312,7 @@ $nav-breakpoint: 760px;
     margin-top: $nav-height-secondary;
   }
 }
+
 
 /*
 * Brand logo
@@ -259,8 +337,23 @@ $nav-breakpoint: 760px;
 @media (min-width: $nav-breakpoint) {
 
   .nav__brand {
-    top: #{0.7rem + $nav-height-secondary};
     padding-right: 0;
+    top: 2.25rem;
+  }
+
+  .has-no-secondary {
+
+    > .nav__bar {
+      height: 2.75rem;
+    }
+
+    > .nav__brand {
+      top: 0.7rem;
+    }
+
+    .nav__list {
+      top: 0;
+    }
   }
 }
 
@@ -268,16 +361,7 @@ $nav-breakpoint: 760px;
 
 @media (min-width: $nav-breakpoint) {
 
-  .nav.has-no-secondary {
-    overflow: hidden;
-  }
-
   .has-no-secondary > {
-
-    .nav__bar,
-    .nav__brand {
-      margin-top: -1.5rem;
-    }
 
     .nav__buttongroup {
       margin-top: 0;
