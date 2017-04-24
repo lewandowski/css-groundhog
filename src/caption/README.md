@@ -9,7 +9,7 @@ meta:
 ## Introduction
 The Groundhog **caption** component is a styled text element. It can hold `<a>` elements and is typically accompanied by image or illustrations.  
 
-## Including the checkbox component
+## Including the caption component
 1. To include a caption component into your project, first create the `<img>` and `<p>` or `figcaption` elements:
 
 ```html
@@ -38,7 +38,7 @@ The Groundhog **caption** component is a styled text element. It can hold `<a>` 
 <figure>
 ```
 
-## Additional attributes for the checkbox
+## Additional attributes for the caption
 | attribute name | effect |
 |----------------|--------|
 | `caption`      | Will enable text style like in the examples |
