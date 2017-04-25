@@ -111,6 +111,7 @@ $includedButton: false !default;
   .theme--dark .btn--primary {
     border-color: #fff;
     background-color: $buttoncolor;
+    text-decoration: none;
   }
 
   .theme--dark .btn--primary:hover,
@@ -225,6 +226,7 @@ $includedButton: false !default;
   .btn--secondary.theme--dark {
     border-color: #fff;
     color: $gray-130;
+    text-decoration: none;
   }
 
   .theme--dark .btn--secondary:hover,

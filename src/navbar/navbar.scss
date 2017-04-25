@@ -282,7 +282,7 @@ $nav-search-results-width: 276px;
   color: #fff;
 }
 
-.expandable__content {
+.nav .expandable__content {
   color: #fff;
   list-style: none;
   line-height: 2rem;
@@ -295,7 +295,7 @@ $nav-search-results-width: 276px;
   }
 }
 
-.expandable__content.is-expanded {
+.nav .expandable__content.is-expanded {
   z-index: 10;
   max-width: $nav-search-results-width;
   display: block;
