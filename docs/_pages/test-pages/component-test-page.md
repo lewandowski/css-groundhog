@@ -1,7 +1,8 @@
 ---
 title: "Component test page"
-layout: islands.hbs
+layout: test-pages.hbs
 theme: theme--blue
+type: test-page
 ---
 
 <div class="layout is-flex has-islands">
