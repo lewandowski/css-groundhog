@@ -46,6 +46,10 @@ $nav-search-results-width: 276px;
 
 @media (min-width: $nav-breakpoint) {
 
+  .nav {
+    height: auto;
+  }
+
   .nav__bar {
     position: relative;
     overflow: visible;
