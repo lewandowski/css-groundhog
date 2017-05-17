@@ -156,6 +156,10 @@ gulp.task('doc', (taskDone) => {
       }, {
         match: { type: 'layout' },
         pattern: 'doc/layouts/:name',
+      },
+      {
+        match: { type: 'test-page' },
+        pattern: 'doc/test-pages/:name',
       }],
     }))
     .use(navigation({

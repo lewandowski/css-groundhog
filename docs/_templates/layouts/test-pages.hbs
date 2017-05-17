@@ -1,0 +1,32 @@
+{{#extend 'default'}}
+  {{#content 'breadcrumbs'}}
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs__item">
+      <a class="breadcrumbs__link" href="{{sitedata.site.baseurl}}/">Main</a>
+    </li>
+    {{#unless hideComponentBreadcrumb}}
+    <li class="breadcrumbs__item">
+      <a class="breadcrumbs__link" href="{{sitedata.site.baseurl}}/doc/test-pages/">Test pages</a>
+    </li>
+    {{/unless}}
+    <li class="breadcrumbs__item">
+      <span class="breadcrumbs__last">{{title}}</span>
+    </li>
+  </ul>
+  {{/content}}
+
+  {{#content 'area'}}
+{{{contents}}}
+    {{#unless hideCode }}
+    <div class="layout has-islands">
+      <div class="island">
+          <h2>Code</h2>
+          <div class="demo__code"><pre><code>
+{{{highlight contents 'html'}}}
+          </code></pre>
+        </div>
+      </div>
+    </div>
+    {{/unless}}
+  {{/content}}
+{{/extend}}
