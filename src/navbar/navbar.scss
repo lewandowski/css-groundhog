@@ -8,10 +8,10 @@ $nav-secondary-background: $gray-900;
 $nav-height: 2.75rem;
 $nav-height-secondary: 1.5rem;
 
-$nav-breakpoint: 980px;
+$nav-breakpoint: 980px !default;
 
-$nav-search-width: 200px;
-$nav-search-results-width: 276px;
+$nav-search-width: 200px !default;
+$nav-search-results-width: 276px !default;
 
 .nav {
   display: block;

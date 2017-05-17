@@ -1,7 +1,7 @@
 @import "../common/variables";
 @import "../button/button";
 
-$column-width: 180px;
+$column-width: 180px !default;
 
 .footer {
   background-color: $gray-800;

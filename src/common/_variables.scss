@@ -1,11 +1,8 @@
 @import "colors";
 
-$mainfont: "BerninaSans", "Open Sans", sans-serif;
-$screen-xs: 320px;
-$screen-sm: 460px;
-$screen-md: 768px;
-$screen-lg: 992px;
-$screen-xl: 1200px;
-
-$nav-breakpoint-sm: 860px;
-$nav-breakpoint: $screen-sm - 25px;
+$mainfont: "BerninaSans", "Open Sans", sans-serif !default;
+$screen-xs: 320px !default;
+$screen-sm: 460px !default;
+$screen-md: 768px !default;
+$screen-lg: 992px !default;
+$screen-xl: 1200px !default;
