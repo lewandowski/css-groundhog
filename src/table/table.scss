@@ -1,7 +1,7 @@
 @import "../common/variables";
 
 $includedTable: false !default;
-$breakpoint: 920px;
+$breakpoint: 920px !default;
 
 @if ($includedTable == false) {
 
