@@ -35,7 +35,7 @@ function fetchResults(select, searchData, params) {
 }
 
 const initData = () => {
-  $('.js-search').forEach(el => {
+  $('.js-search:not([action=""]').forEach(el => {
     const form = el.parentNode;
     const ul = form.appendChild(document.createElement('ul'));
     const searchData = form.action;
