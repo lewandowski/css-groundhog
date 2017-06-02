@@ -19,6 +19,7 @@
     "browser-sync": "^2.11.2",
     "browserify": "^13.1.0",
     "cheerio": "^0.22.0",
+    "conventional-changelog": "^1.1.3",
     "eslint-config-airbnb": "^9.0.1",
     "eslint-plugin-import": "^1.12.0",
     "globby": "^4.0.0",
@@ -59,5 +60,8 @@
     "through2": "^2.0.1",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "gulp-conventional-changelog": "^1.1.3"
   }
 }

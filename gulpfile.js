@@ -23,7 +23,8 @@ const packageData = require('./package.json');
 const zip = require('gulp-zip');
 const s3 = require('gulp-s3');
 const replace = require('gulp-replace');
-
+const fs = require('fs');
+const changelog = require('gulp-conventional-changelog');
 /*
 * Metalsmith dependencies
 */
@@ -277,4 +278,13 @@ gulp.task('build', (done) => {
 
 gulp.task('publish', (done) => {
   runSequence('replace-asset-urls', 'replace-asset-urls-in-html', 'package', 'upload-s3', done);
+});
+
+gulp.task('changelog', (done) => {
+  return gulp.src('docs/_pages/changelog.md', { read: false })
+    .pipe(changelog({
+      preset: 'angular',
+      releaseCount: 0,
+    }))
+  .pipe(gulp.dest('docs/_pages/'))
 });
