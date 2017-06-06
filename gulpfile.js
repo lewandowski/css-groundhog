@@ -16,6 +16,7 @@ const bSync = require('browser-sync');
 const merge = require('merge2');
 const browserify = require('browserify');
 const watchify = require('watchify');
+const count = require('gulp-count');
 const source = require('vinyl-source-stream');
 const eslint = require('gulp-eslint');
 const packageData = require('./package.json');
@@ -104,7 +105,7 @@ gulp.task('serve', (done) => {
   done();
 });
 
-markdown.marked.Renderer.prototype.table = (header, body) => `<table class="table">
+markdown.marked.Renderer.prototype.table = (header, body) => `<table class="table table--responsive">
   <thead>
     ${header}
   </thead>
@@ -155,6 +156,10 @@ gulp.task('doc', (taskDone) => {
       }, {
         match: { type: 'layout' },
         pattern: 'doc/layouts/:name',
+      },
+      {
+        match: { type: 'test-page' },
+        pattern: 'doc/test-pages/:name',
       }],
     }))
     .use(navigation({
@@ -218,19 +223,21 @@ gulp.task('icons', () => {
 
 
 gulp.task('package', () => {
-  gulp.src(['./dist/js/main.js', './dist/css/main.css'])
+  return gulp.src(['dist/js/main.js', 'dist/css/main.css'])
+    .pipe(count())
     .pipe(zip(`groundhog-v${version}.zip`))
-    .pipe(gulp.dest('./dist/download/'));
+    .pipe(count())
+    .pipe(gulp.dest('dist/download/'));
 });
 
 gulp.task('replace-asset-urls', () => {
-  gulp.src('dist/**/*.css')
+  return gulp.src('dist/**/*.css')
     .pipe(replace('url(/assets/', `url(//assets.dynatrace.com/groundhog/v${version}/assets/`))
     .pipe(gulp.dest('dist'));
 });
 
 gulp.task('replace-asset-urls-in-html', () => {
-  gulp.src('dist/**/*.html')
+  return gulp.src('dist/**/*.html')
     .pipe(replace('="/assets/', `="//assets.dynatrace.com/groundhog/v${version}/assets/`))
     .pipe(replace('="http://groundhog.dynalab/assets/', `="//assets.dynatrace.com/groundhog/v${version}/assets/`))
     .pipe(replace('="/css/', `="//assets.dynatrace.com/groundhog/v${version}/css/`))

@@ -9,11 +9,16 @@
   box-sizing: inherit;
 }
 
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: $mainfont;
-  font-weight: 300;
   color: $gray-700;
 }
 
@@ -26,6 +31,17 @@ a {
 a:hover {
   color: $turquoise-700;
   text-decoration: underline;
+}
+
+.theme--dark a,
+a.theme--dark {
+  color: $white;
+  text-decoration: underline;
+}
+
+.theme--dark a:hover,
+a.theme--dark:hover {
+  text-decoration: none;
 }
 
 img {

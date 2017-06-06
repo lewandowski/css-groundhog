@@ -14,7 +14,7 @@
 */
 .tab {
   flex: 1 1 100px;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 2rem;
   height: 2rem;
@@ -60,7 +60,7 @@
   bottom: 0;
   left: 0;
   transition: height 100ms ease-out;
-  background-color: $turquoise-500;
+  background-color: $turquoise-600;
 }
 
 /*
@@ -79,14 +79,14 @@
 
 .tab:hover:after {
   height: 4px;
-  background-color: $turquoise-500;
+  background-color: $turquoise-600;
 }
 
 .tab.is-active,
 .tab__input:checked + .tab {
   pointer-events: none;
   color: #fff;
-  background-color: $turquoise-500;
+  background-color: $turquoise-600;
 }
 
 /*
@@ -120,12 +120,12 @@
 
 .theme--turquoise {
 
-  @include tabtheme($turquoise-500);
+  @include tabtheme($turquoise-600);
 }
 
 .theme--purple {
 
-  @include tabtheme($purple-500);
+  @include tabtheme($purple-600);
 }
 
 .theme--royalblue {

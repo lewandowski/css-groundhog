@@ -1,22 +1,28 @@
 {
-  "options": [
+  "results": [
     {
-      "value": "Papaya"
+      "label": "Test-Papaya",
+      "url": "/test/test-papaya"
     },
     {
-      "value": "Banana"
+      "label": "Test-Banana",
+      "url": "/test/test-banana"
     },
     {
-      "value": "Ananas"
+      "label": "Test-Ananas",
+      "url": "/test/test-ananas"
     },
     {
-      "value": "Apple"
+      "label": "Test-Apple",
+      "url": "/test/test-apple"
     },
     {
-      "value": "Kiwi"
+      "label": "Test-Kiwi",
+      "url": "/test/test-kiwi"
     },
     {
-      "value": "Orange"
+      "label": "Test-Orange",
+      "url": "/test/test-orange"
     }
   ]
 }

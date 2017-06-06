@@ -1,11 +1,9 @@
 @import "../common/variables";
 
-
-//max width?
 .tag {
   font-family: $mainfont;
   color: $gray-700;
-  font-weight: normal;
+  font-weight: 400;
   appearance: none;
   position: relative;
   display: inline-block;
