@@ -51,3 +51,8 @@ With contributions by:
 
 - Sascha Zarhuber [@saschazar21](https://github.com/saschazar21)
 - Lara Aigmueller [@lara-aigmueller](https://github.com/lara-aigmueller)
+- Fabian Friedl [@ffriedl89](https://github.com/ffriedl89)
+
+## Changelog
+
+[View the full changelog](/doc/changelog/)
