@@ -26,6 +26,7 @@
     "gray-matter": "^2.0.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-conventional-changelog": "^1.1.3",
     "gulp-count": "^0.3.0",
     "gulp-eslint": "^3.0.1",
     "gulp-front-matter": "^1.3.0",
@@ -60,8 +61,5 @@
     "through2": "^2.0.1",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"
-  },
-  "dependencies": {
-    "gulp-conventional-changelog": "^1.1.3"
   }
 }
