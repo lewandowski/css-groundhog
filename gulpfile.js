@@ -293,10 +293,10 @@ const addChangelogPage = () => {
     },
     function (cb) {
       const f = new Vinyl({
-        cwd: '/Users/thomas.heller/Documents/repos/css-groundhog',
-        base: '/Users/thomas.heller/Documents/repos/css-groundhog/docs/_pages/',
+        cwd: '.',
+        base: './docs/_pages/',
         contents: new Buffer(''),
-        path: '/Users/thomas.heller/Documents/repos/css-groundhog/docs/_pages/changelog.md',
+        path: './docs/_pages/changelog.md',
       })
       this.push(f);
       cb(); // flush;
