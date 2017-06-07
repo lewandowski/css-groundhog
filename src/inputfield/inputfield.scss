@@ -73,7 +73,7 @@
 
 .inputfield:focus {
 
-  @include getFocusStyle();
+  @include focusStyle();
 }
 
 .inputfield--search:focus {

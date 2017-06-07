@@ -150,5 +150,5 @@
 
 .switch:focus:not(:active) + .switch__label:before {
 
-  @include getFocusStyle();
+  @include focusStyle();
 }

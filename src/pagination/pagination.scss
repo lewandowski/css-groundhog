@@ -25,7 +25,7 @@
 
 .pagination__item a:focus {
 
-  @include getFocusStyle();
+  @include focusStyle();
 }
 
 .pagination__link {

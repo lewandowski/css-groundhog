@@ -58,9 +58,10 @@
   background-image: url(/assets/images/icons/Icons_file_003_Checkmark_white.svg);
 }
 
-.checkbox__label:focus {
+.checkbox__label:focus,
+.checkbox:focus + .checkbox__label:before {
 
-  @include getFocusStyle();
+  @include focusStyle();
 }
 
 .checkbox__label:hover:before {
@@ -77,11 +78,6 @@
 .checkbox:checked + .checkbox__label.theme--dark:after,
 .theme--dark .checkbox:checked + .checkbox__label:after {
   display: block;
-}
-
-.checkbox:focus + .checkbox__label:before {
-
-  @include getFocusStyle();
 }
 
 .checkbox[disabled] + .checkbox__label,

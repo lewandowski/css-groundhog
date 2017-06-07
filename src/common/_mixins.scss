@@ -19,7 +19,7 @@
   #{$property}: calc(#{$min + "px"} + (#{$max} - #{$min}) * (100vw - 360px) / (1920 - 360));
 }
 
-@mixin getFocusStyle() {
+@mixin focusStyle() {
   outline: none;
   box-shadow: 0 0 0 2px $focuscolor;
 }

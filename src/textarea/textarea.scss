@@ -37,7 +37,7 @@
 
 .textarea:focus {
 
-  @include getFocusStyle();
+  @include focusStyle();
 }
 
 .textarea[disabled] {

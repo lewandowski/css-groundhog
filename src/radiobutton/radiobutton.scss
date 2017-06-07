@@ -60,9 +60,10 @@
   margin-top: 5px;
 }
 
-.radio__label:focus {
+.radio__label:focus,
+.radio:focus + .radio__label:before {
 
-  @include getFocusStyle();
+  @include focusStyle();
 }
 
 .radio__label:hover:before {
@@ -82,11 +83,6 @@
 .radio:checked + .radio__label.theme--dark:after,
 .theme--dark .radio:checked + .radio__label:after {
   background-color: #fff;
-}
-
-.radio:focus + .radio__label:before {
-
-  @include getFocusStyle();
 }
 
 .radio[disabled] + .radio__label,

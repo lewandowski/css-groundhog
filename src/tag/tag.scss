@@ -52,9 +52,10 @@
   color: $gray-500;
 }
 
-.tag:focus {
+.tag:focus,
+.tag__delete:focus {
 
-  @include getFocusStyle();
+  @include focusStyle();
 }
 
 .tag:hover {
@@ -73,9 +74,4 @@
 .tag__delete:hover {
   background-image: url(/assets/images/icons/Icons_file_001_Abort_turquoise_700.svg);
   cursor: pointer;
-}
-
-.tag__delete:focus {
-
-  @include getFocusStyle();
 }

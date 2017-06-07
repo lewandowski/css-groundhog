@@ -70,19 +70,11 @@
   outline: none;
 }
 
-.slider:focus::-webkit-slider-thumb {
-
-  @include getFocusStyle();
-}
-
-.slider:focus::-moz-range-thumb {
-
-  @include getFocusStyle();
-}
-
+.slider:focus::-webkit-slider-thumb,
+.slider:focus::-moz-range-thumb,
 .slider:focus::-ms-thumb {
 
-  @include getFocusStyle();
+  @include focusStyle();
 }
 
 .slider:hover {
