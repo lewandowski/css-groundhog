@@ -1,4 +1,5 @@
 @import "../common/variables";
+@import "../common/mixins";
 
 .tag {
   font-family: $mainfont;
@@ -52,8 +53,8 @@
 }
 
 .tag:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px $focuscolor;
+
+  @include getFocusStyle();
 }
 
 .tag:hover {
@@ -75,6 +76,6 @@
 }
 
 .tag__delete:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px $focuscolor;
+
+  @include getFocusStyle();
 }

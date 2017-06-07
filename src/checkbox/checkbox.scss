@@ -1,4 +1,5 @@
 @import "../common/variables";
+@import "../common/mixins";
 
 .checkbox {
   clip: rect(0 0 0 0);
@@ -58,8 +59,8 @@
 }
 
 .checkbox__label:focus {
-  box-shadow: 0 0 0 2px $focuscolor;
-  outline: none;
+
+  @include getFocusStyle();
 }
 
 .checkbox__label:hover:before {
@@ -79,7 +80,8 @@
 }
 
 .checkbox:focus + .checkbox__label:before {
-  box-shadow: 0 0 0 2px $focuscolor;
+
+  @include getFocusStyle();
 }
 
 .checkbox[disabled] + .checkbox__label,

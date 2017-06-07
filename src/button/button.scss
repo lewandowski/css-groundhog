@@ -1,4 +1,5 @@
 @import "../common/variables";
+@import "../common/mixins";
 
 $includedButton: false !default;
 
@@ -39,8 +40,8 @@ $includedButton: false !default;
   }
 
   .btn:focus {
-    outline: 0;
-    box-shadow: 0 0 0 2px $focuscolor;
+
+    @include getFocusStyle();
   }
 
   .btn:active {
@@ -85,7 +86,8 @@ $includedButton: false !default;
   }
 
   .btn--primary:focus:active {
-    box-shadow: 0 0 0 2px $focuscolor;
+
+    @include getFocusStyle();
   }
 
   .btn--primary[disabled] {
@@ -128,12 +130,14 @@ $includedButton: false !default;
 
   .theme--dark .btn--primary:focus,
   .btn--primary.theme--dark:focus {
-    box-shadow: 0 0 0 2px $focuscolor;
+
+    @include getFocusStyle();
   }
 
   .theme--dark .btn--primary:focus:active,
   .btn--primary.theme--dark:focus:active {
-    box-shadow: 0 0 0 2px $focuscolor;
+
+    @include getFocusStyle();
     border-color: #fff;
   }
 
@@ -190,8 +194,9 @@ $includedButton: false !default;
   }
 
   .btn--secondary:focus {
+
+    @include getFocusStyle();
     border-color: $buttonactivecolor;
-    box-shadow: 0 0 0 2px $focuscolor;
   }
 
   .btn--secondary:active {
@@ -245,15 +250,16 @@ $includedButton: false !default;
 
   .theme--dark .btn--secondary:focus,
   .btn--secondary.theme--dark:focus {
-    border-color: #fff;
-    box-shadow: 0 0 0 2px $focuscolor;
 
+    @include getFocusStyle();
+    border-color: #fff;
   }
 
   .theme--dark .btn--secondary:focus:active,
   .btn--secondary.theme--dark:focus:active {
+
+    @include getFocusStyle();
     border-color: #fff;
-    box-shadow: 0 0 0 2px $focuscolor;
   }
 
   .theme--dark .btn--secondary[disabled],

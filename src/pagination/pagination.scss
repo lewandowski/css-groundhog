@@ -1,5 +1,6 @@
 @import "../common/variables";
 @import "arrow";
+@import "../common/mixins";
 
 .pagination {
   display: table;
@@ -20,6 +21,11 @@
   font-size: 0.875rem;
   min-width: 1.625rem;
   text-align: center;
+}
+
+.pagination__item a:focus {
+
+  @include getFocusStyle();
 }
 
 .pagination__link {

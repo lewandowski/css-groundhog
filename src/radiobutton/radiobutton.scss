@@ -1,4 +1,5 @@
 @import "../common/variables";
+@import "../common/mixins";
 
 .radio {
   clip: rect(0 0 0 0);
@@ -60,8 +61,8 @@
 }
 
 .radio__label:focus {
-  box-shadow: 0 0 0 2px $focuscolor;
-  outline: none;
+
+  @include getFocusStyle();
 }
 
 .radio__label:hover:before {
@@ -84,7 +85,8 @@
 }
 
 .radio:focus + .radio__label:before {
-  box-shadow: 0 0 0 2px $focuscolor;
+
+  @include getFocusStyle();
 }
 
 .radio[disabled] + .radio__label,

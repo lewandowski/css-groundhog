@@ -1,4 +1,5 @@
 @import "../common/variables";
+@import "../common/mixins";
 
 .switch {
   clip: rect(0 0 0 0);
@@ -148,5 +149,6 @@
 }
 
 .switch:focus:not(:active) + .switch__label:before {
-  box-shadow: 0 0 0 2px $focuscolor;
+
+  @include getFocusStyle();
 }

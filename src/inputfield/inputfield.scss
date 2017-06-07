@@ -1,6 +1,7 @@
 @import "../common/variables";
 @import "../common/hint";
 @import "../common/label";
+@import "../common/mixins";
 
 .inputfield {
   font-family: $mainfont;
@@ -71,8 +72,8 @@
 }
 
 .inputfield:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px $focuscolor;
+
+  @include getFocusStyle();
 }
 
 .inputfield--search:focus {
