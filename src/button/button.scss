@@ -1,4 +1,5 @@
 @import "../common/variables";
+@import "../common/mixins";
 
 $includedButton: false !default;
 
@@ -39,8 +40,8 @@ $includedButton: false !default;
   }
 
   .btn:focus {
-    outline: 0;
-    box-shadow: 0 0 0 2px $focuscolor;
+
+    @include focusStyle();
   }
 
   .btn:active {
@@ -84,10 +85,6 @@ $includedButton: false !default;
     background-color: $buttonactivecolor;
   }
 
-  .btn--primary:focus:active {
-    box-shadow: 0 0 0 2px $focuscolor;
-  }
-
   .btn--primary[disabled] {
     background-color: $disabledcolor;
     color: rgba(255, 255, 255, 0.6);
@@ -123,17 +120,6 @@ $includedButton: false !default;
   .theme--dark .btn--primary:active,
   .btn--primary.theme--dark:active {
     background-color: $buttonactivecolor;
-    border-color: #fff;
-  }
-
-  .theme--dark .btn--primary:focus,
-  .btn--primary.theme--dark:focus {
-    box-shadow: 0 0 0 2px $focuscolor;
-  }
-
-  .theme--dark .btn--primary:focus:active,
-  .btn--primary.theme--dark:focus:active {
-    box-shadow: 0 0 0 2px $focuscolor;
     border-color: #fff;
   }
 
@@ -189,19 +175,15 @@ $includedButton: false !default;
     background-color: $gray-130;
   }
 
-  .btn--secondary:focus {
+  .btn--secondary:focus,
+  .btn--secondary:active,
+  .btn--secondary:focus:active {
     border-color: $buttonactivecolor;
-    box-shadow: 0 0 0 2px $focuscolor;
   }
 
   .btn--secondary:active {
-    border-color: $buttonactivecolor;
     color: $buttonactivecolor;
     background-color: $gray-130;
-  }
-
-  .btn--secondary:focus:active {
-    border-color: $buttonactivecolor;
   }
 
   .btn--secondary[disabled] {
@@ -241,19 +223,6 @@ $includedButton: false !default;
     background-color: rgba(255, 255, 255, 0.3);
     border-color: #fff;
     color: #fff;
-  }
-
-  .theme--dark .btn--secondary:focus,
-  .btn--secondary.theme--dark:focus {
-    border-color: #fff;
-    box-shadow: 0 0 0 2px $focuscolor;
-
-  }
-
-  .theme--dark .btn--secondary:focus:active,
-  .btn--secondary.theme--dark:focus:active {
-    border-color: #fff;
-    box-shadow: 0 0 0 2px $focuscolor;
   }
 
   .theme--dark .btn--secondary[disabled],

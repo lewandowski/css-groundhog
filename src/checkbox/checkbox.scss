@@ -1,4 +1,5 @@
 @import "../common/variables";
+@import "../common/mixins";
 
 .checkbox {
   clip: rect(0 0 0 0);
@@ -57,9 +58,10 @@
   background-image: url(/assets/images/icons/Icons_file_003_Checkmark_white.svg);
 }
 
-.checkbox__label:focus {
-  box-shadow: 0 0 0 2px $focuscolor;
-  outline: none;
+.checkbox__label:focus,
+.checkbox:focus + .checkbox__label:before {
+
+  @include focusStyle();
 }
 
 .checkbox__label:hover:before {
@@ -76,10 +78,6 @@
 .checkbox:checked + .checkbox__label.theme--dark:after,
 .theme--dark .checkbox:checked + .checkbox__label:after {
   display: block;
-}
-
-.checkbox:focus + .checkbox__label:before {
-  box-shadow: 0 0 0 2px $focuscolor;
 }
 
 .checkbox[disabled] + .checkbox__label,

@@ -1,4 +1,5 @@
 @import "../common/variables";
+@import "../common/mixins";
 
 .slider {
   appearance: none;
@@ -69,19 +70,11 @@
   outline: none;
 }
 
-.slider:focus::-webkit-slider-thumb {
-  outline: none;
-  box-shadow: 0 0 0 2px $focuscolor;
-}
-
-.slider:focus::-moz-range-thumb {
-  outline: none;
-  box-shadow: 0 0 0 2px $focuscolor;
-}
-
+.slider:focus::-webkit-slider-thumb,
+.slider:focus::-moz-range-thumb,
 .slider:focus::-ms-thumb {
-  outline: none;
-  box-shadow: 0 0 0 2px $focuscolor;
+
+  @include focusStyle();
 }
 
 .slider:hover {

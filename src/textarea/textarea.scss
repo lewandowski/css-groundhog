@@ -1,6 +1,7 @@
 @import "../common/variables";
 @import "../common/hint";
 @import "../common/label";
+@import "../common/mixins";
 
 .textarea {
   font-family: $mainfont;
@@ -35,8 +36,8 @@
 }
 
 .textarea:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px $focuscolor;
+
+  @include focusStyle();
 }
 
 .textarea[disabled] {

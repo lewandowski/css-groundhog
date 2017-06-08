@@ -1,4 +1,5 @@
 @import "../common/variables";
+@import "../common/mixins";
 
 .tag {
   font-family: $mainfont;
@@ -51,9 +52,10 @@
   color: $gray-500;
 }
 
-.tag:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px $focuscolor;
+.tag:focus,
+.tag__delete:focus {
+
+  @include focusStyle();
 }
 
 .tag:hover {
@@ -72,9 +74,4 @@
 .tag__delete:hover {
   background-image: url(/assets/images/icons/Icons_file_001_Abort_turquoise_700.svg);
   cursor: pointer;
-}
-
-.tag__delete:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px $focuscolor;
 }
