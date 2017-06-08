@@ -55,12 +55,13 @@ An expandable table is an extension of a basic table.
 
 ## Available themes for expandable table
 
-The default theme for the expandable table is `purple`, other available themes are:
+The default theme for the expandable table is `turquoise`, other available themes are:
 
 | class name | theme color |
 | ------------- | ------------- |
 | `.theme--blue` | Base class blue theme |
 | `.theme--royalblue` | Base class royalblue theme |
 | `.theme--green` | Base class green theme |
+| `.theme--purple` | Base class purple theme |
 
 [themeClass]: #available-themes-for-expandable-table
