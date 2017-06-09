@@ -60,6 +60,7 @@
   border-top-left-radius: 3px;
   border-bottom: none;
   border-right: none;
+  background-color: $turquoise-600;
 }
 
 
@@ -129,6 +130,15 @@
 /*
 * tile hover states
 */
+
+
+.tile:hover,
+.tile:hover .tile__header,
+.tile:hover .tile__iconbox,
+.tile:hover .tile__content {
+  border-color: $turquoise-600;
+}
+
 
 .tile--blue:hover,
 .tile--blue:hover .tile__header,

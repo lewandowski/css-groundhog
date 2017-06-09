@@ -1,8 +1,8 @@
 @import "../common/variables";
 @import "../table/table";
 @import "../expandable/expandable";
-$expandable-table-background-color: $purple-100;
-$expandable-table-border-color: $purple-500;
+$expandable-table-background-color: $turquoise-100;
+$expandable-table-border-color: $turquoise-600;
 
 .table--expandable tr.expandable__content {
   background-color: $white;
@@ -45,6 +45,12 @@ $expandable-table-border-color: $purple-500;
   .table--expandable .is-expanded tr:last-child td {
     border-bottom: 2px solid $table-border-color;
   }
+}
+
+
+.theme--purple {
+
+  @include expandable-table-theme($purple-100, $purple-600);
 }
 
 .theme--blue {
