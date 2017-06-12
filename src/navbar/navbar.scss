@@ -12,6 +12,8 @@ $nav-breakpoint: 980px !default;
 
 $nav-search-width: 200px !default;
 $nav-search-results-width: 276px !default;
+$nav-search-to-icon-breakpoint: 560px !default;
+
 
 .nav {
   display: block;
@@ -230,6 +232,7 @@ $nav-search-results-width: 276px !default;
 */
 
 .nav__buttongroup .nav__search {
+  display: none;
   position: relative;
   background-color: transparent;
   border: none;
@@ -237,6 +240,34 @@ $nav-search-results-width: 276px !default;
   border-radius: 0;
   color: #fff;
   width: $nav-search-width;
+}
+
+.nav__search__icon {
+  content: " ";
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  position: relative;
+  background-image: url(/assets/images/icons/Icons_file_002_Search_Magnifying_glass.svg);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
+}
+
+.nav__search__icon:hover {
+  background-color: $gray-700;
+}
+
+
+@media (min-width: $nav-search-to-icon-breakpoint) {
+
+  .nav__buttongroup .nav__search {
+    display: inline-block;
+  }
+
+  .nav__search__icon {
+    display: none;
+  }
 }
 
 .nav__buttongroup .nav__search:hover {
