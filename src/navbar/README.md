@@ -44,7 +44,7 @@ The Groundhog navbar appears in a two versions:
   ```
 
   ```html
-  <a href="" class="nav__search__icon"></a>
+  <a href="#" class="nav__search__icon"></a>
   ```
 
 4. Adjust the breakpoints
