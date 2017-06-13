@@ -53,6 +53,16 @@ An expandable table is an extension of a basic table.
 </div>
 ```
 
+## Behavior
+
+If the attribute `data-behavior="accordion"` is added to the `<table>` element only one expandable content is active at a time.
+
+```html
+<table class="table table--expandable" data-behavior="accordion">
+  ...
+</table>
+```
+
 ## Available themes for expandable table
 
 The default theme for the expandable table is `turquoise`, other available themes are:
