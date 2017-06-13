@@ -52,13 +52,13 @@ The Groundhog **sidebar** component component introduces a possibility of creati
 
 To use `expandable` in the sidebar, wrap the `sidebar__item` in an expandable module like this:
 ```html
-<div class="expandable expandable--expanded is-active">
+<div class="expandable is-current">
   <a href="#" class="sidebar__item expandable__trigger expandable__trigger--right">
     <span class="sidebar__headline">Monitoring</span>
     <span class="sidebar__info">Setup and overview</span>
   </a>
   <div class="expandable__content">
-    <a href="#" class="sidebar__item is-active">
+    <a href="#" class="sidebar__item is-current">
       <span class="sidebar__headline">General</span>
     </a>
     <a href="#" class="sidebar__item">
@@ -68,7 +68,16 @@ To use `expandable` in the sidebar, wrap the `sidebar__item` in an expandable mo
 </div>
 ```
 
-For more details about the expandable component, go the the [expandable section][expandable] of the Groundhog documentation 
+
+### States
+
+| state name | effect |
+|------------|--------|
+| `.is-current` | Highlights the currently selected menu item. This class must be set on the `sidebar__item` and the `expandable` container of this item. |
+| `.is-active` | Expands the `expandable__content` area of the sidebar menu. |
+
+For more details about the expandable component, go the the [expandable section][expandable] of the Groundhog documentation
+
 
 ### A note to expandable sidebars
 
