@@ -125,7 +125,8 @@ ol.list ol ul ul {
 }
 
 .step:before {
-  counter: counter(b) ". ";
+  counter-increment: section;
+  content: counter(section) ". ";
   position: absolute;
   text-align: right;
   width: 4rem;
