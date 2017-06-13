@@ -11,7 +11,6 @@ function clearResults(select) {
 }
 
 function createListElement(result, opts) {
-  console.log(result, opts);
   const opt = document.createElement('li');
   const link = document.createElement('a');
   link.setAttribute('href', result[opts.url]);
@@ -49,7 +48,7 @@ const initData = () => {
     const opts = {
       title: form.dataset.titleprop || 'title',
       url: form.dataset.urlprop || 'url',
-      maxresults: parseInt(form.dataset.maxresults) || 10,
+      maxresults: parseInt(form.dataset.maxresults, 10) || 10,
       resultskey: form.dataset.resultskey || 'results',
     };
     el.addEventListener('keyup', debounce(() => {
