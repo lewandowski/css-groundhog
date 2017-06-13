@@ -70,15 +70,77 @@ type: test-page
     <div class="island">
       <h2>Lists</h2>
       <ul class="list">
-        <li>Ut enim ad minim veniam,
-        <ul>
-          <li>Second level list item</li>
-          <li>Second level list item</li>
-        </ul>
-        </li>
+        <li>Ut enim ad minim veniam,</li>
+          <ul>
+            <li>Second level list item</li>
+            <ol>
+              <li>This is an ordered list item</li>
+              <li>This is an ordered list item</li>
+              <li>This is an ordered list item</li>
+              <li>This is an ordered list item</li>
+                  <ol>
+                    <li>First</li>
+                    <li>Second</li>
+                    <li>Third</li>
+                  </ol>
+              <li>This is an ordered list item</li>
+            </ol>
+            <li>Second level list item</li>
+              <ul>
+                <li>Third level</li>
+                  <ol>
+                    <li>This is an ordered list item</li>
+                    <li>This is an ordered list item</li>
+                  </ol>
+              </ul>
+          </ul>
         <li>quis nostrud exercitation ullamco laboris</li>
         <li>nisi ut aliquip ex ea commodo consequat.</li>
+        <ol>
+          <li>This is an ordered list item</li>
+          <li>This is an ordered list item</li>
+            <ul>
+              <li>Second level list item</li>
+              <li>Second level list item</li>
+            </ul>
+          <li>This is an ordered list item</li>
+        </ol>
       </ul>
+
+      <h3>Second list test</h3>
+      <ol class="list">
+        <li>Ut enim ad minim veniam,</li>
+          <ol>
+            <li>Second level list item</li>
+            <ul>
+              <li>This is an unordered list item</li>
+              <li>This is an unordered list item</li>
+              <li>This is an unordered list item</li>
+              <li>This is an unordered list item</li>
+              <li>This is an unordered list item</li>
+            </ul>
+            <li>Second level list item</li>
+              <ul>
+                <li>This is an unordered list item</li>
+                <li>This is an unordered list item</li>
+                    <ul>
+                      <li>This is an unordered list item</li>
+                      <li>This is an unordered list item</li>
+                    </ul>
+              </ul>
+          </ol>
+        <li>quis nostrud exercitation ullamco laboris</li>
+        <li>nisi ut aliquip ex ea commodo consequat.</li>
+        <ul>
+          <li>This is an unordered list item</li>
+          <li>This is an unordered list item</li>
+            <ol>
+              <li>Second level list item</li>
+              <li>Second level list item</li>
+            </ol>
+          <li>This is an unordered list item</li>
+        </ul>
+      </ol>
     </div>
     <div class="island">
       <h2>Text</h2>
@@ -100,7 +162,10 @@ type: test-page
         <button class="tab">Tab 4</button>
       </div>
       <h3>Text</h3>
-      <p>Lorem ipsum dolor sit amet, <a href="http://www.dynatrace.com">consectetur adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <a href="http://www.dynatrace.com">commodo consequat</a>.</p>
+      <ol>
+        <li class="list"><p>Lorem ipsum dolor sit amet, <a href="http://www.dynatrace.com">consectetur adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <a href="http://www.dynatrace.com">commodo consequat</a>.</p></li>
+        <li class="list"><div class="list">Lorem ipsum dolor sit amet, <a href="http://www.dynatrace.com">consectetur adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <a href="http://www.dynatrace.com">commodo consequat</a>.</div></li>
+      </ol>
     </div>
     <div class="island">
       <h2>Entity name</h2>

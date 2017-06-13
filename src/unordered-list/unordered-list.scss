@@ -2,16 +2,25 @@
 $unordered-list-theme-color: $turquoise-500;
 
 .list {
-  list-style: none;
   padding-left: 0.25rem;
 
   li {
     position: relative;
+    margin-top: 0.75rem;
   }
 
   li + li {
     margin-top: 1.25rem;
   }
+}
+
+ul.list,
+ul.list ul,
+ul.list ol ul,
+ol.list ul,
+ol.list ol ul {
+
+  list-style: none;
 
   li:before {
     content: " ";
@@ -29,12 +38,19 @@ $unordered-list-theme-color: $turquoise-500;
 }
 
 
-.list ul {
-  list-style: none;
+ol.list,
+ul.list ol,
+ol.list ul ol,
+ul.list ol,
+ul.list ul ol {
 
-  li {
-    margin-top: 0.75rem;
+  li:before {
+    content: none;
   }
+}
+
+ul.list ul,
+ol.list ol ul ul {
 
   li:before {
     height: 2px;
@@ -42,17 +58,22 @@ $unordered-list-theme-color: $turquoise-500;
   }
 }
 
-
 .list ul ul {
   list-style: none;
-
-  li {
-    margin-top: 0;
-  }
 
   li:before {
     height: 1px;
     margin-top: 0.65em;
+  }
+}
+
+.list ul ul,
+.list ol ol,
+.list ul ol,
+.list ol ul {
+
+  li {
+    margin-top: 0;
   }
 }
 
@@ -94,4 +115,20 @@ $unordered-list-theme-color: $turquoise-500;
 .theme--green {
 
   @include unorderdlisttheme($green-500);
+}
+
+
+.step {
+  position: relative;
+  padding-left: 1.5rem;
+  counter-increment: b;
+}
+
+.step:before {
+  counter: counter(b) ". ";
+  position: absolute;
+  text-align: right;
+  width: 4rem;
+  margin-left: -4.6rem;
+  line-height: inherit;
 }
