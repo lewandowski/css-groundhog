@@ -16,33 +16,33 @@ $expandable-table-border-color: $turquoise-600;
   background-color: $gray-100;
 }
 
-.table--expandable tbody.is-expanded tr:first-child {
+.table--expandable tbody.is-active tr:first-child {
   background-color: $expandable-table-background-color;
 }
 
-.table--expandable .is-expanded .expandable__content {
+.table--expandable .is-active .expandable__content {
   display: table-row;
 }
 
-.table--expandable .is-expanded tr:first-child td {
+.table--expandable .is-active tr:first-child td {
   border-top: 2px solid $expandable-table-border-color;
 }
 
-.table--expandable .is-expanded tr:last-child td {
+.table--expandable .is-active tr:last-child td {
   border-bottom: 2px solid $expandable-table-border-color;
 }
 
 @mixin expandable-table-theme($table-background-color, $table-border-color) {
 
-  .table--expandable .is-expanded tr:first-child {
+  .table--expandable .is-active tr:first-child {
     background-color: $table-background-color;
   }
 
-  .table--expandable .is-expanded tr:first-child td {
+  .table--expandable .is-active tr:first-child td {
     border-top: 2px solid $table-border-color;
   }
 
-  .table--expandable .is-expanded tr:last-child td {
+  .table--expandable .is-active tr:last-child td {
     border-bottom: 2px solid $table-border-color;
   }
 }

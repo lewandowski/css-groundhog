@@ -1,6 +1,6 @@
 import $ from '../js-common-components/dollar';
 
-const toggleClass = 'is-expanded';
+const toggleClass = 'is-active';
 
 const handleClick = (ev) => {
   ev.preventDefault();
