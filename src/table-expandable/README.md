@@ -34,10 +34,10 @@ An expandable table is an extension of a basic table.
   </tbody>
 </table>
 ```
-3. When the content is expanded by clicking the trigger-link, an `.is-expanded` class is added to the expandable table row.
+3. When the content is expanded by clicking the trigger-link, an `.is-active` class is added to the expandable table row.
 ```html
 ...
-  <tr class="expandable__content is-expanded">
+  <tr class="expandable__content is-active">
     <td colspan="5">
       Expandable content...
     </td>
