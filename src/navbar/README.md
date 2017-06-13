@@ -21,33 +21,61 @@ The Groundhog navbar appears in a two versions:
 ## Including the navbar
 1. To include a Groundhog navbar add an `<ul>` element with multiple `<li>` items, for the menu items. The `<ul>` with secondary menu items is optional. Add a wrapper `<div>`.
 
-2. Update all menu items' references and classes
+3. Update all menu items' references and classes.
+```html
+<li class="nav__item">
+  <a class="nav__link" href="#">Services</a>
+</li>
+```
+```html
+<li class="nav__item">
+  <a class="nav__link nav__link--secondary" href="#">Company</a>
+</li>
+```
 
+4. Add the search functionality and update the link to the search page. (Optional)
+```html
+<form action="/assets/data/search_results.json">
+  <input type="search" class="inputfield inputfield--search nav__search js-search" name="searchterm"/>
+</form>
+```
+```html
+<a href="#" class="nav__search__icon"></a>
+```
+
+2. Update `<form>` action and attributes. (Optional)
   ```html
-  <li class="nav__item">
-    <a class="nav__link" href="#">Services</a>
-  </li>
+  <form action="/assets/data/search_results.json" data-titleprop="label"
+    data-urlprop="path" data-maxresults="5" data-resultskey="results">
+  ```
+  * `action="/assets/data/search_results.json"`
+  set the form's action.
+
+  * `data-resultskey="results"`
+  sets the key for the list of search results. (Optional, default: results)
+
+  * `data-maxresults="5"`
+  sets the number of search results shown. (Optional, default: 10)
+
+  * `data-titleprop="label"`
+  sets the key for the search results' title. (Optional, default: label)
+
+  * `data-urlprop="path"`
+  sets the key for the search results' path. (Optional, default: url)
+
+  Example results:
+  ```json
+  {
+    "results": [
+      {
+        "label": "Test-Papaya",
+        "url": "/test/test-papaya"
+      }
+    ]
+  }
   ```
 
-  ```html
-  <li class="nav__item">
-    <a class="nav__link nav__link--secondary" href="#">Company</a>
-  </li>
-  ```
-
-3. (Optional) Add the search functionality and update the link to the search page.
-
-  ```html
-  <form action="/assets/data/search_results.json">
-    <input type="search" class="inputfield inputfield--search nav__search js-search" name="searchterm"/>
-  </form>
-  ```
-
-  ```html
-  <a href="#" class="nav__search__icon"></a>
-  ```
-
-4. Adjust the breakpoints
+5. Adjust the breakpoints. (Optional)
 
 The `$nav-breakpoint` sets the width where all menu items from the 'Menu' dropdown are shown in the navbar. The second breakpoint `$nav-search-to-icon-breakpoint` sets the width where the search link is replaced by a search input field, directly in the navbar.
 
