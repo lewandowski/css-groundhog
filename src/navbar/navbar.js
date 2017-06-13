@@ -3,7 +3,7 @@ import { debounce } from '../js-common-components/utils';
 
 function clearResults(select) {
   const emptySearchResults = select;
-  emptySearchResults.classList.remove('is-expanded');
+  emptySearchResults.classList.remove('is-active');
   while (select.firstChild) {
     select.removeChild(select.firstChild);
   }
@@ -27,7 +27,7 @@ function fetchResults(select, searchData, params) {
       const elements = results.map(createListElement);
       window.requestAnimationFrame(() => {
         clearResults(select);
-        select.classList.add('expandable', 'is-expanded');
+        select.classList.add('expandable', 'is-active');
         elements
           .forEach((el) => select.appendChild(el));
       });
