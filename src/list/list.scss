@@ -119,9 +119,15 @@ ol.list ol ul ul {
 
 
 .step {
+  display: block;
   position: relative;
   padding-left: 1.5rem;
   counter-increment: b;
+  margin-top: 0.75rem;
+}
+
+.step + .step {
+  margin-top: 1.25rem;
 }
 
 .step:before {

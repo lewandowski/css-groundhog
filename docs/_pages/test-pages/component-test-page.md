@@ -72,74 +72,83 @@ type: test-page
       <ul class="list">
         <li>Ut enim ad minim veniam,</li>
           <ul>
-            <li>Second level list item</li>
-            <ol>
-              <li>This is an ordered list item</li>
-              <li>This is an ordered list item</li>
-              <li>This is an ordered list item</li>
-              <li>This is an ordered list item</li>
+            <li>Second level list item
+              <ol>
+                <li>This is an ordered list item</li>
+                <li>This is an ordered list item</li>
+                <li>This is an ordered list item
                   <ol>
                     <li>First</li>
                     <li>Second</li>
                     <li>Third</li>
                   </ol>
-              <li>This is an ordered list item</li>
-            </ol>
-            <li>Second level list item</li>
+                </li>
+                <li>This is an ordered list item</li>
+              </ol>
+            </li>
+            <li>Second level list item
               <ul>
-                <li>Third level</li>
+                <li>Third level
                   <ol>
                     <li>This is an ordered list item</li>
                     <li>This is an ordered list item</li>
                   </ol>
+                </li>
               </ul>
+            </li>
           </ul>
         <li>quis nostrud exercitation ullamco laboris</li>
-        <li>nisi ut aliquip ex ea commodo consequat.</li>
-        <ol>
-          <li>This is an ordered list item</li>
-          <li>This is an ordered list item</li>
-            <ul>
-              <li>Second level list item</li>
-              <li>Second level list item</li>
-            </ul>
-          <li>This is an ordered list item</li>
-        </ol>
+        <li>nisi ut aliquip ex ea commodo consequat.
+          <ol>
+            <li>This is an ordered list item</li>
+            <li>This is an ordered list item
+              <ul>
+                <li>Second level list item</li>
+                <li>Second level list item</li>
+              </ul>
+            </li>
+            <li>This is an ordered list item</li>
+          </ol>
+        </li>
       </ul>
 
       <h3>Second list test</h3>
       <ol class="list">
-        <li>Ut enim ad minim veniam,</li>
+        <li>Ut enim ad minim veniam,
           <ol>
-            <li>Second level list item</li>
-            <ul>
-              <li>This is an unordered list item</li>
-              <li>This is an unordered list item</li>
-              <li>This is an unordered list item</li>
-              <li>This is an unordered list item</li>
-              <li>This is an unordered list item</li>
-            </ul>
-            <li>Second level list item</li>
+            <li>Second level list item
               <ul>
                 <li>This is an unordered list item</li>
                 <li>This is an unordered list item</li>
-                    <ul>
-                      <li>This is an unordered list item</li>
-                      <li>This is an unordered list item</li>
-                    </ul>
+                <li>This is an unordered list item</li>
               </ul>
+            </li>
+            <li>Second level list item
+              <ul>
+                <li>This is an unordered list item</li>
+                <li>This is an unordered list item
+                  <ul>
+                    <li>This is an unordered list item</li>
+                    <li>This is an unordered list item</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
           </ol>
+        </li>
         <li>quis nostrud exercitation ullamco laboris</li>
-        <li>nisi ut aliquip ex ea commodo consequat.</li>
-        <ul>
-          <li>This is an unordered list item</li>
-          <li>This is an unordered list item</li>
-            <ol>
-              <li>Second level list item</li>
-              <li>Second level list item</li>
-            </ol>
-          <li>This is an unordered list item</li>
-        </ul>
+        <li>nisi ut aliquip ex ea commodo consequat.
+          <ul>
+            <li>This is an unordered list item</li>
+            <li>This is an unordered list item
+                <ol>
+                  <li>Second level list item</li>
+                  <li>Second level list item</li>
+                </ol>
+              </li>
+            <li>This is an unordered list item</li>
+          </ul>
+        </li>
       </ol>
     </div>
     <div class="island">
@@ -162,10 +171,13 @@ type: test-page
         <button class="tab">Tab 4</button>
       </div>
       <h3>Text</h3>
-      <ol>
-        <li class="list"><p>Lorem ipsum dolor sit amet, <a href="http://www.dynatrace.com">consectetur adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <a href="http://www.dynatrace.com">commodo consequat</a>.</p></li>
-        <li class="list"><div class="list">Lorem ipsum dolor sit amet, <a href="http://www.dynatrace.com">consectetur adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <a href="http://www.dynatrace.com">commodo consequat</a>.</div></li>
-      </ol>
+      <p class="step">Lorem ipsum dolor sit amet, <a href="http://www.dynatrace.com">consectetur adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <a href="http://www.dynatrace.com">commodo consequat</a>.</p>
+      <div class="step">
+        <p>Lorem ipsum dolor sit amet, <a href="http://www.dynatrace.com">consectetur adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <a href="http://www.dynatrace.com">commodo consequat</a>.</p>
+        <div class="img-container">
+          <img src="https://dt-cdn.net/wp-content/uploads/2016/12/seasonsgreetings.png" alt="" width="520" height="293" />
+        </div>
+      </div>
     </div>
     <div class="island">
       <h2>Entity name</h2>
