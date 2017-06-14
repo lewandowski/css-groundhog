@@ -8,6 +8,13 @@ $includedExpandable: false !default;
 
   }
 
+  .expandable--separated {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-color: transparent;
+    transition: border-color 100ms ease-out;
+  }
+
   .expandable__content {
     display: none;
   }
@@ -18,6 +25,7 @@ $includedExpandable: false !default;
     padding-left: 32px;
     text-decoration: none;
     color: $turquoise-600;
+    line-height: 2;
   }
 
   .expandable__trigger--right {
@@ -50,18 +58,22 @@ $includedExpandable: false !default;
     color: $turquoise-700;
   }
 
-  .expandable.is-active {
-    border-top: 2px solid;
-    border-bottom: 2px solid;
-    border-color: $turquoise-800;
-  }
-
-  .expandable.is-expanded .expandable__trigger:before {
+  .expandable.is-active .expandable__trigger:before {
     transform: translate(0, -50%) rotate(180deg);
   }
 
-  .expandable.is-expanded .expandable__content {
+  .expandable.is-active .expandable__content {
     display: block;
+  }
+
+  .expandable--separated.is-active {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-color: $turquoise-600;
+  }
+
+  .expandable--separated.is-active + .expandable--separated.is-active {
+    border-top-color: transparent;
   }
 
   $includedExpandable: true;
