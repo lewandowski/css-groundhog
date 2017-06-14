@@ -19,23 +19,14 @@
 }
 
 .definition-list dt {
+  width: 100%;
+  padding-right: 3px;
   font-size: 12px;
   color: $gray-500;
-  display: block;
+  display: inline;
   position: relative;
   background-color: inherit;
-}
-
-.definition-list dd:before {
-  content: " ";
-  position: absolute;
-  background-image: url(/assets/images/icons/dot.svg);
-  background-size: 4px;
-  right: 0%;
-  height: 24px;
-  width: 100vw;
-  background-repeat: repeat-x;
-  display: inline-block;
+  z-index: 1;
 }
 
 .definition-list dd + dd {
@@ -44,11 +35,38 @@
 
 .definition-list dd {
   padding-left: 8px;
-  max-width: 50%;
   position: relative;
   display: block;
   text-align: right;
   margin-top: -22px;
   padding-bottom: 20px;
   right: 0;
+  z-index: 0;
+  text-shadow:
+    1px 2px 2px #fff,
+    2px 2px 2px #fff,
+    3px 2px 2px #fff,
+    4px 2px 2px #fff,
+    5px 2px 2px #fff,
+    6px 2px 2px #fff,
+    -1px 2px 1px #fff,
+    -2px 2px 1px #fff,
+    -3px 2px 2px #fff,
+    -4px 2px 2px #fff,
+    -5px 2px 2px #fff,
+    -6px 2px 2px #fff;
+}
+
+.definition-list dd:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: inline;
+  overflow: hidden;
+  height: 1em;
+  margin-top: 1px;
+  margin-left: -20px;
+  border-bottom: 1px dotted $gray-300;
+  z-index: -2;
 }
