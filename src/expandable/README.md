@@ -22,7 +22,7 @@ The expandable component is used for sections of a page that are hidden by defau
 <div class="expandable__content">...</div>
 ```
 
-3. Finally put header and content into a section and and add the `expandable` class.
+3. Finally put header and content into a section and add the `expandable` class.
 ```html
   <div class="expandable">
     <a href="#" class="expandable__trigger">Click me</a>
@@ -43,6 +43,13 @@ If you want to separate the expandable section from the rest of the content when
     </div>
   </div>
 ```
+
+## Available classes for expandable
+
+| class name | effect |
+|------------|--------|
+| `.expandable` | Base class for the expandable element |
+| `.expandable--separated` | Adds border-top and -bottom to expanded section |
 
 ## States
 
