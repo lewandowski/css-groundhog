@@ -1,7 +1,7 @@
 import $ from '../js-common-components/dollar';
 require('../js-common-components/accordion');
 
-const toggleClass = 'is-expanded';
+const toggleClass = 'is-active';
 
 const init = () => {
   $('.expandable__trigger').forEach(el => {
