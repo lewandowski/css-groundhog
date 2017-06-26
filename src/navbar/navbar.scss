@@ -1,12 +1,13 @@
 @import "../common/variables";
 @import "../common/mixins";
 
-$nav-link-color: $gray-100;
 $nav-primary-background: $gray-860;
-$nav-secondary-background: $gray-900;
+$nav-secondary-background: $gray-700;
+$nav-primary-active: $gray-700;
+$nav-secondary-active: $gray-620;
 
-$nav-height: 2.75rem;
-$nav-height-secondary: 1.5rem;
+$nav-height: 5.5rem;
+$nav-line-height: 2.75rem;
 
 $nav-breakpoint: 980px !default;
 
@@ -14,20 +15,15 @@ $nav-search-width: 200px !default;
 $nav-search-results-width: 276px !default;
 $nav-search-to-icon-breakpoint: 560px !default;
 
-
 .nav {
   display: block;
-  height: $nav-height;
+  height: $nav-line-height;
   background-color: $nav-primary-background;
   position: relative;
 }
 
-.nav.has-no-secondary {
-  height: $nav-height;
-}
-
 /*
-* nav bars
+* Nav bars
 */
 
 .nav__bar {
@@ -37,19 +33,25 @@ $nav-search-to-icon-breakpoint: 560px !default;
   overflow: hidden;
   top: 0;
   right: 0;
-  padding-top: $nav-height;
+  padding-top: $nav-line-height;
   background-color: $nav-primary-background;
   transition: width 125ms ease-out;
 }
 
 .nav__bar.is-active {
-  width: 15rem;
+  width: 100%;
 }
 
 @media (min-width: $nav-breakpoint) {
 
   .nav {
-    height: auto;
+    height: $nav-height;
+    background-color: $nav-secondary-background;
+  }
+
+  .nav.has-no-secondary {
+    height: $nav-line-height;
+    background-color: $nav-primary-background;
   }
 
   .nav__bar {
@@ -58,16 +60,39 @@ $nav-search-to-icon-breakpoint: 560px !default;
     width: auto;
     padding-top: 0;
     transition: none;
-    height: $nav-height + $nav-height-secondary;
   }
 
   .nav__bar.is-active {
     width: auto;
   }
+
+  .nav.hide-brand .nav__brand {
+    display: none;
+  }
 }
 
 /*
-* nav lists
+* Brand logo
+*/
+
+.nav__brand {
+  position: absolute;
+  z-index: 12;
+  top: 0.7rem;
+  left: 0.75rem;
+  width: 7rem;
+}
+
+.nav__logo {
+  max-width: 100%;
+}
+
+.nav__brand:focus {
+  background-color: $gray-700;
+}
+
+/*
+* Nav lists & items
 */
 
 .nav__list {
@@ -76,64 +101,22 @@ $nav-search-to-icon-breakpoint: 560px !default;
   margin: 0;
 }
 
-.nav__list + .nav__list {
-  border-top: 1px solid $gray-300;
+.nav.hide-brand .nav__list {
+  padding-left: 0;
 }
 
-@media (min-width: $nav-breakpoint) {
-
-  .nav__list {
-    display: flex;
-  }
-
-  .nav__list--primary {
-    order: 2;
-    justify-content: flex-start;
-    align-items: center;
-    height: $nav-height;
-    padding-left: 8.5rem;
-    position: absolute;
-    top: $nav-height-secondary;
-  }
-
-  .nav__list--secondary {
-    order: 1;
-    border-top: 0;
-    background-color: $nav-secondary-background;
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 100%;
-    min-width: 100%;
-    height: $nav-height-secondary;
-    justify-content: flex-end;
-    align-items: center;
-    position: absolute;
-    top: 0;
-  }
-
-  .nav__list + .nav__list {
-    border-top: 0;
-  }
+.nav__bar.is-active .nav__list {
+  background-color: $nav-primary-active;
 }
-
-/*
-* nav list item
-*/
 
 .nav__item {
   margin: 0;
+  white-space: nowrap;
 }
 
-@media (min-width: $nav-breakpoint) {
-
-  .nav__item {
-    line-height: 1em;
-  }
+.nav__item.is-current {
+  background-color: $nav-primary-active;
 }
-
-/*
-* navigation link item
-*/
 
 .nav__link,
 .nav__link:visited {
@@ -151,25 +134,67 @@ $nav-search-to-icon-breakpoint: 560px !default;
   text-decoration: none;
 }
 
-.nav__link--secondary {
-  font-size: 0.8rem;
-}
-
 @media (min-width: $nav-breakpoint) {
 
-  .nav__link {
-    padding: 0.85rem 0.5rem;
+  .nav__list {
+    display: flex;
   }
 
-  .nav__link--secondary {
-    padding: 0.25rem 0.5rem;
-    display: inline-block;
+  .nav__list--primary {
+    justify-content: flex-start;
+    align-items: center;
+    height: $nav-line-height;
+    padding-left: 8.5rem;
+  }
+
+  .nav__item,
+  .nav__link {
+    line-height: 1em;
+    height: $nav-line-height;
+  }
+
+  .nav__item--home .nav__link {
+    background-image: url(http://assets.dynatrace.com/global/logos/dynatrace-logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+    width: 10rem;
+    text-indent: -99999px;
+  }
+
+  .nav__link {
+    padding: 0.85rem 1.5rem;
+  }
+
+  /* pull nav item right */
+  .nav__list > .nav__item--right {
+    margin-left: auto;
+
+    & ~ .nav__item--right {
+      margin-left: 0;
+    }
+  }
+
+  .nav__item--right .nav__link {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
 /*
-* Toggle for mobile nav
+* Nav buttongroup:
+* Search, CTA, Menu toggle
 */
+
+.nav__buttongroup {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: $nav-line-height;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 12;
+}
 
 .nav__btn,
 .nav__btn:visited {
@@ -181,10 +206,9 @@ $nav-search-to-icon-breakpoint: 560px !default;
   border: 0;
   outline: 0;
   cursor: pointer;
-  line-height: $nav-height;
-  height: $nav-height;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  line-height: $nav-line-height;
+  height: $nav-line-height;
+  padding: 0 1rem;
   vertical-align: top;
   display: inline-block;
 }
@@ -197,12 +221,21 @@ $nav-search-to-icon-breakpoint: 560px !default;
 }
 
 .nav__btn--cta {
+  display: none;
   background-color: $green-500;
+  white-space: nowrap;
 }
 
 .nav__btn--cta:hover,
 .nav__btn--cta:focus {
   background-color: $green-600;
+}
+
+@media (min-width: $screen-sm) {
+
+  .nav__btn--cta {
+    display: inline-block;
+  }
 }
 
 @media (min-width: $nav-breakpoint) {
@@ -213,30 +246,18 @@ $nav-search-to-icon-breakpoint: 560px !default;
 }
 
 /*
-* nav right button group
+* Search
 */
 
-.nav__buttongroup {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 12;
-
-  form {
-    display: inline-block;
-  }
+.nav__buttongroup form {
+  display: none;
 }
 
-/*
-* search
-*/
-
 .nav__buttongroup .nav__search {
-  display: none;
   position: relative;
   background-color: transparent;
   border: none;
-  height: $nav-height;
+  height: $nav-line-height;
   border-radius: 0;
   color: #fff;
   width: $nav-search-width;
@@ -258,10 +279,9 @@ $nav-search-to-icon-breakpoint: 560px !default;
   background-color: $gray-700;
 }
 
-
 @media (min-width: $nav-search-to-icon-breakpoint) {
 
-  .nav__buttongroup .nav__search {
+  .nav__buttongroup form {
     display: inline-block;
   }
 
@@ -271,11 +291,11 @@ $nav-search-to-icon-breakpoint: 560px !default;
 }
 
 .nav__buttongroup .nav__search:hover {
-  background-color: $gray-700;
+  background-color: $gray-640;
 }
 
 .nav__buttongroup .nav__search:focus {
-  background-color: $gray-700;
+  background-color: $gray-640;
   outline: none;
   box-shadow: none;
 }
@@ -303,103 +323,4 @@ $nav-search-to-icon-breakpoint: 560px !default;
 
 .nav .search__results a:hover {
   background-color: $gray-640;
-}
-
-.nav__cta {
-  height: $nav-height;
-  line-height: $nav-height;
-  padding: 0 1rem;
-  vertical-align: top;
-  border-radius: 0;
-}
-
-.nav__cta {
-  color: #fff;
-}
-
-.nav .expandable__content {
-  color: #fff;
-  list-style: none;
-  line-height: 2rem;
-  white-space: nowrap;
-  overflow: hidden;
-  padding-left: 11px;
-
-  li:hover {
-    background-color: $gray-600;
-  }
-}
-
-.nav .expandable__content.is-active {
-  z-index: 10;
-  max-width: $nav-search-results-width;
-  display: block;
-  position: absolute;
-  right: 0;
-  margin-top: 44px;
-  width: 100%;
-  background-color: $nav-primary-background;
-}
-
-@media (min-width: $nav-breakpoint) {
-
-  .nav__buttongroup {
-    margin-top: $nav-height-secondary;
-  }
-}
-
-
-/*
-* Brand logo
-*/
-
-.nav__brand {
-  position: absolute;
-  z-index: 12;
-  top: 0.7rem;
-  left: 0.75rem;
-  width: 7rem;
-}
-
-.nav__logo {
-  max-width: 100%;
-}
-
-.nav__brand:focus {
-  background-color: $gray-700;
-}
-
-@media (min-width: $nav-breakpoint) {
-
-  .nav__brand {
-    padding-right: 0;
-    top: 2.25rem;
-  }
-
-  .has-no-secondary {
-
-    > .nav__bar {
-      height: 2.75rem;
-    }
-
-    > .nav__brand {
-      top: 0.7rem;
-    }
-
-    .nav__list {
-      top: 0;
-    }
-  }
-}
-
-/** no-secondary-fix **/
-
-@media (min-width: $nav-breakpoint) {
-
-  .has-no-secondary > {
-
-    .nav__buttongroup {
-      margin-top: 0;
-    }
-  }
 }
