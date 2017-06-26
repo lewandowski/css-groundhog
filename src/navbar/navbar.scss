@@ -280,7 +280,13 @@ $nav-search-to-icon-breakpoint: 560px !default;
   box-shadow: none;
 }
 
-.nav .search__results.is-active {
+
+.nav .search__results {
+  display: none;
+}
+
+.nav .search__results.has-focus {
+  display: block;
   position: relative;
   margin: 0;
   padding: 12px 0 12px 0;
@@ -301,7 +307,9 @@ $nav-search-to-icon-breakpoint: 560px !default;
   overflow: hidden;
 }
 
-.nav .search__results a:hover {
+.nav .search__results a:hover,
+.nav .search__results a:focus {
+  outline: none;
   background-color: $gray-640;
 }
 

@@ -1,10 +1,7 @@
 import $ from '../js-common-components/dollar';
 import { debounce } from '../js-common-components/utils';
 
-
 function clearResults(select) {
-  const emptySearchResults = select;
-  emptySearchResults.classList.remove('is-active');
   while (select.firstChild) {
     select.removeChild(select.firstChild);
   }
@@ -32,7 +29,8 @@ function fetchResults(select, searchData, params, opts) {
       const elements = trimmedresults.map(el => createListElement(el, opts));
       window.requestAnimationFrame(() => {
         clearResults(select);
-        select.classList.add('expandable', 'is-active');
+        select.classList.add('expandable');
+
         elements
           .forEach((el) => select.appendChild(el));
       });
@@ -40,10 +38,11 @@ function fetchResults(select, searchData, params, opts) {
 }
 
 const initData = () => {
-  $('.js-search:not([action=""]').forEach(el => {
+  $('.js-search:not([action=""])').forEach(el => {
     const form = el.parentNode;
     const ul = form.appendChild(document.createElement('ul'));
-    const searchData = form.action;
+    ul.addEventListener('click', (e) => e.stopPropagation());
+    const searchData = form.dataset.results || form.action;
     ul.classList.add('search__results', 'expandable');
     const opts = {
       title: form.dataset.titleprop || 'title',
@@ -52,13 +51,14 @@ const initData = () => {
       resultskey: form.dataset.resultskey || 'results',
     };
     el.addEventListener('keyup', debounce(() => {
+      ul.classList.add('has-focus');
       const params = $('input', form)
         .map(input => `${input.name}=${input.value}`)
         .join('&');
       fetchResults(ul, searchData, params, opts);
     }, 150));
-    el.addEventListener('blur', () => {
-      clearResults(ul);
+    $('body')[0].addEventListener('click', () => {
+      ul.classList.remove('has-focus');
     });
   });
 };
