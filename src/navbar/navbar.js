@@ -43,7 +43,7 @@ const initData = () => {
     const ul = form.appendChild(document.createElement('ul'));
     ul.addEventListener('click', (e) => e.stopPropagation());
     const searchData = form.dataset.results || form.action;
-    ul.classList.add('search__results', 'expandable');
+    ul.classList.add('search__results');
     const opts = {
       title: form.dataset.titleprop || 'title',
       url: form.dataset.urlprop || 'url',
@@ -57,7 +57,7 @@ const initData = () => {
         .join('&');
       fetchResults(ul, searchData, params, opts);
     }, 150));
-    $('body')[0].addEventListener('click', () => {
+    document.body.addEventListener('click', () => {
       ul.classList.remove('has-focus');
     });
   });
