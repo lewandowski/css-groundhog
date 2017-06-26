@@ -325,30 +325,6 @@ $nav-search-to-icon-breakpoint: 560px !default;
   color: #fff;
 }
 
-.nav .expandable__content {
-  color: #fff;
-  list-style: none;
-  line-height: 2rem;
-  white-space: nowrap;
-  overflow: hidden;
-  padding-left: 11px;
-
-  li:hover {
-    background-color: $gray-600;
-  }
-}
-
-.nav .expandable__content.is-active {
-  z-index: 10;
-  max-width: $nav-search-results-width;
-  display: block;
-  position: absolute;
-  right: 0;
-  margin-top: 44px;
-  width: 100%;
-  background-color: $nav-primary-background;
-}
-
 @media (min-width: $nav-breakpoint) {
 
   .nav__buttongroup {

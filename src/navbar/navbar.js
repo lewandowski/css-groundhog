@@ -29,8 +29,6 @@ function fetchResults(select, searchData, params, opts) {
       const elements = trimmedresults.map(el => createListElement(el, opts));
       window.requestAnimationFrame(() => {
         clearResults(select);
-        select.classList.add('expandable');
-
         elements
           .forEach((el) => select.appendChild(el));
       });
