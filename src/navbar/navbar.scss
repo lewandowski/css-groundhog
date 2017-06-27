@@ -66,10 +66,6 @@ $nav-search-to-icon-breakpoint: 560px !default;
   .nav__bar.is-active {
     width: auto;
   }
-
-  .nav.hide-brand .nav__brand {
-    display: none;
-  }
 }
 
 /*
@@ -246,18 +242,9 @@ $nav-search-to-icon-breakpoint: 560px !default;
       margin-left: 0;
     }
   }
-
-  .nav__item--right .nav__link {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
 }
 
 /* nav modifier */
-
-.nav.hide-brand .nav__list {
-  padding-left: 0;
-}
 
 .nav__bar.is-active .nav__list {
   background-color: $nav-primary-active;
@@ -338,11 +325,12 @@ $nav-search-to-icon-breakpoint: 560px !default;
 .nav__buttongroup .nav__search {
   position: relative;
   background-color: transparent;
+  color: transparent;
   border: none;
   height: $nav-line-height;
   border-radius: 0;
-  color: #fff;
-  width: $nav-search-width;
+  width: 40px;
+  transition: width 150ms, background-color 150ms;
 }
 
 .nav__search__icon {
@@ -374,10 +362,14 @@ $nav-search-to-icon-breakpoint: 560px !default;
 
 .nav__buttongroup .nav__search:hover {
   background-color: $gray-620;
+  width: $nav-search-width;
+  color: #fff;
 }
 
 .nav__buttongroup .nav__search:focus {
   background-color: $gray-620;
+  width: $nav-search-width;
+  color: #fff;
   outline: none;
   box-shadow: none;
 }
