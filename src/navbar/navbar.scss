@@ -101,21 +101,9 @@ $nav-search-to-icon-breakpoint: 560px !default;
   margin: 0;
 }
 
-.nav.hide-brand .nav__list {
-  padding-left: 0;
-}
-
-.nav__bar.is-active .nav__list {
-  background-color: $nav-primary-active;
-}
-
 .nav__item {
   margin: 0;
   white-space: nowrap;
-}
-
-.nav__item.is-current {
-  background-color: $nav-primary-active;
 }
 
 .nav__link,
@@ -130,8 +118,55 @@ $nav-search-to-icon-breakpoint: 560px !default;
 .nav__link:hover,
 .nav__link:focus {
   color: #fff;
-  background-color: $gray-700;
   text-decoration: none;
+}
+
+/* Primary nav */
+
+.nav__list--primary > .nav__item {
+
+  position: relative;
+
+  &.is-current {
+    background-color: $nav-primary-active;
+  }
+
+  &:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    background-image: url(/assets/images/icons/icons_controls_001_DropDownOpen.svg);
+    background-size: 1em;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 0;
+    top: 20px;
+    transform: translate(0, -50%) rotate(-90deg);
+    transition: transform 0.3s ease;
+  }
+
+  &.is-current:before {
+    transform: translate(0, -50%) rotate(0);
+  }
+
+  .nav__link {
+    padding-left: 40px;
+  }
+}
+
+/* Secondary nav */
+
+.nav__list--secondary > .nav__item {
+
+  &.is-current {
+    background-color: $nav-secondary-active;
+  }
+
+  .nav__link {
+    padding-left: 70px;
+  }
 }
 
 @media (min-width: $nav-breakpoint) {
@@ -140,19 +175,17 @@ $nav-search-to-icon-breakpoint: 560px !default;
     display: flex;
   }
 
-  .nav__list--primary {
-    justify-content: flex-start;
-    align-items: center;
-    height: $nav-line-height;
-    padding-left: 8.5rem;
-  }
-
   .nav__item,
   .nav__link {
     line-height: 1em;
     height: $nav-line-height;
   }
 
+  .nav__link {
+    padding: 0.85rem 1.5rem;
+  }
+
+  /* Home item */
   .nav__item--home .nav__link {
     background-image: url(http://assets.dynatrace.com/global/logos/dynatrace-logo.svg);
     background-repeat: no-repeat;
@@ -162,8 +195,42 @@ $nav-search-to-icon-breakpoint: 560px !default;
     text-indent: -99999px;
   }
 
-  .nav__link {
-    padding: 0.85rem 1.5rem;
+  /* Primary nav */
+
+  .nav__list--primary {
+    justify-content: flex-start;
+    align-items: center;
+    height: $nav-line-height;
+    padding-left: 8.5rem;
+
+    > .nav__item {
+
+      position: static;
+
+      &:before {
+        display: none;
+      }
+
+      .nav__link {
+        padding-left: 1.5rem;
+      }
+
+      > .nav__link:hover {
+        background-color: $gray-700;
+      }
+    }
+  }
+
+  /* Secondary nav */
+
+  .nav__list--secondary {
+    position: absolute;
+    left: 0;
+
+    .nav__item.is-current {
+      border-bottom: 4px solid $turquoise-400;
+      background-color: inherit;
+    }
   }
 
   /* pull nav item right */
@@ -179,6 +246,16 @@ $nav-search-to-icon-breakpoint: 560px !default;
     padding-left: 1rem;
     padding-right: 1rem;
   }
+}
+
+/* nav modifier */
+
+.nav.hide-brand .nav__list {
+  padding-left: 0;
+}
+
+.nav__bar.is-active .nav__list {
+  background-color: $nav-primary-active;
 }
 
 /*
@@ -291,11 +368,11 @@ $nav-search-to-icon-breakpoint: 560px !default;
 }
 
 .nav__buttongroup .nav__search:hover {
-  background-color: $gray-640;
+  background-color: $gray-620;
 }
 
 .nav__buttongroup .nav__search:focus {
-  background-color: $gray-640;
+  background-color: $gray-620;
   outline: none;
   box-shadow: none;
 }
@@ -304,7 +381,7 @@ $nav-search-to-icon-breakpoint: 560px !default;
   position: relative;
   margin: 0;
   padding: 12px 0 12px 0;
-  background-color: $gray-700;
+  background-color: $gray-620;
   list-style: none;
   line-height: 32px;
   max-width: $nav-search-width;
@@ -322,5 +399,5 @@ $nav-search-to-icon-breakpoint: 560px !default;
 }
 
 .nav .search__results a:hover {
-  background-color: $gray-640;
+  background-color: $gray-600;
 }
