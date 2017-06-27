@@ -8,6 +8,7 @@ $nav-secondary-active: $gray-620;
 
 $nav-height: 5.5rem;
 $nav-line-height: 2.75rem;
+$nav-microsite-height: 2rem;
 
 $nav-breakpoint: 980px !default;
 
@@ -228,8 +229,12 @@ $nav-search-to-icon-breakpoint: 560px !default;
     left: 0;
 
     .nav__item.is-current {
-      border-bottom: 4px solid $turquoise-400;
+      border-bottom: 4px solid $turquoise-500;
       background-color: inherit;
+    }
+
+    .nav__link:hover {
+      border-bottom: 2px solid $turquoise-500;
     }
   }
 
@@ -400,4 +405,87 @@ $nav-search-to-icon-breakpoint: 560px !default;
 
 .nav .search__results a:hover {
   background-color: $gray-600;
+}
+
+/*
+* Microsite navigation
+*/
+
+.nav--microsite {
+  height: $nav-microsite-height;
+  z-index: 8;
+
+  .nav__bar {
+    background-color: $royalblue-700;
+    width: 100%;
+    padding: 0;
+  }
+
+  .nav__bar.is-active .nav__list {
+    background-color: $royalblue-700;
+  }
+
+  .expandable__trigger {
+    color: $gray-200;
+    width: 100%;
+  }
+
+  .expandable__trigger:before {
+    background-image: url(/assets/images/icons/icons_controls_001_DropDownOpen.svg);
+    transform: translate(0, -50%) rotate(-90deg);
+  }
+
+  .expandable.is-active .expandable__trigger:before {
+    transform: translate(0, -50%) rotate(0);
+  }
+
+  .expandable__trigger:hover {
+    color: #fff;
+  }
+
+  .nav__item.is-current {
+    background-color: $royalblue-600;
+  }
+
+  .nav__link {
+    padding: 0.5rem 1.5rem;
+    padding-left: 32px; /* same padding as expandable trigger */
+  }
+
+  .nav__link:hover {
+    background-color: $royalblue-500;
+  }
+}
+
+@media (min-width: $nav-breakpoint) {
+
+  .nav--microsite {
+
+    .nav__link {
+      padding: 0.5rem 1.5rem;
+    }
+
+    .nav__item,
+    .nav__link {
+      height: $nav-microsite-height;
+    }
+
+    .nav__item.is-current {
+      background-color: transparent;
+      border-bottom: 4px solid $royalblue-300;
+    }
+
+    .nav__link:hover {
+      background-color: transparent;
+      border-bottom: 2px solid $royalblue-300;
+    }
+
+    .expandable__trigger {
+      display: none;
+    }
+
+    .expandable__content {
+      display: flex;
+    }
+  }
 }
