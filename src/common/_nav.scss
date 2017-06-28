@@ -1,7 +1,12 @@
 $nav-primary-background: $gray-860;
 $nav-secondary-background: $gray-700;
-$nav-primary-active: $gray-700;
-$nav-secondary-active: $gray-620;
+
+$nav-primary-current: $gray-700;
+$nav-primary-hover: $gray-700;
+$nav-secondary-current: $gray-620;
+$nav-secondary-hover: $gray-620;
+
+$nav-current-mobile: $gray-620;
 
 $nav-breakpoint: 980px !default;
 

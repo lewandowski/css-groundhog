@@ -1,20 +1,6 @@
 @import "../common/variables";
+@import "../common/nav";
 @import "../common/mixins";
-
-$nav-primary-background: $gray-860;
-$nav-secondary-background: $gray-700;
-$nav-primary-active: $gray-700;
-$nav-secondary-active: $gray-620;
-
-$nav-height: 5.5rem;
-$nav-line-height: 2.75rem;
-$nav-microsite-height: 2rem;
-
-$nav-breakpoint: 980px !default;
-
-$nav-search-width: 200px !default;
-$nav-search-results-width: 276px !default;
-$nav-search-to-icon-breakpoint: 560px !default;
 
 .nav {
   display: block;
@@ -120,50 +106,18 @@ $nav-search-to-icon-breakpoint: 560px !default;
 
 /* Primary nav */
 
-.nav__list--primary > .nav__item {
-
-  position: relative;
-
-  &.is-current {
-    background-color: $nav-primary-active;
-  }
-
-  &:before {
-    content: " ";
-    display: block;
-    position: absolute;
-    background-image: url(/assets/images/icons/icons_controls_001_DropDownOpen.svg);
-    background-size: 1em;
-    width: 40px;
-    height: 40px;
-    background-repeat: no-repeat;
-    background-position: center;
-    left: 0;
-    top: 20px;
-    transform: translate(0, -50%) rotate(-90deg);
-    transition: transform 0.3s ease;
-  }
-
-  &.is-current:before {
-    transform: translate(0, -50%) rotate(0);
-  }
-
-  .nav__link {
-    padding-left: 40px;
-  }
+.nav__list--primary > .nav__item:not(.expandable).is-current {
+  background-color: $nav-current-mobile;
 }
 
 /* Secondary nav */
 
-.nav__list--secondary > .nav__item {
+.nav__list--secondary > .nav__item.is-current {
+  background-color: $nav-current-mobile;
+}
 
-  &.is-current {
-    background-color: $nav-secondary-active;
-  }
-
-  .nav__link {
-    padding-left: 70px;
-  }
+.nav__list--secondary .nav__link {
+  padding-left: 50px;
 }
 
 @media (min-width: $nav-breakpoint) {
@@ -199,23 +153,23 @@ $nav-search-to-icon-breakpoint: 560px !default;
     align-items: center;
     height: $nav-line-height;
     padding-left: 8.5rem;
+  }
 
-    > .nav__item {
+  .nav__list--primary > .nav__item {
+    position: static;
+  }
 
-      position: static;
+  .nav__list--primary > .nav__item.is-current,
+  .nav__list--primary > .nav__item:not(.expandable).is-current {
+    background-color: $nav-primary-current;
+  }
 
-      &:before {
-        display: none;
-      }
+  .nav__list--primary > .nav__item .nav__link {
+    padding-left: 1.5rem;
+  }
 
-      .nav__link {
-        padding-left: 1.5rem;
-      }
-
-      > .nav__link:hover {
-        background-color: $gray-700;
-      }
-    }
+  .nav__list--primary > .nav__item .nav__link:hover {
+    background-color: $nav-primary-current;
   }
 
   /* Secondary nav */
@@ -247,7 +201,7 @@ $nav-search-to-icon-breakpoint: 560px !default;
 /* nav modifier */
 
 .nav__bar.is-active .nav__list {
-  background-color: $nav-primary-active;
+  background-color: $nav-primary-current;
 }
 
 /*
@@ -285,7 +239,7 @@ $nav-search-to-icon-breakpoint: 560px !default;
 .nav__btn:hover,
 .nav__btn:focus {
   color: #fff;
-  background-color: $gray-700;
+  background-color: $nav-primary-hover;
   text-decoration: none;
 }
 
@@ -346,7 +300,7 @@ $nav-search-to-icon-breakpoint: 560px !default;
 }
 
 .nav__search__icon:hover {
-  background-color: $gray-700;
+  background-color: $nav-primary-hover;
 }
 
 @media (min-width: $nav-search-to-icon-breakpoint) {
@@ -361,13 +315,13 @@ $nav-search-to-icon-breakpoint: 560px !default;
 }
 
 .nav__buttongroup .nav__search:hover {
-  background-color: $gray-620;
+  background-color: $nav-secondary-hover;
   width: $nav-search-width;
   color: #fff;
 }
 
 .nav__buttongroup .nav__search:focus {
-  background-color: $gray-620;
+  background-color: $nav-secondary-hover;
   width: $nav-search-width;
   color: #fff;
   outline: none;
@@ -378,7 +332,7 @@ $nav-search-to-icon-breakpoint: 560px !default;
   position: relative;
   margin: 0;
   padding: 12px 0 12px 0;
-  background-color: $gray-620;
+  background-color: $nav-secondary-hover;
   list-style: none;
   line-height: 32px;
   max-width: $nav-search-width;
@@ -397,87 +351,4 @@ $nav-search-to-icon-breakpoint: 560px !default;
 
 .nav .search__results a:hover {
   background-color: $gray-600;
-}
-
-/*
-* Microsite navigation
-*/
-
-.nav--microsite {
-  height: $nav-microsite-height;
-  z-index: 8;
-
-  .nav__bar {
-    background-color: $royalblue-700;
-    width: 100%;
-    padding: 0;
-  }
-
-  .nav__bar.is-active .nav__list {
-    background-color: $royalblue-700;
-  }
-
-  .expandable__trigger {
-    color: $gray-200;
-    width: 100%;
-  }
-
-  .expandable__trigger:before {
-    background-image: url(/assets/images/icons/icons_controls_001_DropDownOpen.svg);
-    transform: translate(0, -50%) rotate(-90deg);
-  }
-
-  .expandable.is-active .expandable__trigger:before {
-    transform: translate(0, -50%) rotate(0);
-  }
-
-  .expandable__trigger:hover {
-    color: #fff;
-  }
-
-  .nav__item.is-current {
-    background-color: $royalblue-600;
-  }
-
-  .nav__link {
-    padding: 0.5rem 1.5rem;
-    padding-left: 32px; /* same padding as expandable trigger */
-  }
-
-  .nav__link:hover {
-    background-color: $royalblue-500;
-  }
-}
-
-@media (min-width: $nav-breakpoint) {
-
-  .nav--microsite {
-
-    .nav__link {
-      padding: 0.5rem 1.5rem;
-    }
-
-    .nav__item,
-    .nav__link {
-      height: $nav-microsite-height;
-    }
-
-    .nav__item.is-current {
-      background-color: transparent;
-      border-bottom: 4px solid $royalblue-300;
-    }
-
-    .nav__link:hover {
-      background-color: transparent;
-      border-bottom: 2px solid $royalblue-300;
-    }
-
-    .expandable__trigger {
-      display: none;
-    }
-
-    .expandable__content {
-      display: flex;
-    }
-  }
 }
