@@ -178,9 +178,9 @@
     position: absolute;
     left: 0;
 
-    .nav__item.is-current {
+    .nav__item.is-current .nav__link {
       border-bottom: 4px solid $turquoise-500;
-      background-color: inherit;
+      background-color: $nav-secondary-background;
     }
 
     .nav__link:hover {
