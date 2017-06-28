@@ -50,6 +50,8 @@ If you want to separate the expandable section from the rest of the content when
 |------------|--------|
 | `.expandable` | Base class for the expandable element |
 | `.expandable--separated` | Adds border-top and -bottom to expanded section |
+| `.expandable--nav` | Use this together with the navbar component to enhance the mobile behavior of the navigation. For examples check out Groundhog's [navbar](/doc/components/navbar/). |
+| `.expandable--subnav` | Use this together with the subnav component to enhance the mobile behavior of the navigation. For examples check out Groundhog's [subnav](/doc/components/subnav/). |
 
 ## States
 

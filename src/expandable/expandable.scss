@@ -1,4 +1,5 @@
 @import "../common/variables";
+@import "../common/nav";
 
 $includedExpandable: false !default;
 
@@ -74,6 +75,52 @@ $includedExpandable: false !default;
 
   .expandable--separated.is-active + .expandable--separated.is-active {
     border-top-color: transparent;
+  }
+
+  /* Expandable for nav components */
+
+  .expandable--nav .expandable__trigger,
+  .expandable--subnav .expandable__trigger {
+    color: $gray-200;
+  }
+
+  .expandable--nav .expandable__trigger:before,
+  .expandable--subnav .expandable__trigger:before {
+    background-image: url(/assets/images/icons/dropdown_open-white.svg);
+    transform: translate(0, -50%) rotate(-90deg);
+  }
+
+  .expandable--nav .expandable__trigger:hover,
+  .expandable--subnav .expandable__trigger:hover {
+    color: #fff;
+  }
+
+  .expandable--nav.is-active .expandable__trigger:before,
+  .expandable--subnav.is-active .expandable__trigger:before {
+    transform: translate(0, -50%) rotate(0);
+  }
+
+  @media (min-width: $nav-breakpoint) {
+
+    .expandable--subnav .expandable__trigger {
+      display: none;
+    }
+
+    .expandable--subnav .expandable__content {
+      display: flex;
+    }
+
+    .expandable--nav .expandable__trigger {
+      line-height: inherit;
+    }
+
+    .expandable--nav .expandable__trigger:before {
+      content: none;
+    }
+
+    .expandable--nav.is-current .expandable__content {
+      display: flex;
+    }
   }
 
   $includedExpandable: true;

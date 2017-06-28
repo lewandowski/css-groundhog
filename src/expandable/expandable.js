@@ -14,6 +14,11 @@ const init = () => {
       el.setAttribute('data-initialized', true);
     }
   });
+
+  $('.expandable--subnav').forEach(el => {
+    const text = $('.is-current', el)[0].textContent;
+    $('.expandable__trigger', el)[0].textContent = text;
+  });
 };
 
 init();
