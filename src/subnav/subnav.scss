@@ -1,6 +1,7 @@
 @import "../common/variables";
 @import "../common/nav";
 @import "../common/mixins";
+@import "../expandable/expandable";
 
 .subnav {
   overflow: hidden;
@@ -44,6 +45,10 @@
   background-color: $royalblue-500;
 }
 
+.expandable--nav .subnav__link {
+  padding-left: 32px; /* same as expandable trigger padding */
+}
+
 @media (min-width: $nav-breakpoint) {
 
   .subnav {
@@ -63,7 +68,7 @@
     border-bottom: 4px solid $royalblue-300;
   }
 
-  .subnav__link {
+  .subnav .subnav__link {
     height: $subnav-height;
     line-height: $subnav-height;
     padding: 0 1.5rem;
