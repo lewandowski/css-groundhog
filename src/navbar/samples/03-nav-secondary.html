@@ -12,15 +12,40 @@
   </div>
   <nav id="nav-bar-example3" class="nav__bar js-nav-toggle">
     <ul class="nav__list nav__list--primary">
-      <li class="nav__item">
-        <a class="nav__link" href="#">Solution & Pricing</a>
+      <li class="nav__item expandable expandable--nav">
+        <a class="nav__link expandable__trigger" href="#">Solution & Pricing</a>
+        <ul class="nav__list nav__list--secondary expandable__content">
+          <li class="nav__item">
+            <a class="nav__link" href="#">Overview</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Use cases</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Capabilities</a>
+          </li>
+        </ul>
       </li>
-      <li class="nav__item">
-        <a class="nav__link" href="#">Why Dynatrace</a>
+      <li class="nav__item expandable expandable--nav">
+        <a class="nav__link expandable__trigger" href="#">Why Dynatrace</a>
+        <ul class="nav__list nav__list--secondary expandable__content">
+          <li class="nav__item">
+            <a class="nav__link" href="#">Overview</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">AI powered</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Full stack</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Automated</a>
+          </li>
+        </ul>
       </li>
-      <li class="nav__item is-current">
-        <a class="nav__link" href="#">Company</a>
-        <ul class="nav__list nav__list--secondary">
+      <li class="nav__item expandable expandable--nav is-current">
+        <a class="nav__link expandable__trigger" href="#">Company</a>
+        <ul class="nav__list nav__list--secondary expandable__content">
           <li class="nav__item is-current">
             <a class="nav__link" href="#">Overview</a>
           </li>
@@ -30,19 +55,7 @@
           <li class="nav__item">
             <a class="nav__link" href="#">Industry leadership</a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">Innovation</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">Competitive</a>
-          </li>
         </ul>
-      </li>
-      <li class="nav__item">
-        <a class="nav__link" href="#">News & Resources</a>
-      </li>
-      <li class="nav__item">
-        <a class="nav__link" href="#">Support</a>
       </li>
       <li class="nav__item nav__item--right">
         <a class="nav__link" href="#">Login</a>
