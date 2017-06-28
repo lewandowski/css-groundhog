@@ -5,6 +5,335 @@ theme: theme--blue
 type: test-page
 ---
 
+<div class="layout has-islands">
+  <div class="layout__container layout--full">
+    <div class="island">
+      <h2>Navigation (navbar & subnav)</h2>
+      <div class="nav">
+        <a class="nav__brand" href="/">
+          <img class="nav__logo" src="http://assets.dynatrace.com/global/logos/dynatrace-logo.svg" alt="dynatrace logo"/>
+        </a>
+        <div class="nav__buttongroup">
+          <form action="/assets/data/search_results.json" data-resultskey="results" data-maxresults="5" data-titleprop="label" data-urlprop="url">
+            <input type="search" class="inputfield inputfield--search nav__search js-search" name="searchterm"/>
+          </form>
+          <a href="#" class="nav__search__icon"></a>
+          <a class="nav__btn nav__btn--cta" href="https://www.dynatrace.com/trial/">Free trial</a>
+          <button data-target="#nav-bar-example1" id="menu-toggle" class="nav__btn nav__btn--menutoggle">Menu</button>
+        </div>
+        <nav id="nav-bar-example1" class="nav__bar js-nav-toggle">
+          <ul class="nav__list nav__list--primary">
+            <li class="nav__item expandable expandable--nav">
+              <a class="nav__link expandable__trigger" href="#">Solution & Pricing</a>
+              <ul class="nav__list nav__list--secondary expandable__content">
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Overview</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Use cases</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Capabilities</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Technologies</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Services</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Pricing</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__item expandable expandable--nav">
+              <a class="nav__link expandable__trigger" href="#">Why Dynatrace</a>
+              <ul class="nav__list nav__list--secondary expandable__content">
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Overview</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Customer Stories</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Industry leadership</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Innovation</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Competitive</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__item expandable expandable--nav">
+              <a class="nav__link expandable__trigger" href="#">Company</a>
+              <ul class="nav__list nav__list--secondary expandable__content">
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Overview</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Careers</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Partners</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Events</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Leadership</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Locations</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Contact</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__item expandable expandable--nav is-current">
+              <a class="nav__link expandable__trigger" href="#">News & Resources</a>
+              <ul class="nav__list nav__list--secondary expandable__content">
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Overview</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Blog</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Public Relations</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Product news</a>
+                </li>
+                <li class="nav__item is-current">
+                  <a class="nav__link" href="#">Events</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Webinars</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__item expandable expandable--nav">
+              <a class="nav__link expandable__trigger" href="#">Support</a>
+              <ul class="nav__list nav__list--secondary expandable__content">
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Overview</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Documentation</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Forums</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">University</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Downloads</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Tickets</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__item nav__item--right">
+              <a class="nav__link" href="#">SaaS Login</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="subnav">
+        <nav class="subnav__bar expandable expandable--subnav">
+          <a href="#" class="expandable__trigger">Perform 2018</a>
+          <ul class="subnav__list expandable__content">
+            <li class="subnav__item">
+              <a class="subnav__link" href="#">Perform 2018</a>
+            </li>
+            <li class="subnav__item">
+              <a class="subnav__link" href="#">Speakers</a>
+            </li>
+            <li class="subnav__item">
+              <a class="subnav__link" href="#">Schedule</a>
+            </li>
+            <li class="subnav__item is-current">
+              <a class="subnav__link" href="#">Workshops</a>
+            </li>
+            <li class="subnav__item">
+              <a class="subnav__link" href="#">Locations</a>
+            </li>
+            <li class="subnav__item">
+              <a class="subnav__link" href="#">Partners</a>
+            </li>
+            <li class="subnav__item">
+              <a class="subnav__link" href="#">Tickets</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <h2>Navigation (navbar & breadcrumbs)</h2>
+      <div class="nav">
+        <a class="nav__brand" href="/">
+          <img class="nav__logo" src="http://assets.dynatrace.com/global/logos/dynatrace-logo.svg" alt="dynatrace logo"/>
+        </a>
+        <div class="nav__buttongroup">
+          <form action="/assets/data/search_results.json" data-resultskey="results" data-maxresults="5" data-titleprop="label" data-urlprop="url">
+            <input type="search" class="inputfield inputfield--search nav__search js-search" name="searchterm"/>
+          </form>
+          <a href="#" class="nav__search__icon"></a>
+          <a class="nav__btn nav__btn--cta" href="https://www.dynatrace.com/trial/">Free trial</a>
+          <button data-target="#nav-bar-example2" id="menu-toggle" class="nav__btn nav__btn--menutoggle">Menu</button>
+        </div>
+        <nav id="nav-bar-example2" class="nav__bar js-nav-toggle">
+          <ul class="nav__list nav__list--primary">
+            <li class="nav__item expandable expandable--nav">
+              <a class="nav__link expandable__trigger" href="#">Solution & Pricing</a>
+              <ul class="nav__list nav__list--secondary expandable__content">
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Overview</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Use cases</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Capabilities</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Technologies</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Services</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Pricing</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__item expandable expandable--nav">
+              <a class="nav__link expandable__trigger" href="#">Why Dynatrace</a>
+              <ul class="nav__list nav__list--secondary expandable__content">
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Overview</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Customer Stories</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Industry leadership</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Innovation</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Competitive</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__item expandable expandable--nav">
+              <a class="nav__link expandable__trigger" href="#">Company</a>
+              <ul class="nav__list nav__list--secondary expandable__content">
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Overview</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Careers</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Partners</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Events</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Leadership</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Locations</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Contact</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__item expandable expandable--nav">
+              <a class="nav__link expandable__trigger" href="#">News & Resources</a>
+              <ul class="nav__list nav__list--secondary expandable__content">
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Overview</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Blog</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Public Relations</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Product news</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Events</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Webinars</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__item expandable expandable--nav is-current">
+              <a class="nav__link expandable__trigger" href="#">Support</a>
+              <ul class="nav__list nav__list--secondary expandable__content">
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Overview</a>
+                </li>
+                <li class="nav__item is-current">
+                  <a class="nav__link" href="#">Documentation</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Forums</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">University</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Downloads</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Tickets</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__item nav__item--right">
+              <a class="nav__link" href="#">SaaS Login</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="theme--turquoise">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">Support</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">Documentation</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">AppMon</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">AppMon reference</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">AppMon platform overview</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <span class="breadcrumbs__last">Architecture</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="layout is-flex has-islands">
   <div class="layout__container layout--half">
     <div class="island">
@@ -64,7 +393,6 @@ type: test-page
       </table>
     </div>
   </div>
-
 
   <div class="layout__container layout--half">
     <div class="island">
@@ -272,9 +600,6 @@ type: test-page
     </div>
   </div>
 
-
-
-
   <div class="layout__container layout--half">
     <div class="island">
       <h2>Tiles</h2>
@@ -396,5 +721,4 @@ type: test-page
       </form>
     </div>
   </div>
-
 </div>
