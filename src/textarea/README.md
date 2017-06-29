@@ -24,7 +24,7 @@ The Groundhog **textarea** component visually enhances the standard html `<texta
 ```
 3. Add a hint text (optional)
 ```html
-<label for="i0" class="label">Name</label>
-<textarea class="textarea" id="i0" aria-describedby="i0" rows="4" cols="50" ></textarea>
-<p class="hint" id="i0">Hint text</p>
+<label for="i1" class="label">Name</label>
+<textarea class="textarea" id="i1" aria-describedby="i0" rows="4" cols="50" ></textarea>
+<p class="hint" id="i1">Hint text</p>
 ```

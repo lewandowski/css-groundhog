@@ -24,14 +24,17 @@ The Groundhog **input** component visually enhances the standard html `<input>` 
 ```
 3. Add a hint text (optional)
 ```html
-<label for="i0" class="label">Name</label>
-<input type="text" class="inputfield" id="i0"/>
-<p class="hint" id="i0">Hint text</p>
+<label for="i1" class="label">Name</label>
+<input type="text" class="inputfield" id="i1"/>
+<p class="hint" id="i1">Hint text</p>
 ```
 
 ## Available classes for button
 | class name | effect |
 |------------|--------|
 | `.inputfield` | Sets the styling for the input |
+| `.inputfield--date--placeholder` | Sets the styling for date watermarks |
+| `.inputfield--search` | Sets the styling for search inputs |
+| `.hint` | Sets the styling for the hint text |
 | `.label` | Sets the label styling |
 | `.hint` | Sets the styling for the hint text |
