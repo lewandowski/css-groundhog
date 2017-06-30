@@ -104,6 +104,10 @@
   text-decoration: none;
 }
 
+.nav__link--desktop {
+  display: none;
+}
+
 /* Primary nav */
 
 .nav__list--primary > .nav__item:not(.expandable).is-current {
@@ -136,14 +140,8 @@
     padding: 0.85rem 1.5rem;
   }
 
-  /* Home item */
-  .nav__item--home .nav__link {
-    background-image: url(http://assets.dynatrace.com/global/logos/dynatrace-logo.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 70%;
-    width: 10rem;
-    text-indent: -99999px;
+  .nav__link--desktop {
+    display: block;
   }
 
   /* Primary nav */
@@ -284,7 +282,7 @@
   height: $nav-line-height;
   border-radius: 0;
   width: 40px;
-  transition: width 150ms, background-color 150ms;
+  transition: width 150ms, background-color 150ms, background-position 0.25s ease-in-out;
 }
 
 .nav__search__icon {

@@ -111,7 +111,7 @@ $includedExpandable: false !default;
     }
 
     .expandable--nav .expandable__trigger {
-      line-height: inherit;
+      display: none;
     }
 
     .expandable--nav .expandable__trigger:before {

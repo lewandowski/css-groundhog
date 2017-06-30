@@ -24,7 +24,8 @@ type: test-page
         <nav id="nav-bar-example1" class="nav__bar js-nav-toggle">
           <ul class="nav__list nav__list--primary">
             <li class="nav__item expandable expandable--nav">
-              <a class="nav__link expandable__trigger" href="#">Solution & Pricing</a>
+              <a class="nav__link nav__link--mobile expandable__trigger" href="#">Solution & Pricing</a>
+              <a class="nav__link nav__link--desktop" href="#">Solution & Pricing</a>
               <ul class="nav__list nav__list--secondary expandable__content">
                 <li class="nav__item">
                   <a class="nav__link" href="#">Overview</a>
@@ -47,7 +48,8 @@ type: test-page
               </ul>
             </li>
             <li class="nav__item expandable expandable--nav">
-              <a class="nav__link expandable__trigger" href="#">Why Dynatrace</a>
+              <a class="nav__link nav__link--mobile expandable__trigger" href="#">Why Dynatrace</a>
+              <a class="nav__link nav__link--desktop" href="#">Why Dynatrace</a>
               <ul class="nav__list nav__list--secondary expandable__content">
                 <li class="nav__item">
                   <a class="nav__link" href="#">Overview</a>
@@ -67,7 +69,8 @@ type: test-page
               </ul>
             </li>
             <li class="nav__item expandable expandable--nav">
-              <a class="nav__link expandable__trigger" href="#">Company</a>
+              <a class="nav__link nav__link--mobile expandable__trigger" href="#">Company</a>
+              <a class="nav__link nav__link--desktop" href="#">Company</a>
               <ul class="nav__list nav__list--secondary expandable__content">
                 <li class="nav__item">
                   <a class="nav__link" href="#">Overview</a>
@@ -93,7 +96,8 @@ type: test-page
               </ul>
             </li>
             <li class="nav__item expandable expandable--nav is-current">
-              <a class="nav__link expandable__trigger" href="#">News & Resources</a>
+              <a class="nav__link nav__link--mobile expandable__trigger" href="#">News & Resources</a>
+              <a class="nav__link nav__link--desktop" href="#">News & Resources</a>
               <ul class="nav__list nav__list--secondary expandable__content">
                 <li class="nav__item">
                   <a class="nav__link" href="#">Overview</a>
@@ -116,7 +120,8 @@ type: test-page
               </ul>
             </li>
             <li class="nav__item expandable expandable--nav">
-              <a class="nav__link expandable__trigger" href="#">Support</a>
+              <a class="nav__link nav__link--mobile expandable__trigger" href="#">Support</a>
+              <a class="nav__link nav__link--desktop" href="#">Support</a>
               <ul class="nav__list nav__list--secondary expandable__content">
                 <li class="nav__item">
                   <a class="nav__link" href="#">Overview</a>
@@ -188,7 +193,8 @@ type: test-page
         <nav id="nav-bar-example2" class="nav__bar js-nav-toggle">
           <ul class="nav__list nav__list--primary">
             <li class="nav__item expandable expandable--nav">
-              <a class="nav__link expandable__trigger" href="#">Solution & Pricing</a>
+              <a class="nav__link nav__link--mobile expandable__trigger" href="#">Solution & Pricing</a>
+              <a class="nav__link nav__link--desktop" href="#">Solution & Pricing</a>
               <ul class="nav__list nav__list--secondary expandable__content">
                 <li class="nav__item">
                   <a class="nav__link" href="#">Overview</a>
@@ -211,7 +217,8 @@ type: test-page
               </ul>
             </li>
             <li class="nav__item expandable expandable--nav">
-              <a class="nav__link expandable__trigger" href="#">Why Dynatrace</a>
+              <a class="nav__link nav__link--mobile expandable__trigger" href="#">Why Dynatrace</a>
+              <a class="nav__link nav__link--desktop" href="#">Why Dynatrace</a>
               <ul class="nav__list nav__list--secondary expandable__content">
                 <li class="nav__item">
                   <a class="nav__link" href="#">Overview</a>
@@ -231,7 +238,8 @@ type: test-page
               </ul>
             </li>
             <li class="nav__item expandable expandable--nav">
-              <a class="nav__link expandable__trigger" href="#">Company</a>
+              <a class="nav__link nav__link--mobile expandable__trigger" href="#">Company</a>
+              <a class="nav__link nav__link--desktop" href="#">Company</a>
               <ul class="nav__list nav__list--secondary expandable__content">
                 <li class="nav__item">
                   <a class="nav__link" href="#">Overview</a>
@@ -257,7 +265,8 @@ type: test-page
               </ul>
             </li>
             <li class="nav__item expandable expandable--nav">
-              <a class="nav__link expandable__trigger" href="#">News & Resources</a>
+              <a class="nav__link nav__link--mobile expandable__trigger" href="#">News & Resources</a>
+              <a class="nav__link nav__link--desktop" href="#">News & Resources</a>
               <ul class="nav__list nav__list--secondary expandable__content">
                 <li class="nav__item">
                   <a class="nav__link" href="#">Overview</a>
@@ -280,7 +289,8 @@ type: test-page
               </ul>
             </li>
             <li class="nav__item expandable expandable--nav is-current">
-              <a class="nav__link expandable__trigger" href="#">Support</a>
+              <a class="nav__link nav__link--mobile expandable__trigger" href="#">Support</a>
+              <a class="nav__link nav__link--desktop" href="#">Support</a>
               <ul class="nav__list nav__list--secondary expandable__content">
                 <li class="nav__item">
                   <a class="nav__link" href="#">Overview</a>
