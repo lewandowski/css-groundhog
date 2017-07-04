@@ -285,6 +285,10 @@
   transition: width 150ms, background-color 150ms, background-position 0.25s ease-in-out;
 }
 
+.nav__buttongroup .nav__search::placeholder {
+  color: transparent;
+}
+
 .nav__search__icon {
   content: " ";
   display: inline-block;
@@ -324,6 +328,11 @@
   color: #fff;
   outline: none;
   box-shadow: none;
+}
+
+.nav__buttongroup .nav__search:hover::placeholder,
+.nav__buttongroup .nav__search:focus::placeholder {
+  color: $gray-500;
 }
 
 .nav .search__results.is-active {

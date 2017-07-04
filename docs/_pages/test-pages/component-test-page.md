@@ -15,7 +15,7 @@ type: test-page
         </a>
         <div class="nav__buttongroup">
           <form action="/assets/data/search_results.json" data-resultskey="results" data-maxresults="5" data-titleprop="label" data-urlprop="url">
-            <input type="search" class="inputfield inputfield--search nav__search js-search" name="searchterm"/>
+            <input type="search" class="inputfield inputfield--search nav__search js-search" name="searchterm" placeholder="Enter search term"/>
           </form>
           <a href="#" class="nav__search__icon"></a>
           <a class="nav__btn nav__btn--cta" href="https://www.dynatrace.com/trial/">Free trial</a>
@@ -184,7 +184,7 @@ type: test-page
         </a>
         <div class="nav__buttongroup">
           <form action="/assets/data/search_results.json" data-resultskey="results" data-maxresults="5" data-titleprop="label" data-urlprop="url">
-            <input type="search" class="inputfield inputfield--search nav__search js-search" name="searchterm"/>
+            <input type="search" class="inputfield inputfield--search nav__search js-search" name="searchterm" placeholder="Enter search term"/>
           </form>
           <a href="#" class="nav__search__icon"></a>
           <a class="nav__btn nav__btn--cta" href="https://www.dynatrace.com/trial/">Free trial</a>
