@@ -1,5 +1,7 @@
 import $ from '../js-common-components/dollar';
 import { debounce } from '../js-common-components/utils';
+import Promise from 'promise-polyfill';
+import 'whatwg-fetch';
 
 function clearResults(select) {
   while (select.firstChild) {
@@ -17,6 +19,10 @@ function createListElement(result, opts) {
 }
 
 function fetchResults(select, searchData, params, opts) {
+  if (!window.Promise) {
+    window.Promise = Promise;
+  }
+
   fetch(`${searchData}?${params}`)
     .catch(() => '{ results: [] }')
     .then(res => res.json())
