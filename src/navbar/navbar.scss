@@ -14,6 +14,7 @@ $nav-search-width: 200px !default;
 $nav-search-results-width: 276px !default;
 $nav-search-to-icon-breakpoint: 560px !default;
 
+$logo-height: 20px !default;
 
 .nav {
   display: block;
@@ -347,6 +348,7 @@ $nav-search-to-icon-breakpoint: 560px !default;
 
 .nav__logo {
   max-width: 100%;
+  height: $logo-height;
 }
 
 .nav__brand:focus {
