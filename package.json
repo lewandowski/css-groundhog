@@ -1,6 +1,6 @@
 {
   "name": "@dynatrace/groundhog",
-  "version": "0.9.1",
+  "version": "0.10.0",
   "description": "CSS components for Dynatrace",
   "main": "dist/js/main.js",
   "scripts": {
@@ -60,5 +60,9 @@
     "through2": "^2.0.1",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "promise-polyfill": "^6.0.2",
+    "whatwg-fetch": "^2.0.3"
   }
 }
