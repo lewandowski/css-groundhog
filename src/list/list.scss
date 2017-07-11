@@ -25,7 +25,7 @@ ol.list ol ul {
   li:before {
     content: " ";
     display: inline-block;
-    background-color: $unordered-list-theme-color;
+    // background-color: inherit;
     width: 0.5rem;
     height: 0.5rem;
     position: relative;
@@ -86,7 +86,7 @@ ol.list ol ul ul {
 
 @mixin unorderdlisttheme($color) {
 
-  ul.list li:before {
+  .list li:before {
     background-color: $color;
   }
 }
