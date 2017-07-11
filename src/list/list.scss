@@ -25,6 +25,7 @@ ol.list ol ul {
   li:before {
     content: " ";
     display: inline-block;
+    background-color: $unordered-list-theme-color;
     width: 0.5rem;
     height: 0.5rem;
     position: relative;
