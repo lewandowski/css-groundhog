@@ -72,7 +72,7 @@ hideCode: true
       The fastest blog in the world uses Groundhog.
     </p>
     <p>
-      <a href="http://dynatrace.com/blog/" class="btn btn--primary">See it in action</a>
+      <a href="https://www.dynatrace.com/blog/" class="btn btn--primary">See it in action</a>
     </p>
   </div>
 
