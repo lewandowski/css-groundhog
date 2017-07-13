@@ -34,9 +34,9 @@ hideCode: true
   </div>
 
   <div class="island presentation-tile">
-    <h2>help.ruxit.com</h2>
+    <h2>help.dynatrace.com</h2>
     <figure>
-      <img src="/assets/images/showcase/help.ruxit.com.jpg" alt="help.ruxit.com">
+      <img src="/assets/images/showcase/help.dynatrace.com.jpg" alt="help.dynatrace.com">
     </figure>
     <p>
       The original Ruxit (now Dynatrace) help was the project where it all started and
@@ -44,7 +44,7 @@ hideCode: true
       the Help's code in all the CSS of this library.
     </p>
     <p>
-      <a href="https://help.ruxit.com" class="btn btn--primary">See it in action</a>
+      <a href="https://help.dynatrace.com" class="btn btn--primary">See it in action</a>
     </p>
   </div>
 
@@ -64,15 +64,15 @@ hideCode: true
 
 
   <div class="island presentation-tile">
-    <h2>blog.ruxit.com</h2>
+    <h2>dynatrace.com/blog</h2>
     <figure>
-      <img src="/assets/images/showcase/blog.ruxit.com.jpg" alt="blog.ruxit.com">
+      <img src="/assets/images/showcase/blog.dynatrace.com.jpg" alt="dynatrace.com/blog">
     </figure>
     <p>
       The fastest blog in the world uses Groundhog.
     </p>
     <p>
-      <a href="http://blog.ruxit.com" class="btn btn--primary">See it in action</a>
+      <a href="http://dynatrace.com/blog/" class="btn btn--primary">See it in action</a>
     </p>
   </div>
 
