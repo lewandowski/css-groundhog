@@ -23,7 +23,7 @@ hideCode: true
       <img src="/assets/images/layouts/sidebar-and-contents.svg" alt="Sidebar and Contents">
     </figure>
     <p>
-      Sidebar and contents like you see it on the compoennts page. Sidebar hides on smaller screens.
+      Sidebar and contents like you see it on the components page. Sidebar hides on smaller screens.
     </p>
     <p>
       <a href="/doc/layouts/sidebar-and-content/" class="btn btn--primary">See it in action</a>
