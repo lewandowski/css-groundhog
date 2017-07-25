@@ -12,6 +12,16 @@ $includeLabel: false !default;
     padding-bottom: 6px;
   }
 
+  .label--progressbar {
+    float: right;
+    margin-bottom: -10px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: right;
+    line-height: 1rem;
+    color: $gray-900;
+  }
+
   $includeLabel: true;
 
 }
