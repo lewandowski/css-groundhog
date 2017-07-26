@@ -21,7 +21,7 @@ type: test-page
           <a class="nav__btn nav__btn--cta" href="https://www.dynatrace.com/trial/">Free trial</a>
           <button data-target="#nav-bar-example1" class="nav__btn nav__btn--menutoggle">Menu</button>
         </div>
-        <nav id="nav-bar-example1" class="nav__bar js-nav-toggle">
+        <nav id="nav-bar-example1" class="nav__bar">
           <ul class="nav__list nav__list--primary">
             <li class="nav__item expandable expandable--nav">
               <a class="nav__link nav__link--mobile expandable__trigger" href="#">Solution & Pricing</a>
@@ -190,7 +190,7 @@ type: test-page
           <a class="nav__btn nav__btn--cta" href="https://www.dynatrace.com/trial/">Free trial</a>
           <button data-target="#nav-bar-example2" class="nav__btn nav__btn--menutoggle">Menu</button>
         </div>
-        <nav id="nav-bar-example2" class="nav__bar js-nav-toggle">
+        <nav id="nav-bar-example2" class="nav__bar">
           <ul class="nav__list nav__list--primary">
             <li class="nav__item expandable expandable--nav">
               <a class="nav__link nav__link--mobile expandable__trigger" href="#">Solution & Pricing</a>
