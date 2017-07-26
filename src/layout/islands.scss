@@ -28,5 +28,29 @@
 
 .layout.has-islands {
   padding: 12px;
-  //background-color: $gray160; TODO: Review
+}
+
+.island--connected.has--nav {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  max-width: 80pc;
+}
+
+@media(min-width: 768px) {
+
+  .island--connected.has--nav {
+    flex-direction: row;
+  }
+}
+
+.island--connected.has--nav .main {
+  width: 70%;
+  flex: 0 0 70%;
+}
+
+.island--connected.has--nav .nav--context {
+  width: 30%;
+  flex: 0 0 30%;
+  margin: 0;
 }

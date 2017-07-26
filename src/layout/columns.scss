@@ -1,0 +1,19 @@
+@import "../common/variables";
+
+.has-columns {
+  justify-content: space-between;
+
+  .column--half {
+    flex: 0 0 50%;
+    max-width: calc(50% - 24px);
+  }
+
+  .column--1-of-3 {
+    flex: 0 0 33.3%;
+    max-width: calc(33.3% - 24px);
+  }
+  .column--2-of-3 {
+    flex-basis: 66.6%;
+    max-width: calc(66.6% - 24px);
+  }
+}
