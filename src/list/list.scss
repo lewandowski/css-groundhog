@@ -86,7 +86,7 @@ ol.list ol ul ul {
 
 @mixin unorderdlisttheme($color) {
 
-  li:before {
+  .list li:before {
     background-color: $color;
   }
 }

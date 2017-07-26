@@ -50,7 +50,7 @@ The Groundhog navbar appears in two versions:
 
 5. Add the search functionality and update the link to the search page. (Optional)
 ```html
-<form action="/assets/data/search_results.json">
+<form action="/search/">
   <input type="search" class="inputfield inputfield--search nav__search js-search" name="searchterm"/>
 </form>
 ```
@@ -60,11 +60,14 @@ The Groundhog navbar appears in two versions:
 
 6. Update `<form>` action and attributes. (Optional)
   ```html
-  <form action="/assets/data/search_results.json" data-titleprop="label"
+  <form action="/search/" data-results="/assets/data/search_results.json" data-titleprop="label"
     data-urlprop="path" data-maxresults="5" data-resultskey="results">
   ```
-  * `action="/assets/data/search_results.json"`
+  * `action="/search/"`
   set the form's action.
+
+  * `data-results="/assets/data/search_results.json"`
+  sets the url for fetching the search results. (Optional, default: forms action attribute)
 
   * `data-resultskey="results"`
   sets the key for the list of search results. (Optional, default: results)
