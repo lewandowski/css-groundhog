@@ -1,34 +1,17 @@
 @import "../common/variables";
+@import "../common/nav";
 @import "../common/mixins";
-
-$nav-link-color: $gray-100;
-$nav-primary-background: $gray-860;
-$nav-secondary-background: $gray-900;
-
-$nav-height: 2.75rem;
-$nav-height-secondary: 1.5rem;
-
-$nav-breakpoint: 980px !default;
-
-$nav-search-width: 200px !default;
-$nav-search-results-width: 276px !default;
-$nav-search-to-icon-breakpoint: 560px !default;
-
-$logo-height: 20px !default;
+@import "../expandable/expandable";
 
 .nav {
   display: block;
-  height: $nav-height;
+  height: $nav-line-height;
   background-color: $nav-primary-background;
   position: relative;
 }
 
-.nav.has-no-secondary {
-  height: $nav-height;
-}
-
 /*
-* nav bars
+* Nav bars
 */
 
 .nav__bar {
@@ -38,19 +21,25 @@ $logo-height: 20px !default;
   overflow: hidden;
   top: 0;
   right: 0;
-  padding-top: $nav-height;
+  padding-top: $nav-line-height;
   background-color: $nav-primary-background;
   transition: width 125ms ease-out;
 }
 
 .nav__bar.is-active {
-  width: 15rem;
+  width: 100%;
 }
 
 @media (min-width: $nav-breakpoint) {
 
   .nav {
-    height: auto;
+    height: $nav-height;
+    background-color: $nav-secondary-background;
+  }
+
+  .nav.has-no-secondary {
+    height: $nav-line-height;
+    background-color: $nav-primary-background;
   }
 
   .nav__bar {
@@ -59,7 +48,6 @@ $logo-height: 20px !default;
     width: auto;
     padding-top: 0;
     transition: none;
-    height: $nav-height + $nav-height-secondary;
   }
 
   .nav__bar.is-active {
@@ -68,7 +56,23 @@ $logo-height: 20px !default;
 }
 
 /*
-* nav lists
+* Brand logo
+*/
+
+.nav__brand {
+  position: absolute;
+  z-index: 12;
+  top: 0.7rem;
+  left: 0.75rem;
+  width: 7rem;
+}
+
+.nav__logo {
+  max-width: 100%;
+}
+
+/*
+* Nav lists & items
 */
 
 .nav__list {
@@ -77,64 +81,10 @@ $logo-height: 20px !default;
   margin: 0;
 }
 
-.nav__list + .nav__list {
-  border-top: 1px solid $gray-300;
-}
-
-@media (min-width: $nav-breakpoint) {
-
-  .nav__list {
-    display: flex;
-  }
-
-  .nav__list--primary {
-    order: 2;
-    justify-content: flex-start;
-    align-items: center;
-    height: $nav-height;
-    padding-left: 8.5rem;
-    position: absolute;
-    top: $nav-height-secondary;
-  }
-
-  .nav__list--secondary {
-    order: 1;
-    border-top: 0;
-    background-color: $nav-secondary-background;
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 100%;
-    min-width: 100%;
-    height: $nav-height-secondary;
-    justify-content: flex-end;
-    align-items: center;
-    position: absolute;
-    top: 0;
-  }
-
-  .nav__list + .nav__list {
-    border-top: 0;
-  }
-}
-
-/*
-* nav list item
-*/
-
 .nav__item {
   margin: 0;
+  white-space: nowrap;
 }
-
-@media (min-width: $nav-breakpoint) {
-
-  .nav__item {
-    line-height: 1em;
-  }
-}
-
-/*
-* navigation link item
-*/
 
 .nav__link,
 .nav__link:visited {
@@ -145,32 +95,129 @@ $logo-height: 20px !default;
   padding: 0.5rem 1rem;
 }
 
-.nav__link:hover,
-.nav__link:focus {
+.nav__link.expandable__trigger {
+  padding-left: 32px; /* see expandable.scss */
+}
+
+.nav__link:hover {
   color: #fff;
-  background-color: $gray-700;
   text-decoration: none;
 }
 
-.nav__link--secondary {
-  font-size: 0.8rem;
+.nav__link--desktop {
+  display: none;
+}
+
+.nav__list--primary > .nav__item:not(.expandable).is-current,
+.nav__list--secondary > .nav__item.is-current {
+  background-color: $nav-current-mobile;
+}
+
+.nav__list--secondary .nav__link {
+  padding-left: 50px;
 }
 
 @media (min-width: $nav-breakpoint) {
 
-  .nav__link {
-    padding: 0.85rem 0.5rem;
+  .nav__list {
+    display: flex;
   }
 
-  .nav__link--secondary {
-    padding: 0.25rem 0.5rem;
-    display: inline-block;
+  .nav__item,
+  .nav__link {
+    line-height: 1em;
+    height: $nav-line-height;
+  }
+
+  .nav__link {
+    padding: 0.85rem 1.5rem;
+  }
+
+  .nav__link--desktop {
+    display: block;
+  }
+
+  .nav__link--mobile {
+    display: none;
+  }
+
+  /* Primary nav */
+
+  .nav__list--primary {
+    justify-content: flex-start;
+    align-items: center;
+    height: $nav-line-height;
+    padding-left: 8.5rem;
+  }
+
+  .nav__list--primary > .nav__item {
+    position: static;
+  }
+
+  .nav__list--primary > .nav__item.is-current,
+  .nav__list--primary > .nav__item:not(.expandable).is-current {
+    background-color: $nav-primary-current;
+  }
+
+  .nav__list--primary > .nav__item .nav__link {
+    padding-left: 1.5rem;
+  }
+
+  .nav__list--primary > .nav__item .nav__link:hover {
+    background-color: $nav-primary-current;
+  }
+
+  /* Secondary nav */
+
+  .nav__list--secondary {
+    display: none;
+    position: absolute;
+    left: 0;
+
+    .nav__item.is-current .nav__link {
+      border-bottom: 4px solid $turquoise-500;
+      background-color: $nav-secondary-background;
+    }
+
+    .nav__link:hover {
+      border-bottom: 2px solid $turquoise-500;
+    }
+  }
+
+  /* pull nav item right */
+  .nav__list > .nav__item--right {
+    margin-left: auto;
+
+    & ~ .nav__item--right {
+      margin-left: 0;
+    }
+  }
+
+  .is-current > .nav__list--secondary {
+    display: flex;
   }
 }
 
+/* nav modifier */
+
+.nav__bar.is-active .nav__list {
+  background-color: $nav-primary-current;
+}
+
 /*
-* Toggle for mobile nav
+* Nav buttongroup:
+* Search, CTA, Menu toggle
 */
+
+.nav__buttongroup {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: $nav-line-height;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 12;
+}
 
 .nav__btn,
 .nav__btn:visited {
@@ -182,28 +229,41 @@ $logo-height: 20px !default;
   border: 0;
   outline: 0;
   cursor: pointer;
-  line-height: $nav-height;
-  height: $nav-height;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  line-height: $nav-line-height;
+  height: $nav-line-height;
+  padding: 0 1rem;
   vertical-align: top;
   display: inline-block;
 }
 
-.nav__btn:hover,
-.nav__btn:focus {
+.nav__btn:hover {
   color: #fff;
-  background-color: $gray-700;
+  background-color: $nav-primary-hover;
   text-decoration: none;
 }
 
 .nav__btn--cta {
+  display: none;
   background-color: $green-500;
+  white-space: nowrap;
 }
 
-.nav__btn--cta:hover,
-.nav__btn--cta:focus {
+.nav__btn--cta:hover {
   background-color: $green-600;
+}
+
+.nav__btn:focus,
+.nav__btn--cta:focus,
+.nav__link:focus {
+
+  @include focusStyle();
+}
+
+@media (min-width: $screen-sm) {
+
+  .nav__btn--cta {
+    display: inline-block;
+  }
 }
 
 @media (min-width: $nav-breakpoint) {
@@ -214,33 +274,26 @@ $logo-height: 20px !default;
 }
 
 /*
-* nav right button group
+* Search
 */
 
-.nav__buttongroup {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 12;
-
-  form {
-    display: inline-block;
-  }
+.nav__buttongroup form {
+  display: none;
 }
 
-/*
-* search
-*/
-
 .nav__buttongroup .nav__search {
-  display: none;
   position: relative;
   background-color: transparent;
+  color: transparent;
   border: none;
-  height: $nav-height;
+  height: $nav-line-height;
   border-radius: 0;
-  color: #fff;
-  width: $nav-search-width;
+  width: 40px;
+  transition: width 150ms, background-color 150ms, background-position 0.25s ease-in-out;
+}
+
+.nav__buttongroup .nav__search::placeholder {
+  color: transparent;
 }
 
 .nav__search__icon {
@@ -256,13 +309,12 @@ $logo-height: 20px !default;
 }
 
 .nav__search__icon:hover {
-  background-color: $gray-700;
+  background-color: $nav-primary-hover;
 }
-
 
 @media (min-width: $nav-search-to-icon-breakpoint) {
 
-  .nav__buttongroup .nav__search {
+  .nav__buttongroup form {
     display: inline-block;
   }
 
@@ -272,15 +324,23 @@ $logo-height: 20px !default;
 }
 
 .nav__buttongroup .nav__search:hover {
-  background-color: $gray-700;
+  background-color: $nav-secondary-hover;
+  width: $nav-search-width;
+  color: #fff;
 }
 
 .nav__buttongroup .nav__search:focus {
-  background-color: $gray-700;
+  background-color: $nav-secondary-hover;
+  width: $nav-search-width;
+  color: #fff;
   outline: none;
   box-shadow: none;
 }
 
+.nav__buttongroup .nav__search:hover::placeholder,
+.nav__buttongroup .nav__search:focus::placeholder {
+  color: $gray-500;
+}
 
 .nav .search__results {
   display: none;
@@ -291,7 +351,7 @@ $logo-height: 20px !default;
   position: relative;
   margin: 0;
   padding: 12px 0 12px 0;
-  background-color: $gray-700;
+  background-color: $nav-secondary-hover;
   list-style: none;
   line-height: 32px;
   max-width: $nav-search-width;
@@ -312,80 +372,4 @@ $logo-height: 20px !default;
 .nav .search__results a:focus {
   outline: none;
   background-color: $gray-640;
-}
-
-.nav__cta {
-  height: $nav-height;
-  line-height: $nav-height;
-  padding: 0 1rem;
-  vertical-align: top;
-  border-radius: 0;
-}
-
-.nav__cta {
-  color: #fff;
-}
-
-@media (min-width: $nav-breakpoint) {
-
-  .nav__buttongroup {
-    margin-top: $nav-height-secondary;
-  }
-}
-
-
-/*
-* Brand logo
-*/
-
-.nav__brand {
-  position: absolute;
-  z-index: 12;
-  top: 0.7rem;
-  left: 0.75rem;
-  width: 7rem;
-}
-
-.nav__logo {
-  max-width: 100%;
-  height: $logo-height;
-}
-
-.nav__brand:focus {
-  background-color: $gray-700;
-}
-
-@media (min-width: $nav-breakpoint) {
-
-  .nav__brand {
-    padding-right: 0;
-    top: 2.25rem;
-  }
-
-  .has-no-secondary {
-
-    > .nav__bar {
-      height: 2.75rem;
-    }
-
-    > .nav__brand {
-      top: 0.7rem;
-    }
-
-    .nav__list {
-      top: 0;
-    }
-  }
-}
-
-/** no-secondary-fix **/
-
-@media (min-width: $nav-breakpoint) {
-
-  .has-no-secondary > {
-
-    .nav__buttongroup {
-      margin-top: 0;
-    }
-  }
 }

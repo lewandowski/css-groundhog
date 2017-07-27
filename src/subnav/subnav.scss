@@ -1,0 +1,85 @@
+@import "../common/variables";
+@import "../common/nav";
+@import "../common/mixins";
+@import "../expandable/expandable";
+
+.subnav {
+  overflow: hidden;
+  z-index: 8;
+}
+
+.subnav__bar {
+  display: block;
+  width: 100%;
+  background-color: $royalblue-700;
+}
+
+.subnav__list {
+
+  @include list-reset();
+  margin: 0;
+}
+
+.subnav__item {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.subnav__item.is-current {
+  background-color: $royalblue-600;
+}
+
+.subnav__link,
+.subnav__link:visited {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  padding: 0.5rem 1.5rem;
+}
+
+.subnav__link:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: $royalblue-500;
+}
+
+.subnav__link:focus {
+
+  @include focusStyle();
+}
+
+.expandable--nav .subnav__link {
+  padding-left: 32px; /* same as expandable trigger padding */
+}
+
+@media (min-width: $nav-breakpoint) {
+
+  .subnav {
+    height: $subnav-height;
+  }
+
+  .subnav__list {
+    display: flex;
+
+  }
+
+  .subnav__item.is-current {
+    background-color: transparent;
+  }
+
+  .subnav__item.is-current .subnav__link {
+    border-bottom: 4px solid $royalblue-300;
+  }
+
+  .subnav .subnav__link {
+    height: $subnav-height;
+    line-height: $subnav-height;
+    padding: 0 1.5rem;
+  }
+
+  .subnav__link:hover {
+    background-color: transparent;
+    border-bottom: 2px solid $royalblue-300;
+  }
+}
