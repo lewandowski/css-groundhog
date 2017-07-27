@@ -38,11 +38,14 @@
   padding: 0.5rem 1.5rem;
 }
 
-.subnav__link:hover,
-.subnav__link:focus {
+.subnav__link:hover {
   color: #fff;
   text-decoration: none;
   background-color: $royalblue-500;
+}
+
+.subnav__link:focus {
+  @include focusStyle();
 }
 
 .expandable--nav .subnav__link {
@@ -74,8 +77,7 @@
     padding: 0 1.5rem;
   }
 
-  .subnav__link:hover,
-  .subnav__link:focus {
+  .subnav__link:hover {
     background-color: transparent;
     border-bottom: 2px solid $royalblue-300;
   }
