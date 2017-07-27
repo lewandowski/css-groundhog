@@ -34,13 +34,9 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 80pc;
+  max-width: 80rem;
 
-  .content--aside {
-    order: 0;
-  }
-
-  .content--aside.on-top {
+  .content--aside--top {
     order: -1;
   }
 }
@@ -56,7 +52,7 @@
     }
 
     .content--aside,
-    .content--aside.on-top {
+    .content--aside--top {
       width: 30%;
       flex: 0 0 30%;
       margin-left: 2rem;

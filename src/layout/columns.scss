@@ -1,35 +1,20 @@
 @import "../common/variables";
+@import "../common/mixins";
 
 .section {
   display: block;
-  padding: 1.5rem;
-
-  .column--half,
-  .column--1-of-3,
-  .column--2-of-3 {
-    max-width: 100%;
-  }
+  margin-top: 1.5rem;
 }
 
 @media(min-width: $screen-md) {
 
   .section {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 
-    .column--half {
-      flex: 0 0 50%;
-      max-width: calc(50% - 24px);
-    }
-
-    .column--1-of-3 {
-      flex: 0 0 33.3%;
-      max-width: calc(33.3% - 24px);
-    }
-
-    .column--2-of-3 {
-      flex-basis: 66.6%;
-      max-width: calc(66.6% - 24px);
-    }
+    @include columnWidth(2);
+    @include columnWidth(3);
+    @include columnWidth(4);
   }
 }
