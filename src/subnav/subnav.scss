@@ -45,6 +45,7 @@
 }
 
 .subnav__link:focus {
+
   @include focusStyle();
 }
 
