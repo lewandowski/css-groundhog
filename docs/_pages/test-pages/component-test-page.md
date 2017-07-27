@@ -726,7 +726,7 @@ type: test-page
             <textarea cols="30" rows="5" class="textarea" placeholder="Textarea text" id="i8"></textarea>
           </field>
           <button role="button" type="button" class="btn btn--primary">Submit</button>
-          <button role="button" type="button" class="btn btn--secondary">Cancle</button>
+          <button role="button" type="button" class="btn btn--secondary">Cancel</button>
         </fieldset>
       </form>
     </div>

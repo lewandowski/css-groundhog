@@ -1,6 +1,7 @@
 @import "../common/variables";
 @import "../common/nav";
 @import "../common/mixins";
+@import "../expandable/expandable";
 
 .nav {
   display: block;
@@ -70,10 +71,6 @@
   max-width: 100%;
 }
 
-.nav__brand:focus {
-  background-color: $gray-700;
-}
-
 /*
 * Nav lists & items
 */
@@ -98,8 +95,11 @@
   padding: 0.5rem 1rem;
 }
 
-.nav__link:hover,
-.nav__link:focus {
+.nav__link.expandable__trigger {
+  padding-left: 32px; /* see expandable.scss */
+}
+
+.nav__link:hover {
   color: #fff;
   text-decoration: none;
 }
@@ -108,14 +108,7 @@
   display: none;
 }
 
-/* Primary nav */
-
-.nav__list--primary > .nav__item:not(.expandable).is-current {
-  background-color: $nav-current-mobile;
-}
-
-/* Secondary nav */
-
+.nav__list--primary > .nav__item:not(.expandable).is-current,
 .nav__list--secondary > .nav__item.is-current {
   background-color: $nav-current-mobile;
 }
@@ -177,6 +170,7 @@
   /* Secondary nav */
 
   .nav__list--secondary {
+    display: none;
     position: absolute;
     left: 0;
 
@@ -197,6 +191,10 @@
     & ~ .nav__item--right {
       margin-left: 0;
     }
+  }
+
+  .is-current > .nav__list--secondary {
+    display: flex;
   }
 }
 
@@ -238,8 +236,7 @@
   display: inline-block;
 }
 
-.nav__btn:hover,
-.nav__btn:focus {
+.nav__btn:hover {
   color: #fff;
   background-color: $nav-primary-hover;
   text-decoration: none;
@@ -251,9 +248,15 @@
   white-space: nowrap;
 }
 
-.nav__btn--cta:hover,
-.nav__btn--cta:focus {
+.nav__btn--cta:hover {
   background-color: $green-600;
+}
+
+.nav__btn:focus,
+.nav__btn--cta:focus,
+.nav__link:focus {
+
+  @include focusStyle();
 }
 
 @media (min-width: $screen-sm) {
