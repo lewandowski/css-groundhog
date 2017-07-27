@@ -1,3 +1,5 @@
+$columngap: 24px;
+
 @mixin list-reset() {
 
   list-style: none;
@@ -22,4 +24,15 @@
 @mixin focusStyle() {
   outline: none;
   box-shadow: 0 0 0 2px $focuscolor;
+}
+
+@mixin columnWidth($noOfColumns) {
+
+  @for $i from 1 through $noOfColumns {
+
+    .column--#{$i}-of-#{$noOfColumns} {
+      max-width: calc(#{100% / $noOfColumns * $i} - #{$columngap});
+      flex: 1 0 calc(#{100% / $noOfColumns * $i} - #{$columngap});
+    }
+  }
 }

@@ -1,0 +1,20 @@
+@import "../common/variables";
+@import "../common/mixins";
+
+.section {
+  display: block;
+  margin-top: 1.5rem;
+}
+
+@media(min-width: $screen-md) {
+
+  .section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include columnWidth(2);
+    @include columnWidth(3);
+    @include columnWidth(4);
+  }
+}
