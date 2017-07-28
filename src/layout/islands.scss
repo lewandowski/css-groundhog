@@ -8,6 +8,7 @@
   flex-shrink: 1;
   flex-basis: 400px;
   border-radius: 3px;
+  overflow: auto;
 }
 
 @media(min-width: 700px) {
