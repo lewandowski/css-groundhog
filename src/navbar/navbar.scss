@@ -329,7 +329,8 @@
   color: #fff;
 }
 
-.nav__buttongroup .nav__search:focus {
+.nav__buttongroup .nav__search:focus,
+.nav__buttongroup .nav__search.has-focus {
   background-color: $nav-secondary-hover;
   width: $nav-search-width;
   color: #fff;
@@ -342,11 +343,13 @@
   color: $gray-500;
 }
 
-.nav .search__results {
+.nav__search:not(.has-focus) ~ ul {
   display: none;
 }
 
-.nav .search__results.has-focus {
+
+
+.nav__search ~ ul {
   display: block;
   position: relative;
   margin: 0;
