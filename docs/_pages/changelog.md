@@ -1,10 +1,10 @@
 ---
 title: Changelog
-layout: islands.hbs
- hideCode: true
+layout: single-island.hbs
+hideCode: true
 ---
-# Changelog
 
+# Changelog
 
 
 <a name="2.0.0"></a>
@@ -33,7 +33,6 @@ layout: islands.hbs
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/Dynatrace/css-groundhog/compare/v0.10.1...v1.0.0) (2017-07-14)
 
-* version++
 
 <a name="0.10.1"></a>
 ## [0.10.1](https://github.com/Dynatrace/css-groundhog/compare/v0.10.0...v0.10.1) (2017-07-11)
