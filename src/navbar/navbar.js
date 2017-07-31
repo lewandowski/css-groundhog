@@ -3,7 +3,6 @@ import { debounce } from '../js-common-components/utils';
 import Promise from 'promise-polyfill';
 import 'whatwg-fetch';
 
-let form;
 const inputField = document.querySelector('.inputfield--search');
 
 function clearResults(select) {
@@ -45,12 +44,12 @@ function fetchResults(select, searchData, params, opts) {
     });
 }
 
-const getfunc = (keyCode, indexOfSelected, lenght) => {
+const getfunc = (keyCode, indexOfSelected, length) => {
   switch (keyCode) {
     case 38:
-      return (((indexOfSelected - 1) % lenght) + lenght) % lenght;
+      return (((indexOfSelected - 1) % length) + length) % length;
     default:
-      return (((indexOfSelected + 1) % lenght) + lenght) % lenght;
+      return (((indexOfSelected + 1) % length) + length) % length;
   }
 };
 
@@ -83,7 +82,7 @@ const handleKeydown = (ev) => {
 
 const initData = () => {
   $('.js-search:not([action=""])').forEach(el => {
-    form = el.parentNode;
+    const form = el.parentNode;
     const ul = form.appendChild(document.createElement('ul'));
     ul.addEventListener('click', (e) => e.stopPropagation());
     ul.classList.add('search__results');
@@ -97,15 +96,15 @@ const initData = () => {
     };
 
     inputField.addEventListener('keyup', debounce(() => {
-      inputField.classList.add('has-focus');
       const params = $('input', form)
         .map(input => `${input.name}=${input.value}`)
         .join('&');
       fetchResults(ul, searchData, params, opts);
+      inputField.classList.add('has-focus');
     }, 150));
 
     document.body.addEventListener('click', () => {
-      inputField.classList.add('has-focus');
+      inputField.classList.remove('has-focus');
     });
 
     document.body.addEventListener('keydown', handleKeydown);
