@@ -270,65 +270,14 @@ gulp.task('dev', (done) => {
   gulp.watch([scriptFiles], ['scripts:lint', 'scripts']);
   gulp.watch(['src/**/samples/**/*.html', 'src/**/README.md', 'docs/**/*'], ['doc']);
   runSequence('copy-assets', 'icons', 'styles:lint', 'styles',
-    'scripts:lint', 'scripts', 'changelog', 'doc', 'serve', done);
+    'scripts:lint', 'scripts', 'doc', 'serve', done);
 });
 
 gulp.task('build', (done) => {
   runSequence('copy-assets', 'icons',
-    ['styles:lint', 'scripts:lint'], ['styles', 'scripts'], 'changelog', 'doc', done);
+    ['styles:lint', 'scripts:lint'], ['styles', 'scripts'], 'doc', done);
 });
 
 gulp.task('publish', (done) => {
   runSequence('replace-asset-urls', 'replace-asset-urls-in-html', 'package', 'upload-s3', done);
-});
-
-const addChangelogPage = () => {
-  return through(
-    {
-      objectMode: true,
-      allowHalfOpen: false,
-    },
-    function (file, enc, cb) {
-      cb(null, file); // noop
-    },
-    function (cb) {
-      const f = new Vinyl({
-        cwd: '.',
-        base: './docs/_pages/',
-        contents: new Buffer(''),
-        path: './docs/_pages/changelog.md',
-      })
-      this.push(f);
-      cb(); // flush;
-    }
-  );
-};
-
-const prependfrontmatter = () => {
-  return through(
-    {
-      objectMode: true,
-      allowHalfOpen: false,
-    },
-    function (file, enc, cb) {
-      const content = file.contents;
-      const frontmatter = '---\ntitle: Changelog\nlayout: islands.hbs\n hideCode: true\n---\n# Changelog\n\n';
-      file.contents = new Buffer(`${frontmatter}\n\n${content}`);
-      cb(null, file); // noop
-    },
-    function (cb) {
-      cb(); // flush;
-    }
-  );
-};
-
-gulp.task('changelog', () => {
-  return gulp.src('docs/_pages/changelog1.md', { read: false })
-    .pipe(addChangelogPage())
-    .pipe(changelog({
-      preset: 'angular',
-      releaseCount: 0,
-    }))
-    .pipe(prependfrontmatter())
-  .pipe(gulp.dest('docs/_pages/'));
 });
