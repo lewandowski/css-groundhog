@@ -23,7 +23,7 @@ hideCode: true
       <img src="/assets/images/layouts/sidebar-and-contents.svg" alt="Sidebar and Contents">
     </figure>
     <p>
-      Sidebar and contents like you see it on the compoennts page. Sidebar hides on smaller screens.
+      Sidebar and contents like you see it on the components page. Sidebar hides on smaller screens.
     </p>
     <p>
       <a href="/doc/layouts/sidebar-and-content/" class="btn btn--primary">See it in action</a>
@@ -56,4 +56,41 @@ hideCode: true
       <a href="/doc/layouts/nested-islands" class="btn btn--primary">See it in action</a>
     </p>
   </div>
+  <div class="island">
+    <h2>Main and aside</h2>
+    <figure>
+      <img src="/assets/images/layouts/main-aside.svg" alt="Columns">
+    </figure>
+    <p>
+      This layout allows to separate the content in main and aside.
+    </p>
+    <p>
+      <a href="/doc/layouts/main-aside" class="btn btn--primary">See it in action</a>
+    </p>
+  </div>
+  <div class="island">
+    <h2>Sidebar, main and aside</h2>
+    <figure>
+      <img src="/assets/images/layouts/sidebar-main-aside.svg" alt="Columns">
+    </figure>
+    <p>
+      This layout allows to separate the content in main and aside, additionally it provides a sidebar.
+    </p>
+    <p>
+      <a href="/doc/layouts/sidebar-main-aside" class="btn btn--primary">See it in action</a>
+    </p>
+  </div>
+  <div class="island">
+    <h2>Content layout - Columns</h2>
+    <figure>
+      <img src="/assets/images/layouts/columns.svg" alt="Columns">
+    </figure>
+    <p>
+      Columns allow to structure the content in two or 3 columns.
+    </p>
+    <p>
+      <a href="/doc/layouts/columns" class="btn btn--primary">See it in action</a>
+    </p>
+  </div>
+
 </div>

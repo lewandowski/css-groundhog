@@ -8,6 +8,7 @@
   flex-shrink: 1;
   flex-basis: 400px;
   border-radius: 3px;
+  overflow: auto;
 }
 
 @media(min-width: 700px) {
@@ -28,5 +29,35 @@
 
 .layout.has-islands {
   padding: 12px;
-  //background-color: $gray160; TODO: Review
+}
+
+.island .content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 80rem;
+
+  .content--aside--top {
+    order: -1;
+  }
+}
+
+@media(min-width: 768px) {
+
+  .island .content {
+    flex-direction: row;
+
+    .content--main {
+      width: 70%;
+      flex: 0 0 70%;
+    }
+
+    .content--aside,
+    .content--aside--top {
+      width: 30%;
+      flex: 0 0 30%;
+      margin-left: 2rem;
+      order: 0;
+    }
+  }
 }

@@ -1,5 +1,4 @@
 @import "../common/variables";
-$breadcrumb-border-color: $turquoise-500;
 $breadcrumb-link-color: $turquoise-600;
 $breadcrumb-active-color: $turquoise-700;
 
@@ -66,7 +65,7 @@ $breadcrumb-active-color: $turquoise-700;
 
 .breadcrumbs__link:before {
   right: -3px;
-  border-left-color: $breadcrumb-border-color;
+  border-left-color: #fff;
   z-index: 2;
 }
 
@@ -82,7 +81,7 @@ $breadcrumb-active-color: $turquoise-700;
   border-left-color: $breadcrumb-active-color;
 }
 
-@mixin breadcrumb-theme($link-color, $border-color, $active-color) {
+@mixin breadcrumb-theme($link-color, $active-color) {
 
   .breadcrumbs {
     background-color: $active-color;
@@ -93,13 +92,8 @@ $breadcrumb-active-color: $turquoise-700;
     background-color: $link-color;
   }
 
-  .breadcrumbs__link:before,
   .breadcrumbs__link:after {
     border-left-color: $link-color;
-  }
-
-  .breadcrumbs__link:before {
-    border-left-color: $border-color;
   }
 
   .breadcrumbs__link:focus,
@@ -115,20 +109,20 @@ $breadcrumb-active-color: $turquoise-700;
 
 .theme--blue {
 
-  @include breadcrumb-theme($blue-700, $blue-600, $blue-800);
+  @include breadcrumb-theme($blue-700, $blue-800);
 }
 
 .theme--purple {
 
-  @include breadcrumb-theme($purple-700, $purple-600, $purple-800);
+  @include breadcrumb-theme($purple-700, $purple-800);
 }
 
 .theme--royalblue {
 
-  @include breadcrumb-theme($royalblue-600, $royalblue-500, $royalblue-700);
+  @include breadcrumb-theme($royalblue-600, $royalblue-700);
 }
 
 .theme--green {
 
-  @include breadcrumb-theme($green-600, $green-500, $green-700);
+  @include breadcrumb-theme($green-600, $green-700);
 }
