@@ -15,6 +15,7 @@ hideCode: true
 * **sidebar:** ellipsis for items longer than the area ([fe5de6d](https://github.com/Dynatrace/css-groundhog/commit/fe5de6d))
 
 ### Features
+* **navbar:** keyboard support for searchfield ([59c40b8](https://github.com/Dynatrace/css-groundhog/commit/59c40b8))
 
 #### Updated components
 
