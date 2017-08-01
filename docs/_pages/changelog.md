@@ -15,12 +15,13 @@ hideCode: true
 * **sidebar:** ellipsis for items longer than the area ([fe5de6d](https://github.com/Dynatrace/css-groundhog/commit/fe5de6d))
 
 ### Features
-* **navbar:** keyboard support for searchfield ([59c40b8](https://github.com/Dynatrace/css-groundhog/commit/59c40b8))
+
 
 #### Updated components
 
 * **navbar:** new secondary nav styles for desktop and mobile ([52a9372](https://github.com/Dynatrace/css-groundhog/commit/52a9372))
 * **navbar:** new two bars layout, new position for buttongroup items, new examples ([8c17408](https://github.com/Dynatrace/css-groundhog/commit/8c17408))
+* **navbar:** keyboard support for searchfield ([59c40b8](https://github.com/Dynatrace/css-groundhog/commit/59c40b8))
 * **expandable:** add modifier for navigation components ([72319af](https://github.com/Dynatrace/css-groundhog/commit/72319af))
 * **expandable:** updated active class and added separated version ([7773239](https://github.com/Dynatrace/css-groundhog/commit/7773239))
 
