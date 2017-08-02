@@ -23,10 +23,7 @@ const packageData = require('./package.json');
 const zip = require('gulp-zip');
 const s3 = require('gulp-s3');
 const replace = require('gulp-replace');
-const fs = require('fs');
-const changelog = require('gulp-conventional-changelog');
-const through = require('through2');
-const Vinyl = require('vinyl');
+
 /*
 * Metalsmith dependencies
 */
