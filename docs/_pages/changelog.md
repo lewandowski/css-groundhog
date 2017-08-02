@@ -6,6 +6,12 @@ hideCode: true
 
 # Changelog
 
+<a name="2.0.1"></a>
+## [2.0.1](https://github.com/Dynatrace/css-groundhog/compare/v2.0.0...v2.0.1) (2017-08-02)
+
+### Bug Fixes
+
+* **navbar:** fixed mobile active state bug ([6c1d5a8](https://github.com/Dynatrace/css-groundhog/commit/6c1d5a8))
 
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/Dynatrace/css-groundhog/compare/v1.0.0...v2.0.0) (2017-07-31)
