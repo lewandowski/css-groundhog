@@ -118,6 +118,10 @@ $includedExpandable: false !default;
       content: none;
     }
 
+    .expandable--nav.is-active .expandable__content {
+      display: none;
+    }
+
     .expandable--nav.is-current .expandable__content {
       display: flex;
     }

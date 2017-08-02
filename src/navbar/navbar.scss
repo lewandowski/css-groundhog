@@ -148,6 +148,7 @@
     align-items: center;
     height: $nav-line-height;
     padding-left: 8.5rem;
+    overflow: hidden;
   }
 
   .nav__list--primary > .nav__item {
@@ -202,6 +203,13 @@
 
 .nav__bar.is-active .nav__list {
   background-color: $nav-primary-current;
+}
+
+@media (min-width: $nav-breakpoint) {
+
+  .nav__bar.is-active .nav__list--primary {
+    background-color: $nav-primary-background;
+  }
 }
 
 /*
