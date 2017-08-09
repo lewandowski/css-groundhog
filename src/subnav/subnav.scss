@@ -11,7 +11,7 @@
 .subnav__bar {
   display: block;
   width: 100%;
-  background-color: $royalblue-700;
+  background-color: $turquoise-700;
 }
 
 .subnav__list {
@@ -26,7 +26,7 @@
 }
 
 .subnav__item.is-current {
-  background-color: $royalblue-600;
+  background-color: $turquoise-600;
 }
 
 .subnav__link,
@@ -41,7 +41,7 @@
 .subnav__link:hover {
   color: #fff;
   text-decoration: none;
-  background-color: $royalblue-500;
+  background-color: $turquoise-500;
 }
 
 .subnav__link:focus {
@@ -69,7 +69,7 @@
   }
 
   .subnav__item.is-current .subnav__link {
-    border-bottom: 4px solid $royalblue-300;
+    border-bottom: 4px solid $turquoise-300;
   }
 
   .subnav .subnav__link {
@@ -80,6 +80,65 @@
 
   .subnav__link:hover {
     background-color: transparent;
-    border-bottom: 2px solid $royalblue-300;
+    border-bottom: 2px solid $turquoise-300;
   }
+}
+
+
+@mixin subnav-theme($bg-color, $active-color, $hover-color, $border-color) {
+
+  .subnav__bar {
+    background-color: $bg-color;
+  }
+
+  .subnav__item.is-current {
+    background-color: $active-color;
+  }
+
+  .subnav__link:hover {
+    background-color: $hover-color;
+  }
+
+  @media (min-width: $nav-breakpoint) {
+
+    .subnav__item.is-current {
+      background-color: transparent;
+    }
+
+    .subnav__item.is-current .subnav__link {
+      border-bottom: 4px solid $border-color;
+    }
+
+    .subnav__link:hover {
+      background-color: transparent;
+      border-bottom: 2px solid $border-color;
+    }
+  }
+}
+
+.theme--blue {
+
+  @include subnav-theme($blue-700, $blue-600, $blue-500, $blue-300);
+
+}
+
+
+.theme--purple {
+
+  @include subnav-theme($purple-700, $purple-600, $purple-500, $purple-300);
+
+}
+
+
+.theme--royalblue {
+
+  @include subnav-theme($royalblue-700, $royalblue-600, $royalblue-500, $royalblue-300);
+
+}
+
+
+.theme--green {
+
+  @include subnav-theme($green-700, $green-600, $green-500, $green-300);
+
 }
