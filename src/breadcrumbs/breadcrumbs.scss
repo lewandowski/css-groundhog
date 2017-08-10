@@ -25,6 +25,10 @@ $breadcrumb-active-color: $turquoise-700;
   position: relative;
 }
 
+.breadcrumbs__item:first-child .breadcrumbs__link {
+  padding-left: 1.7rem;
+}
+
 .breadcrumbs__link,
 .breadcrumbs__link:visited, {
   color: #fff;
