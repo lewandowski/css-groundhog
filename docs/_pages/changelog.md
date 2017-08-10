@@ -7,6 +7,14 @@ hideCode: true
 # Changelog
 
 
+<a name="2.1.1"></a>
+## [2.1.1](https://github.com/Dynatrace/css-groundhog/compare/v2.1.0...v2.1.1) (2017-08-10)
+
+### Bug Fixes
+
+* **navbar:** Fixed distance to border
+* **breadcrumbs:** Aligned border distance with navbar
+
 <a name="2.1.0"></a>
 ## [2.1.0](https://github.com/Dynatrace/css-groundhog/compare/v2.0.1...v2.1.0) (2017-08-10)
 
