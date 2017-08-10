@@ -6,6 +6,16 @@ hideCode: true
 
 # Changelog
 
+
+<a name="2.1.0"></a>
+## [2.1.0](https://github.com/Dynatrace/css-groundhog/compare/v2.0.1...v2.1.0) (2017-08-10)
+
+### Features
+
+#### Updated components
+
+* **subnav:** new themes for subnav ([4b652ab](https://github.com/Dynatrace/css-groundhog/commit/4b652ab))
+
 <a name="2.0.1"></a>
 ## [2.0.1](https://github.com/Dynatrace/css-groundhog/compare/v2.0.0...v2.0.1) (2017-08-02)
 
