@@ -63,7 +63,7 @@
   position: absolute;
   z-index: 12;
   top: 0.7rem;
-  left: 0.75rem;
+  left: 1.55rem;
   width: 7rem;
 }
 
@@ -86,13 +86,16 @@
   white-space: nowrap;
 }
 
-.nav__link,
-.nav__link:visited {
+.nav__link {
   color: $gray-200;
   text-decoration: none;
   outline: 0;
   display: block;
   padding: 0.5rem 1rem;
+}
+
+.nav__link:visited {
+  color: $gray-200;
 }
 
 .nav__link.expandable__trigger {
@@ -147,7 +150,7 @@
     justify-content: flex-start;
     align-items: center;
     height: $nav-line-height;
-    padding-left: 8.5rem;
+    padding-left: 9.3rem;
     overflow: hidden;
   }
 
@@ -227,8 +230,7 @@
   z-index: 12;
 }
 
-.nav__btn,
-.nav__btn:visited {
+.nav__btn {
   color: #fff;
   font-size: 1em;
   font-family: inherit;
@@ -239,9 +241,14 @@
   cursor: pointer;
   line-height: $nav-line-height;
   height: $nav-line-height;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   vertical-align: top;
   display: inline-block;
+}
+
+.nav__btn:visited {
+  color: #fff;
+  background-color: transparent;
 }
 
 .nav__btn:hover {
