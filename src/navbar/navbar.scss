@@ -377,3 +377,11 @@
   outline: none;
   background-color: $gray-640;
 }
+
+@media (min-width: $nav-breakpoint) {
+
+  body:after {
+    content: "widescreen";
+    display: none;
+  }
+}
