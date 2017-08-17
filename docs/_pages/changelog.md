@@ -6,6 +6,13 @@ hideCode: true
 
 # Changelog
 
+<a name="2.1.3"></a>
+## [2.1.3](https://github.com/Dynatrace/css-groundhog/compare/v2.1.2...v2.1.3) (2017-08-17)
+
+### Bug Fixes
+
+* **base:** Fixed root font size
+
 <a name="2.1.2"></a>
 ## [2.1.2](https://github.com/Dynatrace/css-groundhog/compare/v2.1.1...v2.1.2) (2017-08-10)
 
