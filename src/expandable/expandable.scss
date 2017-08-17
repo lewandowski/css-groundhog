@@ -110,10 +110,6 @@ $includedExpandable: false !default;
       display: flex;
     }
 
-    .expandable--nav .expandable__trigger {
-      display: none;
-    }
-
     .expandable--nav .expandable__trigger:before {
       content: none;
     }
