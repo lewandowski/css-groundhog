@@ -23,12 +23,11 @@ The Groundhog navbar appears in two versions:
 
 2. Add all necessary Groundhog classes for the elements mentioned in step 1. Use the `has-no-secondary` class on the nav's wrapper `<div>` if there is no need for a secondary navigation.
 
-3. If a secondary navigation is used, nest the `<ul>` element within the `<li>` item of the pages' parent. Also add two anchor elements `<a>`, one that actually links to the parent page and one that becomes the expandable trigger in the navbar's mobile version. Add classes from [Groundhog's expandable](/doc/components/expandable) for mobile behavior.
+3. If a secondary navigation is used, nest the `<ul>` element within the `<li>` item of the pages' parent. Add classes from [Groundhog's expandable](/doc/components/expandable) for mobile behavior.
 ```html
 <ul class="nav__list nav__list--primary">
   <li class="nav__item expandable expandable--nav">
-    <a class="nav__link nav__link--mobile expandable__trigger" href="#">Solution & Pricing</a>
-    <a class="nav__link nav__link--desktop" href="#">Solution & Pricing</a>
+    <a class="nav__link expandable__trigger" href="#">Solution & Pricing</a>
     <ul class="nav__list nav__list--secondary expandable__content">
       <li class="nav__item">
         <a class="nav__link" href="#">Overview</a>
@@ -111,12 +110,9 @@ The `$nav-breakpoint` sets the width where all menu items from the 'Menu' dropdo
 | `.nav__list--primary` | Menu item list for primary nav |
 | `.nav__list--secondary` | Menu item list for secondary nav |
 
-## Available classes for nav items and links
+## Available classes for nav items
 | class name | effect |
 |------------|--------|
 | `.nav__item` | Base class for nav items |
 | `.nav__item is-current` | Indicates that page or a child page is currently selected |
 | `.nav__item--right` | For nav items on primary level only, moves them to the right of the navbar |
-| `.nav__link` | Base class for nav links |
-| `.nav__link--mobile` | For nav links on primary level, trigger for expanding secondary nav |
-| `.nav__link--desktop` | For nav links on primary level, links to referenced page |

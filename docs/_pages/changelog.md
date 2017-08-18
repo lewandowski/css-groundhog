@@ -6,6 +6,14 @@ hideCode: true
 
 # Changelog
 
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/Dynatrace/css-groundhog/compare/v2.1.2...v3.0.0) (2017-08-18)
+
+### Features
+
+#### Updated components
+* **navbar:** removed second anchor of primary nav item ([fab7fda](https://github.com/Dynatrace/css-groundhog/commit/fab7fda))
+
 <a name="2.1.2"></a>
 ## [2.1.2](https://github.com/Dynatrace/css-groundhog/compare/v2.1.1...v2.1.2) (2017-08-10)
 
