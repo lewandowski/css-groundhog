@@ -116,14 +116,16 @@ const getSize = () => {
   return size.replace(/[\W]/g, '');
 };
 
+const clickHandler = (ev) => {
+  const size = getSize();
+  if (size === 'widescreen') {
+    ev.stopImmediatePropagation();
+  }
+};
+
 const init = () => {
   $('.expandable__trigger.nav__link').forEach(el => {
-    el.addEventListener('click', (ev) => {
-      const size = getSize();
-      if (size === 'widescreen') {
-        ev.stopImmediatePropagation();
-      }
-    });
+    el.addEventListener('click', clickHandler);
   });
 };
 
