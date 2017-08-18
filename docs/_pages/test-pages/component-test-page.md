@@ -24,7 +24,7 @@ type: test-page
         <nav id="nav-bar-example1" class="nav__bar">
           <ul class="nav__list nav__list--primary">
             <li class="nav__item expandable expandable--nav">
-              <a class="nav__link expandable__trigger" href="#noop">Solution & Pricing</a>
+              <a class="nav__link expandable__trigger" href="#noop">Solution & pricing</a>
               <ul class="nav__list nav__list--secondary expandable__content">
                 <li class="nav__item">
                   <a class="nav__link" href="#noop">Overview</a>
@@ -53,7 +53,7 @@ type: test-page
                   <a class="nav__link" href="#noop">Overview</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#noop">Customer Stories</a>
+                  <a class="nav__link" href="#noop">Customer stories</a>
                 </li>
                 <li class="nav__item">
                   <a class="nav__link" href="#noop">Industry leadership</a>
@@ -93,7 +93,7 @@ type: test-page
               </ul>
             </li>
             <li class="nav__item expandable expandable--nav is-current">
-              <a class="nav__link expandable__trigger" href="#noop">News & Resources</a>
+              <a class="nav__link expandable__trigger" href="#noop">News & resources</a>
               <ul class="nav__list nav__list--secondary expandable__content">
                 <li class="nav__item">
                   <a class="nav__link" href="#noop">Overview</a>
@@ -102,7 +102,7 @@ type: test-page
                   <a class="nav__link" href="#noop">Blog</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#noop">Public Relations</a>
+                  <a class="nav__link" href="#noop">Public relations</a>
                 </li>
                 <li class="nav__item">
                   <a class="nav__link" href="#noop">Product news</a>
@@ -139,7 +139,7 @@ type: test-page
               </ul>
             </li>
             <li class="nav__item nav__item--right">
-              <a class="nav__link" href="#noop">SaaS Login</a>
+              <a class="nav__link" href="#noop">SaaS login</a>
             </li>
           </ul>
         </nav>
@@ -188,7 +188,7 @@ type: test-page
         <nav id="nav-bar-example2" class="nav__bar">
           <ul class="nav__list nav__list--primary">
             <li class="nav__item expandable expandable--nav">
-              <a class="nav__link expandable__trigger" href="#noop">Solution & Pricing</a>
+              <a class="nav__link expandable__trigger" href="#noop">Solution & pricing</a>
               <ul class="nav__list nav__list--secondary expandable__content">
                 <li class="nav__item">
                   <a class="nav__link" href="#noop">Overview</a>
@@ -217,7 +217,7 @@ type: test-page
                   <a class="nav__link" href="#noop">Overview</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#noop">Customer Stories</a>
+                  <a class="nav__link" href="#noop">Customer stories</a>
                 </li>
                 <li class="nav__item">
                   <a class="nav__link" href="#noop">Industry leadership</a>
@@ -257,7 +257,7 @@ type: test-page
               </ul>
             </li>
             <li class="nav__item expandable expandable--nav">
-              <a class="nav__link expandable__trigger" href="#noop">News & Resources</a>
+              <a class="nav__link expandable__trigger" href="#noop">News & resources</a>
               <ul class="nav__list nav__list--secondary expandable__content">
                 <li class="nav__item">
                   <a class="nav__link" href="#noop">Overview</a>
@@ -266,7 +266,7 @@ type: test-page
                   <a class="nav__link" href="#noop">Blog</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#noop">Public Relations</a>
+                  <a class="nav__link" href="#noop">Public relations</a>
                 </li>
                 <li class="nav__item">
                   <a class="nav__link" href="#noop">Product news</a>
@@ -303,7 +303,7 @@ type: test-page
               </ul>
             </li>
             <li class="nav__item nav__item--right">
-              <a class="nav__link" href="#noop">SaaS Login</a>
+              <a class="nav__link" href="#noop">SaaS login</a>
             </li>
           </ul>
         </nav>
