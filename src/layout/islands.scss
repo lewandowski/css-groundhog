@@ -31,33 +31,33 @@
   padding: 12px;
 }
 
-.island .content {
+.content {
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 80rem;
+}
 
-  .content--aside--top {
-    order: -1;
-  }
+.content--aside--top {
+  order: -1;
 }
 
 @media(min-width: 768px) {
 
-  .island .content {
+  .content {
     flex-direction: row;
+  }
 
-    .content--main {
-      width: 70%;
-      flex: 0 0 70%;
-    }
+  .content--main {
+    width: 70%;
+    flex: 0 0 70%;
+  }
 
-    .content--aside,
-    .content--aside--top {
-      width: 30%;
-      flex: 0 0 30%;
-      padding-left: 2rem;
-      order: 0;
-    }
+  .content--aside,
+  .content--aside--top {
+    width: 30%;
+    flex: 0 0 30%;
+    padding-left: 2rem;
+    order: 0;
   }
 }
