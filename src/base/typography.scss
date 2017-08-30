@@ -103,12 +103,6 @@ ul,
 ol {
 
   @extend %typecsset-reset;
-  margin-left: 1rem;
-}
-
-li > ul,
-li > ol {
-  margin-bottom: 0;
 }
 
 /*------------------------------------*\
