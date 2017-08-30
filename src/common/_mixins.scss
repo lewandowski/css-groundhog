@@ -36,3 +36,25 @@ $columngap: 24px;
     }
   }
 }
+
+@mixin stepLevel($level) {
+
+  $sel: ".step";
+
+  @for $i from 2 through $level {
+
+    #{$sel} :not(.step) {
+      counter-reset: step#{$i};
+    }
+
+    $sel: selector-nest($sel, ".step");
+
+    #{$sel} {
+      counter-increment: step#{$i};
+    }
+
+    #{$sel}:before {
+      content: counter(step#{$i}) ". ";
+    }
+  }
+}
