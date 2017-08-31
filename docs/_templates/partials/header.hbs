@@ -9,8 +9,11 @@
     {{/if}}
     {{#if header.cta }}
     <div class="cta">
-      <a class="btn btn--secondary" href="{{header.cta.url}}">{{header.cta.text}}</a>
+      <p><a class="btn btn--secondary" href="{{header.cta.url}}">{{header.cta.text}}</a></p>
     </div>
+    {{/if}}
+    {{#if sitedata.package.version}}
+    <p>Current version: {{sitedata.package.version}}</p>
     {{/if}}
   </header>
 {{/if}}

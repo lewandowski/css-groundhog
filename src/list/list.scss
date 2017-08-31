@@ -1,4 +1,5 @@
 @import "../common/variables";
+@import "../common/mixins";
 $unordered-list-theme-color: $turquoise-500;
 
 .list {
@@ -12,6 +13,16 @@ $unordered-list-theme-color: $turquoise-500;
   li + li {
     margin-top: 1.25rem;
   }
+
+  li > ul,
+  li > ol {
+    margin-bottom: 0;
+  }
+}
+
+ul,
+ol {
+  margin-left: 1rem;
 }
 
 ul.list,
@@ -122,20 +133,25 @@ ol.list ol ul ul {
   display: block;
   position: relative;
   padding-left: 1.5rem;
-  counter-increment: b;
+  counter-increment: step1;
   margin-top: 0.75rem;
 }
 
-.step + .step {
-  margin-top: 1.25rem;
+.step + :not(.step) {
+  counter-reset: step1;
 }
 
 .step:before {
-  counter-increment: section;
-  content: counter(section) ". ";
+  content: counter(step1) ". ";
   position: absolute;
   text-align: right;
   width: 4rem;
   margin-left: -4.6rem;
   line-height: inherit;
 }
+
+.step + .step {
+  margin-top: 1.25rem;
+}
+
+@include stepLevel(3);
