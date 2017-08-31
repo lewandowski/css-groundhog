@@ -17,162 +17,157 @@ type: test-page
           <form action="/assets/data/search_results.json" data-resultskey="results" data-maxresults="5" data-titleprop="label" data-urlprop="url">
             <input type="search" class="inputfield inputfield--search nav__search js-search" name="searchterm" placeholder="Enter search term"/>
           </form>
-          <a href="#" class="nav__search__icon"></a>
+          <a href="#noop" class="nav__search__icon"></a>
           <a class="nav__btn nav__btn--cta" href="https://www.dynatrace.com/trial/">Free trial</a>
           <button data-target="#nav-bar-example1" class="nav__btn nav__btn--menutoggle">Menu</button>
         </div>
         <nav id="nav-bar-example1" class="nav__bar">
           <ul class="nav__list nav__list--primary">
             <li class="nav__item expandable expandable--nav">
-              <a class="nav__link nav__link--mobile expandable__trigger" href="#">Solution & Pricing</a>
-              <a class="nav__link nav__link--desktop" href="#">Solution & Pricing</a>
+              <a class="nav__link expandable__trigger" href="#noop">Solution & pricing</a>
               <ul class="nav__list nav__list--secondary expandable__content">
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Overview</a>
+                  <a class="nav__link" href="#noop">Overview</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Use cases</a>
+                  <a class="nav__link" href="#noop">Use cases</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Capabilities</a>
+                  <a class="nav__link" href="#noop">Capabilities</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Technologies</a>
+                  <a class="nav__link" href="#noop">Technologies</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Services</a>
+                  <a class="nav__link" href="#noop">Services</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Pricing</a>
+                  <a class="nav__link" href="#noop">Pricing</a>
                 </li>
               </ul>
             </li>
             <li class="nav__item expandable expandable--nav">
-              <a class="nav__link nav__link--mobile expandable__trigger" href="#">Why Dynatrace</a>
-              <a class="nav__link nav__link--desktop" href="#">Why Dynatrace</a>
+              <a class="nav__link expandable__trigger" href="#noop">Why Dynatrace</a>
               <ul class="nav__list nav__list--secondary expandable__content">
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Overview</a>
+                  <a class="nav__link" href="#noop">Overview</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Customer Stories</a>
+                  <a class="nav__link" href="#noop">Customer stories</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Industry leadership</a>
+                  <a class="nav__link" href="#noop">Industry leadership</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Innovation</a>
+                  <a class="nav__link" href="#noop">Innovation</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Competitive</a>
+                  <a class="nav__link" href="#noop">Competitive</a>
                 </li>
               </ul>
             </li>
             <li class="nav__item expandable expandable--nav">
-              <a class="nav__link nav__link--mobile expandable__trigger" href="#">Company</a>
-              <a class="nav__link nav__link--desktop" href="#">Company</a>
+              <a class="nav__link expandable__trigger" href="#noop">Company</a>
               <ul class="nav__list nav__list--secondary expandable__content">
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Overview</a>
+                  <a class="nav__link" href="#noop">Overview</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Careers</a>
+                  <a class="nav__link" href="#noop">Careers</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Partners</a>
+                  <a class="nav__link" href="#noop">Partners</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Events</a>
+                  <a class="nav__link" href="#noop">Events</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Leadership</a>
+                  <a class="nav__link" href="#noop">Leadership</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Locations</a>
+                  <a class="nav__link" href="#noop">Locations</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Contact</a>
+                  <a class="nav__link" href="#noop">Contact</a>
                 </li>
               </ul>
             </li>
             <li class="nav__item expandable expandable--nav is-current">
-              <a class="nav__link nav__link--mobile expandable__trigger" href="#">News & Resources</a>
-              <a class="nav__link nav__link--desktop" href="#">News & Resources</a>
+              <a class="nav__link expandable__trigger" href="#noop">News & resources</a>
               <ul class="nav__list nav__list--secondary expandable__content">
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Overview</a>
+                  <a class="nav__link" href="#noop">Overview</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Blog</a>
+                  <a class="nav__link" href="#noop">Blog</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Public Relations</a>
+                  <a class="nav__link" href="#noop">Public relations</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Product news</a>
+                  <a class="nav__link" href="#noop">Product news</a>
                 </li>
                 <li class="nav__item is-current">
-                  <a class="nav__link" href="#">Events</a>
+                  <a class="nav__link" href="#noop">Events</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Webinars</a>
+                  <a class="nav__link" href="#noop">Webinars</a>
                 </li>
               </ul>
             </li>
             <li class="nav__item expandable expandable--nav">
-              <a class="nav__link nav__link--mobile expandable__trigger" href="#">Support</a>
-              <a class="nav__link nav__link--desktop" href="#">Support</a>
+              <a class="nav__link expandable__trigger" href="#noop">Support</a>
               <ul class="nav__list nav__list--secondary expandable__content">
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Overview</a>
+                  <a class="nav__link" href="#noop">Overview</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Documentation</a>
+                  <a class="nav__link" href="#noop">Documentation</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Forums</a>
+                  <a class="nav__link" href="#noop">Forums</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">University</a>
+                  <a class="nav__link" href="#noop">University</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Downloads</a>
+                  <a class="nav__link" href="#noop">Downloads</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Tickets</a>
+                  <a class="nav__link" href="#noop">Tickets</a>
                 </li>
               </ul>
             </li>
             <li class="nav__item nav__item--right">
-              <a class="nav__link" href="#">SaaS Login</a>
+              <a class="nav__link" href="#noop">SaaS login</a>
             </li>
           </ul>
         </nav>
       </div>
       <div class="subnav">
         <nav class="subnav__bar expandable expandable--subnav">
-          <a href="#" class="expandable__trigger">Perform 2018</a>
+          <a href="#noop" class="expandable__trigger">Workshops</a>
           <ul class="subnav__list expandable__content">
             <li class="subnav__item">
-              <a class="subnav__link" href="#">Perform 2018</a>
+              <a class="subnav__link" href="#noop">Perform 2018</a>
             </li>
             <li class="subnav__item">
-              <a class="subnav__link" href="#">Speakers</a>
+              <a class="subnav__link" href="#noop">Speakers</a>
             </li>
             <li class="subnav__item">
-              <a class="subnav__link" href="#">Schedule</a>
+              <a class="subnav__link" href="#noop">Schedule</a>
             </li>
             <li class="subnav__item is-current">
-              <a class="subnav__link" href="#">Workshops</a>
+              <a class="subnav__link" href="#noop">Workshops</a>
             </li>
             <li class="subnav__item">
-              <a class="subnav__link" href="#">Locations</a>
+              <a class="subnav__link" href="#noop">Locations</a>
             </li>
             <li class="subnav__item">
-              <a class="subnav__link" href="#">Partners</a>
+              <a class="subnav__link" href="#noop">Partners</a>
             </li>
             <li class="subnav__item">
-              <a class="subnav__link" href="#">Tickets</a>
+              <a class="subnav__link" href="#noop">Tickets</a>
             </li>
           </ul>
         </nav>
@@ -186,134 +181,129 @@ type: test-page
           <form action="/assets/data/search_results.json" data-resultskey="results" data-maxresults="5" data-titleprop="label" data-urlprop="url">
             <input type="search" class="inputfield inputfield--search nav__search js-search" name="searchterm" placeholder="Enter search term"/>
           </form>
-          <a href="#" class="nav__search__icon"></a>
+          <a href="#noop" class="nav__search__icon"></a>
           <a class="nav__btn nav__btn--cta" href="https://www.dynatrace.com/trial/">Free trial</a>
           <button data-target="#nav-bar-example2" class="nav__btn nav__btn--menutoggle">Menu</button>
         </div>
         <nav id="nav-bar-example2" class="nav__bar">
           <ul class="nav__list nav__list--primary">
             <li class="nav__item expandable expandable--nav">
-              <a class="nav__link nav__link--mobile expandable__trigger" href="#">Solution & Pricing</a>
-              <a class="nav__link nav__link--desktop" href="#">Solution & Pricing</a>
+              <a class="nav__link expandable__trigger" href="#noop">Solution & pricing</a>
               <ul class="nav__list nav__list--secondary expandable__content">
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Overview</a>
+                  <a class="nav__link" href="#noop">Overview</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Use cases</a>
+                  <a class="nav__link" href="#noop">Use cases</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Capabilities</a>
+                  <a class="nav__link" href="#noop">Capabilities</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Technologies</a>
+                  <a class="nav__link" href="#noop">Technologies</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Services</a>
+                  <a class="nav__link" href="#noop">Services</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Pricing</a>
+                  <a class="nav__link" href="#noop">Pricing</a>
                 </li>
               </ul>
             </li>
             <li class="nav__item expandable expandable--nav">
-              <a class="nav__link nav__link--mobile expandable__trigger" href="#">Why Dynatrace</a>
-              <a class="nav__link nav__link--desktop" href="#">Why Dynatrace</a>
+              <a class="nav__link expandable__trigger" href="#noop">Why Dynatrace</a>
               <ul class="nav__list nav__list--secondary expandable__content">
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Overview</a>
+                  <a class="nav__link" href="#noop">Overview</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Customer Stories</a>
+                  <a class="nav__link" href="#noop">Customer stories</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Industry leadership</a>
+                  <a class="nav__link" href="#noop">Industry leadership</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Innovation</a>
+                  <a class="nav__link" href="#noop">Innovation</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Competitive</a>
+                  <a class="nav__link" href="#noop">Competitive</a>
                 </li>
               </ul>
             </li>
             <li class="nav__item expandable expandable--nav">
-              <a class="nav__link nav__link--mobile expandable__trigger" href="#">Company</a>
-              <a class="nav__link nav__link--desktop" href="#">Company</a>
+              <a class="nav__link expandable__trigger" href="#noop">Company</a>
               <ul class="nav__list nav__list--secondary expandable__content">
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Overview</a>
+                  <a class="nav__link" href="#noop">Overview</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Careers</a>
+                  <a class="nav__link" href="#noop">Careers</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Partners</a>
+                  <a class="nav__link" href="#noop">Partners</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Events</a>
+                  <a class="nav__link" href="#noop">Events</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Leadership</a>
+                  <a class="nav__link" href="#noop">Leadership</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Locations</a>
+                  <a class="nav__link" href="#noop">Locations</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Contact</a>
+                  <a class="nav__link" href="#noop">Contact</a>
                 </li>
               </ul>
             </li>
             <li class="nav__item expandable expandable--nav">
-              <a class="nav__link nav__link--mobile expandable__trigger" href="#">News & Resources</a>
-              <a class="nav__link nav__link--desktop" href="#">News & Resources</a>
+              <a class="nav__link expandable__trigger" href="#noop">News & resources</a>
               <ul class="nav__list nav__list--secondary expandable__content">
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Overview</a>
+                  <a class="nav__link" href="#noop">Overview</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Blog</a>
+                  <a class="nav__link" href="#noop">Blog</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Public Relations</a>
+                  <a class="nav__link" href="#noop">Public relations</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Product news</a>
+                  <a class="nav__link" href="#noop">Product news</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Events</a>
+                  <a class="nav__link" href="#noop">Events</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Webinars</a>
+                  <a class="nav__link" href="#noop">Webinars</a>
                 </li>
               </ul>
             </li>
             <li class="nav__item expandable expandable--nav is-current">
-              <a class="nav__link nav__link--mobile expandable__trigger" href="#">Support</a>
-              <a class="nav__link nav__link--desktop" href="#">Support</a>
+              <a class="nav__link expandable__trigger" href="#noop">Support</a>
               <ul class="nav__list nav__list--secondary expandable__content">
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Overview</a>
+                  <a class="nav__link" href="#noop">Overview</a>
                 </li>
                 <li class="nav__item is-current">
-                  <a class="nav__link" href="#">Documentation</a>
+                  <a class="nav__link" href="#noop">Documentation</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Forums</a>
+                  <a class="nav__link" href="#noop">Forums</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">University</a>
+                  <a class="nav__link" href="#noop">University</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Downloads</a>
+                  <a class="nav__link" href="#noop">Downloads</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Tickets</a>
+                  <a class="nav__link" href="#noop">Tickets</a>
                 </li>
               </ul>
             </li>
             <li class="nav__item nav__item--right">
-              <a class="nav__link" href="#">SaaS Login</a>
+              <a class="nav__link" href="#noop">SaaS login</a>
             </li>
           </ul>
         </nav>
@@ -321,19 +311,19 @@ type: test-page
       <div class="theme--turquoise">
         <ul class="breadcrumbs">
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">Support</a>
+            <a class="breadcrumbs__link" href="#noop">Support</a>
           </li>
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">Documentation</a>
+            <a class="breadcrumbs__link" href="#noop">Documentation</a>
           </li>
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">AppMon</a>
+            <a class="breadcrumbs__link" href="#noop">AppMon</a>
           </li>
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">AppMon reference</a>
+            <a class="breadcrumbs__link" href="#noop">AppMon reference</a>
           </li>
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">AppMon platform overview</a>
+            <a class="breadcrumbs__link" href="#noop">AppMon platform overview</a>
           </li>
           <li class="breadcrumbs__item">
             <span class="breadcrumbs__last">Architecture</span>
@@ -561,7 +551,7 @@ type: test-page
             <td>ip-172-31-35-213.ec2.internal:8079</td>
             <td>4.55 ms</td>
             <td>7.33/min</td>
-            <td><a href="#" class="expandable__trigger">more</a></td>
+            <td><a href="#noop" class="expandable__trigger">more</a></td>
           </tr>
           <tr class="expandable__content">
             <td colspan="5">
@@ -575,7 +565,7 @@ type: test-page
             <td>ip-172-31-35-213.ec2.internal:8079</td>
             <td>5.59 ms</td>
             <td>4.09/min</td>
-            <td><a href="#" class="expandable__trigger">more</a></td>
+            <td><a href="#noop" class="expandable__trigger">more</a></td>
           </tr>
           <tr class="expandable__content">
             <td colspan="5">
@@ -598,7 +588,7 @@ type: test-page
             <td>ip-172-31-35-213.ec2.internal:8079</td>
             <td>173 ms</td>
             <td>4.08/min</td>
-            <td><a href="#" class="expandable__trigger">more</a></td>
+            <td><a href="#noop" class="expandable__trigger">more</a></td>
           </tr>
           <tr class="expandable__content">
             <td colspan="5">

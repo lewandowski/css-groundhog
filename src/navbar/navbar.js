@@ -80,7 +80,7 @@ const handleKeydown = (ev) => {
   return false;
 };
 
-const initData = () => {
+const initSearch = () => {
   $('.js-search:not([action=""])').forEach(el => {
     const form = el.parentNode;
     const ul = form.appendChild(document.createElement('ul'));
@@ -111,4 +111,23 @@ const initData = () => {
   });
 };
 
-initData();
+const getSize = () => {
+  const size = window.getComputedStyle(document.body, ':after').getPropertyValue('content');
+  return size.replace(/[\W]/g, '');
+};
+
+const clickHandler = (ev) => {
+  const size = getSize();
+  if (size === 'widescreen') {
+    ev.stopImmediatePropagation();
+  }
+};
+
+const init = () => {
+  $('.expandable__trigger.nav__link').forEach(el => {
+    el.addEventListener('click', clickHandler);
+  });
+};
+
+initSearch();
+init();

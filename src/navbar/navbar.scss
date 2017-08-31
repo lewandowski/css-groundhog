@@ -107,10 +107,6 @@
   text-decoration: none;
 }
 
-.nav__link--desktop {
-  display: none;
-}
-
 .nav__list--primary > .nav__item:not(.expandable).is-current,
 .nav__list--secondary > .nav__item.is-current {
   background-color: $nav-current-mobile;
@@ -134,14 +130,6 @@
 
   .nav__link {
     padding: 0.85rem 1.5rem;
-  }
-
-  .nav__link--desktop {
-    display: block;
-  }
-
-  .nav__link--mobile {
-    display: none;
   }
 
   /* Primary nav */
@@ -388,4 +376,12 @@
 .nav .search__results a:focus {
   outline: none;
   background-color: $gray-640;
+}
+
+@media (min-width: $nav-breakpoint) {
+
+  body:after {
+    content: "widescreen";
+    display: none;
+  }
 }

@@ -6,6 +6,21 @@ hideCode: true
 
 # Changelog
 
+
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/Dynatrace/css-groundhog/compare/v2.1.4...v3.0.0) (2017-08-31)
+
+### Features
+
+#### Updated components
+* **navbar:** removed second anchor of primary nav item ([fab7fda](https://github.com/Dynatrace/css-groundhog/commit/fab7fda))
+* **list:** reset step counter, make steps nestable ([1c610a2](https://github.com/Dynatrace/css-groundhog/commit/1c610a2))
+* **layouts:** reduced specificity of island content selectors
+
+### Bug Fixes
+
+* **layouts:** fix space between main and aside content
+
 <a name="2.1.4"></a>
 ## [2.1.4](https://github.com/Dynatrace/css-groundhog/compare/v2.1.3...v2.1.4) (2017-08-28)
 
