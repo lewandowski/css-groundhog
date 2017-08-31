@@ -31,30 +31,30 @@
   padding: 12px;
 }
 
-.content {
+.island .content {
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 80rem;
 }
 
-.content--aside--top {
+.island .content--aside--top {
   order: -1;
 }
 
 @media(min-width: 768px) {
 
-  .content {
+  .island .content {
     flex-direction: row;
   }
-
-  .content--main {
+  
+  .island .content--main {
     width: 70%;
     flex: 0 0 70%;
   }
 
-  .content--aside,
-  .content--aside--top {
+  .island .content--aside,
+  .island .content--aside--top {
     width: 30%;
     flex: 0 0 30%;
     padding-left: 2rem;

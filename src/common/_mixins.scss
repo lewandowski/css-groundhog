@@ -41,14 +41,18 @@ $columngap: 24px;
 
   $sel: ".step";
 
+  /* step level 1 already handled in list.scss */
   @for $i from 2 through $level {
 
+    /* reset nested counter on level $i */
     #{$sel} :not(.step) {
       counter-reset: step#{$i};
     }
 
+    /* create new selector */
     $sel: selector-nest($sel, ".step");
 
+    /* add CSS rules */
     #{$sel} {
       counter-increment: step#{$i};
     }
