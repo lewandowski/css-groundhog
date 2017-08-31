@@ -6,13 +6,26 @@ hideCode: true
 
 # Changelog
 
+
 <a name="3.0.0"></a>
-# [3.0.0](https://github.com/Dynatrace/css-groundhog/compare/v2.1.2...v3.0.0) (2017-08-18)
+# [3.0.0](https://github.com/Dynatrace/css-groundhog/compare/v2.1.4...v3.0.0) (2017-08-18)
 
 ### Features
 
 #### Updated components
 * **navbar:** removed second anchor of primary nav item ([fab7fda](https://github.com/Dynatrace/css-groundhog/commit/fab7fda))
+
+<a name="2.1.4"></a>
+## [2.1.4](https://github.com/Dynatrace/css-groundhog/compare/v2.1.3...v2.1.4) (2017-08-28)
+
+### Bug Fixes
+
+* **base:** Fixed root font size
+
+<a name="2.1.3"></a>
+## [2.1.3](https://github.com/Dynatrace/css-groundhog/compare/v2.1.2...v2.1.3) (2017-08-18)
+
+* **doc:** added version to header in the doc
 
 <a name="2.1.2"></a>
 ## [2.1.2](https://github.com/Dynatrace/css-groundhog/compare/v2.1.1...v2.1.2) (2017-08-10)
