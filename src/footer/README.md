@@ -58,12 +58,13 @@ The Groundhog **footer** component visually enhances the standard html `<footer>
 ```
 
 ## Available classes for footer
-| attribute name | effect |
+| class name | effect |
 |------------|--------|
-| `footer` | Sets the basic styling for the footer element |
-| `footer__sociallink` | Sets the styling for the social buttons |
-| `footer__columns` | Defines the link list area |
-| `footer__column__group` | Defines a column group |
-| `footer__column__separated` | Sets the styling for separated columns |
-| `footer__linklist` | Sets the styling for the link list columns |
-| `footer__linkitem` | Sets link styling to list elements |
+| `.footer` | Sets the basic styling for the footer element |
+| `.footer__sociallink` | Sets the styling for the social buttons |
+| `.footer__columns` | Defines the link list area |
+| `.footer__column__group` | Defines a column group |
+| `.footer__column__separated` | Sets the styling for separated columns |
+| `.footer__linklist` | Sets the styling for the link list |
+| `.footer__linklist--horizontal` | Sets the styling for the horizontal link list |
+| `.footer__linkitem` | Sets link styling to list elements |
