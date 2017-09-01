@@ -100,3 +100,4 @@ With contributions by:
 
 - Sascha Zarhuber [@saschazar21](https://github.com/saschazar21)
 - Lara Aigmüller [@lara-aigmueller](https://github.com/lara-aigmueller)
+- Fabian Friedl [@ffriedl89](https://github.com/ffriedl89)
