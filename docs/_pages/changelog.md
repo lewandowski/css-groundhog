@@ -6,6 +6,16 @@ hideCode: true
 
 # Changelog
 
+<a name="3.2.0"></a>
+## [3.2.0](https://github.com/Dynatrace/css-groundhog/compare/v3.1.0...v3.2.0) (2017-09-05)
+
+### Features
+
+#### Updated components
+
+* **colors:** Updated color palette to new colors
+
+
 <a name="3.1.0"></a>
 ## [3.1.0](https://github.com/Dynatrace/css-groundhog/compare/v3.0.0...v3.1.0) (2017-09-05)
 
