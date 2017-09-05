@@ -87,3 +87,12 @@ $column-width: 180px !default;
 .footer__sociallink + .footer__sociallink {
   margin-left: 1rem;
 }
+
+.footer__linklist--horizontal .footer__linkitem {
+  display: inline-block;
+}
+
+.footer__linklist--horizontal .footer__linkitem + .footer__linkitem:before {
+  content: " | ";
+  color: #fff;
+}

@@ -6,6 +6,16 @@ hideCode: true
 
 # Changelog
 
+<a name="3.1.0"></a>
+## [3.1.0](https://github.com/Dynatrace/css-groundhog/compare/v3.0.0...v3.1.0) (2017-09-05)
+
+### Features
+
+#### Updated components
+
+* **footer:** added class for horizontal link list ([156352d](https://github.com/Dynatrace/css-groundhog/commit/156352d))
+* **layouts:** updated island padding ([c27763c](https://github.com/Dynatrace/css-groundhog/commit/c27763c))
+* **layouts:** added support for more columns ([63adfd0](https://github.com/Dynatrace/css-groundhog/commit/63adfd0))
 
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/Dynatrace/css-groundhog/compare/v2.1.4...v3.0.0) (2017-08-31)
