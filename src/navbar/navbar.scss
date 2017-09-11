@@ -62,9 +62,16 @@
 .nav__brand {
   position: absolute;
   z-index: 12;
-  top: 0.7rem;
-  left: 1.55rem;
-  width: 7rem;
+  top: 0;
+  left: 0;
+  width: 10rem;
+  padding: 0.75rem 1.5rem 3px;
+  border: 2px solid transparent;
+}
+
+.nav__brand:focus {
+  border: 2px solid $gray-300;
+  outline: none;
 }
 
 .nav__logo {
@@ -92,6 +99,7 @@
   outline: 0;
   display: block;
   padding: 0.5rem 1rem;
+  border: 2px solid transparent;
 }
 
 .nav__link:visited {
@@ -100,11 +108,15 @@
 
 .nav__link.expandable__trigger {
   padding-left: 32px; /* see expandable.scss */
+  border: 2px solid transparent;
 }
 
-.nav__link:hover {
+.nav__link:hover,
+.nav__link:active,
+.nav__link:focus:active {
   color: #fff;
   text-decoration: none;
+  border: 2px solid transparent;
 }
 
 .nav__list--primary > .nav__item:not(.expandable).is-current,
@@ -130,6 +142,7 @@
 
   .nav__link {
     padding: 0.85rem 1.5rem;
+    border: 2px solid transparent;
   }
 
   /* Primary nav */
@@ -232,6 +245,7 @@
   padding: 0 1.5rem;
   vertical-align: top;
   display: inline-block;
+  border: 2px solid transparent;
 }
 
 .nav__btn:visited {
@@ -239,16 +253,22 @@
   background-color: transparent;
 }
 
-.nav__btn:hover {
+.nav__btn:hover,
+.nav__btn:active,
+.nav__btn:focus:active,
+.nav__link:active,
+.nav__link:focus:active {
   color: #fff;
   background-color: $nav-primary-hover;
   text-decoration: none;
+  border: 2px solid transparent;
 }
 
 .nav__btn--cta {
   display: none;
   background-color: $green-500;
   white-space: nowrap;
+  border: 2px solid transparent;
 }
 
 .nav__btn--cta:hover {
@@ -256,8 +276,13 @@
 }
 
 .nav__btn:focus,
-.nav__btn--cta:focus,
 .nav__link:focus {
+  border: 2px solid $gray-300;
+  outline: none;
+}
+
+.nav__btn--cta:focus {
+  border: 2px solid transparent;
 
   @include focusStyle();
 }

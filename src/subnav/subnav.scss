@@ -36,6 +36,7 @@
   text-decoration: none;
   outline: 0;
   padding: 0.5rem 1.5rem;
+  border: 2px solid transparent;
 }
 
 .subnav__link:hover {
@@ -44,9 +45,13 @@
   background-color: $turquoise-500;
 }
 
-.subnav__link:focus {
+.subnav__link:active,
+.subnav__link:focus:active {
+  border: 2px solid transparent;
+}
 
-  @include focusStyle();
+.subnav__link:focus {
+  border: 2px solid $gray-300;
 }
 
 .expandable--nav .subnav__link {
@@ -78,7 +83,9 @@
     padding: 0 1.5rem;
   }
 
-  .subnav__link:hover {
+  .subnav__link:hover,
+  .subnav__link:active,
+  .subnav__link:focus:active {
     background-color: transparent;
     border-bottom: 2px solid $turquoise-300;
   }

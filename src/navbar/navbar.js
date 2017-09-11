@@ -118,14 +118,25 @@ const getSize = () => {
 
 const clickHandler = (ev) => {
   const size = getSize();
+  ev.target.blur();
   if (size === 'widescreen') {
     ev.stopImmediatePropagation();
   }
 };
 
+const hideFocus = (ev) => {
+  ev.target.blur();
+};
+
 const init = () => {
   $('.expandable__trigger.nav__link').forEach(el => {
     el.addEventListener('click', clickHandler);
+  });
+  $('.nav__link').forEach(el => {
+    el.addEventListener('click', hideFocus);
+  });
+  $('.subnav__link').forEach(el => {
+    el.addEventListener('click', hideFocus);
   });
 };
 
