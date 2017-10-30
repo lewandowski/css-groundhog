@@ -6,6 +6,24 @@ hideCode: true
 
 # Changelog
 
+<a name="4.0.0"></a>
+## [4.0.0](https://github.com/Dynatrace/css-groundhog/compare/v3.3.0...v4.0.0) (2017-10-30)
+
+### Fixes
+
+#### Updated components
+
+* **footer:** Updated footer and removed @extend btn in sociallinks due to conflicts when using scss files in scss build pipelines with overlapping defintions
+
+<a name="3.3.0"></a>
+## [3.3.0](https://github.com/Dynatrace/css-groundhog/compare/v3.2.0...v3.3.0) (2017-10-09)
+
+### Fixes
+
+#### Updated components
+
+* **table-expandable:** Updated expandable zebra style
+
 <a name="3.2.0"></a>
 ## [3.2.0](https://github.com/Dynatrace/css-groundhog/compare/v3.1.0...v3.2.0) (2017-09-05)
 

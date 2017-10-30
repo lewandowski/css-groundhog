@@ -23,7 +23,7 @@ The Groundhog **footer** component visually enhances the standard html `<footer>
 ```html
 <footer class="footer">
   <div class="footer__socials theme--dark">
-    <a href="https://www.facebook.com/Dynatrace" class="footer__sociallink">facebook</a>
+    <a href="https://www.facebook.com/Dynatrace" class="btn btn--secondary footer__sociallink">facebook</a>
   </div>
 </footer>
 ```
