@@ -70,11 +70,7 @@ $column-width: 180px !default;
   text-decoration: underline;
 }
 
-.footer__sociallink {
-
-  @extend .btn;
-  @extend .btn--secondary;
-
+.footer__sociallink.footer__sociallink {
   display: inline-block;
   width: 2.5rem;
   height: 2.5rem;
