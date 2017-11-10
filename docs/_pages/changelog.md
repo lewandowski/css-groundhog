@@ -6,6 +6,15 @@ hideCode: true
 
 # Changelog
 
+<a name="4.0.1"></a>
+## [4.0.1](https://github.com/Dynatrace/css-groundhog/compare/v4.4.0...v4.0.1) (2017-11-10)
+
+### Fixes
+
+#### Updated components
+
+* **list:** Steps counter is resetted with every first step within a wrapping element
+
 <a name="4.0.0"></a>
 ## [4.0.0](https://github.com/Dynatrace/css-groundhog/compare/v3.3.0...v4.0.0) (2017-10-30)
 
