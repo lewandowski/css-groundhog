@@ -137,6 +137,7 @@ ol.list ol ul ul {
   margin-top: 0.75rem;
 }
 
+* > .step:first-child,
 .step + :not(.step) {
   counter-reset: step1;
 }

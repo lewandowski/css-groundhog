@@ -1,6 +1,6 @@
 {
   "name": "@dynatrace/groundhog",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "CSS components for Dynatrace",
   "main": "dist/js/main.js",
   "scripts": {
