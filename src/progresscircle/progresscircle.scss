@@ -1,0 +1,99 @@
+@import "../common/variables";
+
+.progresscircle {
+  --progress: 0;
+  max-width: 100%;
+}
+
+.progresscircle__background {
+  stroke: $gray-200;
+}
+
+/**
+* 1514 is the circumference of the circle, based on the standardized svg.
+*/
+
+.progresscircle__progress {
+  stroke-dasharray: 1514;
+  stroke-dashoffset: 1514;
+  transition: stroke-dashoffset 450ms ease-out;
+}
+
+.progresscircle__background,
+.progresscircle__progress {
+  stroke-width: 15;
+  fill: transparent;
+}
+
+.progresscircle--bold .progresscircle__background,
+.progresscircle--bold .progresscircle__progress {
+  stroke-width: 30;
+}
+
+.progresscircle__icon {
+  fill: $gray-700;
+}
+
+/**
+* Progress no js fallback
+* only works with custom properties: https://caniuse.com/#search=custom%20properties
+*/
+
+.progresscircle:not([data-progress]) {
+  --progress: 0;
+}
+
+.progresscircle:not([data-progress]) .progresscircle__progress {
+  stroke-dashoffset: calc(1514px - (1514px / 100 * var(--progress)));
+}
+
+
+@mixin progresscircletheme($color) {
+
+  .progresscircle__progress {
+    stroke: $color;
+  }
+}
+
+/**
+* Apply theme overrides for colors
+*/
+
+.theme--blue {
+
+  @include progresscircletheme($blue-600);
+}
+
+.theme--turquoise {
+
+  @include progresscircletheme($turquoise-500);
+}
+
+.theme--purple {
+
+  @include progresscircletheme($purple-600);
+}
+
+.theme--royalblue {
+
+  @include progresscircletheme($royalblue-500);
+}
+
+.theme--green {
+
+  @include progresscircletheme($green-500);
+}
+
+/**
+* Apply default theming
+*/
+
+@include progresscircletheme($turquoise-500);
+
+/**
+* Warning state win over themeing
+*/
+
+.progresscircle--warning .progresscircle__progress {
+  stroke: $yellow-600;
+}
