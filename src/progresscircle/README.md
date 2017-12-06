@@ -9,7 +9,7 @@ since: "5.0"
 
 ## Introduction
 
-The Groundhog __progresscircle__ is a visual representation of a progress from 0 to 100. It can be used to show visualize a percentage of a whole.  
+The Groundhog __progresscircle__ is a visual representation of a progress from 0 to 100. It can be used to visualize a percentage of a whole.  
 The progresscircle is available since __v5.0__
 
 ## Progress circle versions 
