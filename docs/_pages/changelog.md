@@ -6,8 +6,20 @@ hideCode: true
 
 # Changelog
 
+<a name="5.0.0"></a>
+## [5.0.0](https://github.com/Dynatrace/css-groundhog/compare/v4.0.1...v5.0.0) (2017-11-10)
+
+### Features
+
+* **progresscircle** Initial implementation of the progresscircle
+* **buttongroup** Initial implementation of the buttongroup
+
+### Docs
+
+* Component documentation pages now contain a **since version** note
+
 <a name="4.0.1"></a>
-## [4.0.1](https://github.com/Dynatrace/css-groundhog/compare/v4.4.0...v4.0.1) (2017-11-10)
+## [4.0.1](https://github.com/Dynatrace/css-groundhog/compare/v4.0.0...v4.0.1) (2017-11-10)
 
 ### Fixes
 

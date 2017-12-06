@@ -4,6 +4,7 @@ meta:
   title: "Footer"
   description: "A footer component for Dynatrace styled web entities with css and markup examples."
   keywords: "Footer, web, Dynatrace, groundhog, css component"
+since: 0.1.1
 ---
 
 ## Introduction

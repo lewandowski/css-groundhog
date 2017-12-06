@@ -4,6 +4,7 @@ meta:
   title: "Switch"
   description: "A switch component for Dynatrace styled web entities with css and markup examples."
   keywords: "switch, form, toggle, Dynatrace, groundhog, css component"
+since: 0.1.1
 ---
 
 

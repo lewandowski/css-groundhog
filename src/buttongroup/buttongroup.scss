@@ -1,0 +1,79 @@
+@import "../common/variables";
+
+.buttongroup {
+  display: table;
+}
+
+.buttongroup .btn {
+  border-color: $gray-300;
+  border-radius: 0;
+}
+
+.buttongroup .btn:hover {
+  background-color: $gray-100;
+  z-index: 1;
+}
+
+.buttongroup .btn + .btn {
+  margin-left: -1px;
+}
+
+.buttongroup .btn.is-active {
+  background-color: $gray-100;
+  z-index: 1;
+}
+
+.buttongroup .btn:first-child {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.buttongroup .btn:last-child {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+@mixin buttongrouptheme($color, $hover, $active) {
+
+  .buttongroup .btn {
+    color: $color;
+  }
+
+  .buttongroup .btn:hover {
+    color: $hover;
+    border-color: $hover;
+  }
+
+  .buttongroup .btn.is-active {
+    color: $active;
+    border-color: $active;
+  }
+}
+
+
+.theme--blue {
+
+  @include buttongrouptheme($blue-500, $blue-600, $blue-700);
+}
+
+.theme--turquoise {
+
+  @include buttongrouptheme($turquoise-500, $turquoise-600, $turquoise-700);
+}
+
+.theme--purple {
+
+  @include buttongrouptheme($purple-500, $purple-600, $purple-700);
+}
+
+.theme--royalblue {
+
+  @include buttongrouptheme($royalblue-500, $royalblue-600, $royalblue-700);
+}
+
+.theme--green {
+
+  @include buttongrouptheme($green-500, $green-600, $green-700);
+}
+
+@include buttongrouptheme($turquoise-500, $turquoise-600, $turquoise-700);

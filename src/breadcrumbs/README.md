@@ -4,12 +4,12 @@ meta:
   title: "Breadcrumbs"
   description: "A breadcrumb bar component for Dynatrace styled web entities with css and markup examples."
   keywords: "breadcrumbs, structure, hierarchy, Dynatrace, groundhog, css component"
+since: 0.1.1
 ---
 
 
 ## Introduction
 The Groundhog **breadcrumbs bar** component is a visual way to display the hierarchy path to the page currently viewed by the user. The links inside the breadcrumbs bar help the user navigate and put the currently viewed page into context.
-
 
 ## Including the breadcrumbs bar
 Breadcrumbs visually enhances the basic html `<ul>` (unordered list) element to introduce semantic structure into the markup of the breadcrumbs.

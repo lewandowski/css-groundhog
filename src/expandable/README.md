@@ -4,6 +4,7 @@ meta:
   title: "Expandable"
   description: "An expandable component for Dynatrace styled web entities with css and markup examples."
   keywords: "expandable, Dynatrace, groundhog, css component"
+since: 0.1.1
 ---
 
 ## Introduction

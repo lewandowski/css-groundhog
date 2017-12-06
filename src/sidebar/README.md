@@ -4,6 +4,7 @@ meta:
   title: "Sidebar"
   description: "A sidebar component for Dynatrace styled web entities with css and markup examples."
   keywords: "sidebar, navigation, Dynatrace, groundhog, css component"
+since: 0.1.1
 ---
 
 

@@ -4,6 +4,7 @@ meta:
   title: "Definition list"
   description: "A definition list component for Dynatrace styled web entities with css and markup examples."
   keywords: "Definition list, table, meta data, key-value, Dynatrace, groundhog, css component"
+since: 0.8.0
 ---
 
 ## Introduction

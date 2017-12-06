@@ -1,3 +1,11 @@
+---
+meta:
+  title: "Pagination"
+  description: "A pagination component for Dynatrace styled web entities with css and markup examples."
+  keywords: "pagination, paging, pages, navigation, css component"
+since: 0.1.1
+---
+
 ## Notes
 
 * Pagination > 6 entries must be concatenated using ellipsis `...` after the first and last 3 entries.
