@@ -5,3 +5,4 @@ require('./slider/slider');
 require('./table/table');
 require('./navbar/navbar');
 require('./expandable/expandable');
+require('./progresscircle/progresscircle');
