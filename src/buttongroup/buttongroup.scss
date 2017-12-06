@@ -34,11 +34,11 @@
 }
 
 @mixin buttongrouptheme($color, $hover, $active) {
- 
+
   .buttongroup .btn {
     color: $color;
   }
-  
+
   .buttongroup .btn:hover {
     color: $hover;
     border-color: $hover;
