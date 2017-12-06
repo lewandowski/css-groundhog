@@ -4,6 +4,7 @@ meta:
   title: "Loading distractor"
   description: "A loading distractor for Dynatrace styled web entities with css and markup examples."
   keywords: "loading, distractor, spinner, Dynatrace, groundhog, css component"
+since: 0.3.2
 ---
 
 

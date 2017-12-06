@@ -4,6 +4,7 @@ meta:
   title: "Buttongroup"
   description: "A grouping element that joins multiple buttons to a group, merging them visually"
   keywords: "buttons, group, tabs, Dynatrace, groundhog, css component"
+since: 5.0.0
 ---
 
 ## Introduction

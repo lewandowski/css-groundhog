@@ -4,13 +4,12 @@ meta:
   title: "Progress circle"
   description: "A progress circle component for Dynatrace styled web entities with css and markup examples."
   keywords: "Progress, Dynatrace, groundhog, css component"
-since: "5.0"
+since: 5.0.0
 ---
 
 ## Introduction
 
-The Groundhog __progresscircle__ is a visual representation of a progress from 0 to 100. It can be used to visualize a percentage of a whole.  
-The progresscircle is available since __v5.0__
+The Groundhog __progresscircle__ is a visual representation of a progress from 0 to 100. It can be used to visualize a percentage of a whole.
 
 ## Progress circle versions 
 

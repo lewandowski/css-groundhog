@@ -4,6 +4,7 @@ meta:
   title: "Progress bar"
   description: "A progress bar component for Dynatrace styled web entities with css and markup examples."
   keywords: "Progress, Dynatrace, groundhog, css component"
+since: 2.0.0
 ---
 
 ## Introduction

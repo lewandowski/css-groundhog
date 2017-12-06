@@ -4,6 +4,7 @@ meta:
   title: "Navbar"
   description: "A navbar component for Dynatrace styled web entities with css and markup examples."
   keywords: "navbar, menu, menubar, navigation, css component"
+since: 0.1.1
 ---
 
 
