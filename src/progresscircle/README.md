@@ -14,8 +14,12 @@ The progresscircle is available since __v5.0__
 
 ## Progress circle versions 
 
-The Groundhog progresscircle has variable versions in differing colors and states: 
+The Groundhog progresscircle has variable versions in differing colors and states:
 
+* with & without an icon
+* thin & bold
+* color-themed
+* warning state
 
 ## Including a progresscircle
 
