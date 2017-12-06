@@ -6,8 +6,16 @@ hideCode: true
 
 # Changelog
 
+<a name="5.1.0"></a>
+## [5.0.0](https://github.com/Dynatrace/css-groundhog/compare/v5.0.0...v5.1.0) (2017-12-06)
+
+### Features
+
+* **infochip** Initial implementation of the infochip
+
+
 <a name="5.0.0"></a>
-## [5.0.0](https://github.com/Dynatrace/css-groundhog/compare/v4.0.1...v5.0.0) (2017-11-10)
+## [5.0.0](https://github.com/Dynatrace/css-groundhog/compare/v4.0.1...v5.0.0) (2017-12-06)
 
 ### Features
 

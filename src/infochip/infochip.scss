@@ -1,0 +1,39 @@
+@import "../common/variables";
+
+.infochip {
+  display: flex;
+  margin-bottom: 1.25rem;
+}
+
+.infochip:last-child {
+  margin: 0 0;
+}
+
+.infochip__icon {
+  margin-right: 0.375rem;
+}
+
+.infochip__desc {
+  font-size: 14px;
+}
+
+.infochip__desc__title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 300;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.infochip__icon .icon {
+  width: 24px;
+  height: 24px;
+}
+
+@media (min-width: $screen-md) {
+
+  .infochip {
+    margin-bottom: 0;
+    margin-right: 3.75rem;
+  }
+}
