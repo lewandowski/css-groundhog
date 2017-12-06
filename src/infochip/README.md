@@ -4,6 +4,7 @@ meta:
   title: "Infochip"
   description: "A infochip component for Dynatrace styled web entities with css and markup examples."
   keywords: "Infochip, information, summary, Dynatrace, groundhog, css component"
+since: 5.1.0
 ---
 
 ## Introduction
