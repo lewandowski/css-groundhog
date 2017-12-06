@@ -4,6 +4,7 @@ meta:
   title: "Media"
   description: "The media component is a combination of any type of media (img, video, audio,...) and some text."
   keywords: "media, Dynatrace, groundhog, css, component"
+since: 0.1.1
 ---
 
 ## Introduction

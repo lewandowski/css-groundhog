@@ -1,9 +1,10 @@
 ---
-layout: components.hbs
-  meta:
-    title: "Lists"
-    description: "A list component for Dynatrace styled web entities with css and markup examples."
-    keywords: "list, unordered, ordered, steps, structure, Dynatrace, groundhog, css component"
+layout: components_icons.hbs
+meta:
+  title: "Lists"
+  description: "A list component for Dynatrace styled web entities with css and markup examples."
+  keywords: "list, unordered, ordered, steps, structure, Dynatrace, groundhog, css component"
+since: 0.1.1
 ---
 
 ## Introduction

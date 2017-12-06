@@ -4,6 +4,7 @@ meta:
   title: "Caption"
   description: "A caption component for Dynatrace styled web entities with css and markup examples."
   keywords: "Caption, figcaption, img, image, Dynatrace, groundhog, css component"
+since: 0.6.2
 ---
 
 ## Introduction

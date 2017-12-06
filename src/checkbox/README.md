@@ -4,6 +4,7 @@ meta:
   title: "Checkbox"
   description: "A checkbox component for Dynatrace styled web entities with css and markup examples."
   keywords: "Checkbox, form element, form, Dynatrace, groundhog, css component"
+since: 0.1.1
 ---
 
 ## Introduction

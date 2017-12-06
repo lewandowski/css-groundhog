@@ -4,6 +4,7 @@ meta:
   title: "Slider"
   description: "A range component for Dynatrace styled web entities with css and markup examples."
   keywords: "slider, range, Dynatrace, groundhog, css component"
+since: 0.1.1
 ---
 
 
