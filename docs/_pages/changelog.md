@@ -6,8 +6,19 @@ hideCode: true
 
 # Changelog
 
+
+<a name="5.1.1"></a>
+## [5.1.1](https://github.com/Dynatrace/css-groundhog/compare/v5.1.0...v5.1.1) (2017-12-12)
+
+### Fixes
+
+#### Updated components
+
+* **tile:** Updated hover state of tile to remove artefacts
+
+
 <a name="5.1.0"></a>
-## [5.0.0](https://github.com/Dynatrace/css-groundhog/compare/v5.0.0...v5.1.0) (2017-12-06)
+## [5.1.0](https://github.com/Dynatrace/css-groundhog/compare/v5.0.0...v5.1.0) (2017-12-06)
 
 ### Features
 
