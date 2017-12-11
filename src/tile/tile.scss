@@ -57,7 +57,6 @@
   left: 0;
   position: absolute;
   border: 1px solid transparent;
-  border-top-left-radius: 3px;
   border-bottom: none;
   border-right: none;
   background-color: $turquoise-600;
@@ -137,50 +136,32 @@
 */
 
 
-.tile:hover,
-.tile:hover .tile__header,
-.tile:hover .tile__iconbox,
-.tile:hover .tile__content {
+.tile:hover {
   border-color: $turquoise-600;
 }
 
 
-.tile--blue:hover,
-.tile--blue:hover .tile__header,
-.tile--blue:hover .tile__iconbox,
-.tile--blue:hover .tile__content {
+.tile--blue:hover {
   border-color: $blue-500;
 }
 
 
-.tile--royalblue:hover,
-.tile--royalblue:hover .tile__header,
-.tile--royalblue:hover .tile__iconbox,
-.tile--royalblue:hover .tile__content {
+.tile--royalblue:hover {
   border-color: $royalblue-500;
 }
 
 
-.tile--purple:hover,
-.tile--purple:hover .tile__header,
-.tile--purple:hover .tile__iconbox,
-.tile--purple:hover .tile__content {
+.tile--purple:hover {
   border-color: $purple-600;
 }
 
 
-.tile--error:hover,
-.tile--error:hover .tile__header,
-.tile--error:hover .tile__iconbox,
-.tile--error:hover .tile__content {
+.tile--error:hover {
   border-color: $red-500;
 }
 
 
-.tile--gray:hover,
-.tile--gray:hover .tile__header,
-.tile--gray:hover .tile__iconbox,
-.tile--gray:hover .tile__content {
+.tile--gray:hover {
   border-color: $gray-700;
 }
 
