@@ -6,9 +6,18 @@ hideCode: true
 
 # Changelog
 
+<a name="5.1.2"></a>
+## [5.1.2](https://github.com/Dynatrace/css-groundhog/compare/v5.1.1...v5.1.2) (2017-12-12)
+
+### Fixes
+
+#### Updated components
+
+* **tabs:** Fixed border-radius for tabs
+
 
 <a name="5.1.1"></a>
-## [5.1.1](https://github.com/Dynatrace/css-groundhog/compare/v5.1.0...v5.1.1) (2017-12-12)
+## [5.1.1](https://github.com/Dynatrace/css-groundhog/compare/v5.1.0...v5.1.1) (2017-12-11)
 
 ### Fixes
 
