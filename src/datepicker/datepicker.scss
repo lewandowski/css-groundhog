@@ -3,6 +3,11 @@
 
 .datepicker {
   position: relative;
+
+  button {
+    background-color: $white;
+    margin: 0;
+  }
 }
 
 .btn--datepicker {
