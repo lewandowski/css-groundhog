@@ -1,0 +1,112 @@
+@import "../common/variables";
+@import "../common/mixins";
+
+.datepicker {
+  position: relative;
+}
+
+.btn--datepicker {
+  background-image: url(/assets/images/icons/icons_controls_001_Clock.svg);
+  background-size: 20px 20px;
+  background-position: 12px center;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  padding-right: 12px;
+  border: 1px solid $gray-300;
+}
+
+.btn--datepicker.expandable__trigger:before {
+  display: none;
+}
+
+.btn--datepicker:hover {
+  background-color: $gray-130;
+  border-color: $gray-400;
+}
+
+.datepicker__calendar {
+  display: none;
+  position: absolute;
+  background-color: $white;
+  border: 1px solid $gray-300;
+  padding: 12px;
+  border-radius: 3px;
+  border-top-left-radius: 0;
+  top: 31px;
+  left: 0;
+}
+
+.btn--datepicker__previous,
+.btn--datepicker__next {
+  border: none;
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+  fill: $turquoise-600;
+}
+
+.btn--datepicker__previous {
+  transform: scaleX(-1);
+}
+
+.btn--datepicker__previous:hover,
+.btn--datepicker__next:hover {
+  fill: $turquoise-700;
+  background-color: $gray-130;
+}
+
+.datepicker th {
+  font-size: 12px;
+  font-weight: 400;
+  color: $gray-500;
+  line-height: 32px;
+}
+
+.datepicker td {
+  text-align: center;
+}
+
+.datepicker td button {
+  font-size: 14px;
+  font-family: $mainfont;
+  color: $gray-700;
+  border: none;
+  width: 32px;
+  height: 32px;
+  line-height: 30px;
+  border: 1px solid transparent;
+  border-radius: 0;
+  margin: 2px;
+}
+
+.datepicker td button:hover {
+  cursor: pointer;
+  border: 1px solid $turquoise-600;
+}
+
+.datepicker td button:active {
+  border-color: $turquoise-800;
+  background-color: $gray-100;
+}
+
+.datepicker td button:focus {
+
+  @include focusStyle();
+}
+
+.expandable.is-active .btn--datepicker {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.expandable.is-active .datepicker__calendar {
+  display: block;
+}
+
+.datepicker__month {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
