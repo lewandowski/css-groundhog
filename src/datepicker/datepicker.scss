@@ -20,10 +20,6 @@
   border: 1px solid $gray-300;
 }
 
-.btn--datepicker.expandable__trigger:before {
-  display: none;
-}
-
 .btn--datepicker:hover {
   background-color: $gray-130;
   border-color: $gray-400;
@@ -48,10 +44,6 @@
   height: 32px;
   padding: 6px;
   fill: $turquoise-600;
-}
-
-.btn--datepicker__previous {
-  transform: scaleX(-1);
 }
 
 .btn--datepicker__previous:hover,
@@ -89,9 +81,14 @@
   border: 1px solid $turquoise-600;
 }
 
-.datepicker td button:active {
+.datepicker td button:active,
+.datepicker .btn--selected {
   border-color: $turquoise-800;
   background-color: $gray-100;
+}
+
+.datepicker td button:disabled {
+  color: $gray-300;
 }
 
 .datepicker td button:focus {
@@ -99,12 +96,12 @@
   @include focusStyle();
 }
 
-.expandable.is-active .btn--datepicker {
+.datepicker.is-active .btn--datepicker {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.expandable.is-active .datepicker__calendar {
+.datepicker.is-active .datepicker__calendar {
   display: block;
 }
 
