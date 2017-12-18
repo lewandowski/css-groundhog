@@ -69,7 +69,7 @@ The Groundhog **infochip** component is a styled element, usually two lines of t
 ```
 
 
-## Additional attributes for the caption
+## Additional attributes for the infochip
 | attribute name   | effect |
 |------------------|--------|
 | `infochip`       | Wrapper class for the infochip |
