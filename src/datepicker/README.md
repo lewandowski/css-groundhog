@@ -13,7 +13,6 @@ The Groundhog **datepicker** component consists of a button that triggers a visu
 ## Including the datepicker component
 
 1. To include a datepicker component into your project, first create the html structure according to the example:
-
 ```html
 <div>
   <button>
@@ -56,7 +55,6 @@ The Groundhog **datepicker** component consists of a button that triggers a visu
 ```
 
 2. To add the visual enhancements of Groundhog, add the necessary classes to the elements' class attributes.
-
 ```html
 <div class="datepicker">
   <button class="btn btn--datepicker">
@@ -76,14 +74,17 @@ The Groundhog **datepicker** component consists of a button that triggers a visu
 ```
 
 3. To make the calendar expandable add the `data-target` and the appropriate `id` elements.
-
 ```html
 <div id="datepicker" class="datepicker">
   <button data-target="#datepicker" class="btn btn--datepicker">
     ...
 ```
 
-## Additional attributes for the caption
+4. Highlight the currently selected date by adding the `btn--selected` class to the elements class attributes.
+
+5. Set the disabled state for dates that are not part of the currently shown month. 
+
+## Additional attributes for the datepicker
 | attribute name | effect |
 |----------------|--------|
 | `datepicker`      | Sets the basic styles for the datepicker |
@@ -92,4 +93,7 @@ The Groundhog **datepicker** component consists of a button that triggers a visu
 | `datepicker__month`      | Will enhance the styling of the month, previous and next buttons in the calendar |
 | `btn--datepicker__previous`      | Enhances the styling of the previous button |
 | `btn--datepicker__next`      | Enhances the styling of the next button |
+| `btn--selected`      | Shows which date is currently selected |
+| `disabled`      | Disabled state for date buttons that are not in the currently selected month |
+
 
