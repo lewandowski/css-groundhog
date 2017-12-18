@@ -14,6 +14,15 @@ hideCode: true
 
 * **datepicker** Initial implementation of the datepicker
 
+<a name="5.1.3"></a>
+## [5.1.3](https://github.com/Dynatrace/css-groundhog/compare/v5.1.2...v5.1.3) (2017-12-14)
+
+### Fixes
+
+#### Updated components
+
+* **list:** Steps counter is resetted when step is first element of type step
+
 
 <a name="5.1.2"></a>
 ## [5.1.2](https://github.com/Dynatrace/css-groundhog/compare/v5.1.1...v5.1.2) (2017-12-12)
