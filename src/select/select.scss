@@ -39,7 +39,6 @@
 .select:focus {
 
   @include focusStyle();
-  background-image: url(/assets/images/icons/icons_file_002_dropdownopen.svg);
 }
 
 .select:active {
