@@ -7,12 +7,23 @@ hideCode: true
 # Changelog
 
 
+<a name="5.2.1"></a>
+## [5.2.1](https://github.com/Dynatrace/css-groundhog/compare/v5.2.0...v5.2.1) (2017-12-22)
+
+### Fixes
+
+#### Updated components
+
+* **select:** Arrow icon should not be rotated when select is focused
+
+
 <a name="5.2.0"></a>
 ## [5.2.0](https://github.com/Dynatrace/css-groundhog/compare/v5.1.2...v5.2.0) (2017-12-18)
 
 ### Features
 
 * **datepicker** Initial implementation of the datepicker
+
 
 <a name="5.1.3"></a>
 ## [5.1.3](https://github.com/Dynatrace/css-groundhog/compare/v5.1.2...v5.1.3) (2017-12-14)
