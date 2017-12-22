@@ -12,7 +12,6 @@ The Groundhog **infochip** component is a styled element, usually two lines of t
 
 ## Including the infochip component
 1. To include a infochip component into your project, first create the html structure like shown in the example:
-
 ```html
 <div>
   <div>
@@ -27,7 +26,6 @@ The Groundhog **infochip** component is a styled element, usually two lines of t
 ```
 
 2. To add the visual enhancements of Groundhog, add the necessary classes to the elements class attributes:
-
 ```html
 <div class="infochip">
   <div class="infochip__desc">
@@ -42,7 +40,6 @@ The Groundhog **infochip** component is a styled element, usually two lines of t
 ```
 
 3. For infochips with an icon, adapt the structue like this:
-
 ```html
 <div class="infochip">
   <div class="infochip__icon">
@@ -61,8 +58,7 @@ The Groundhog **infochip** component is a styled element, usually two lines of t
 </div>
 ```
 
-3. Add the `title` attribute for hover functionality.
-
+4. Add the `title` attribute for hover functionality.
 ```html
 ...
   <div class="infochip__desc">
@@ -73,9 +69,7 @@ The Groundhog **infochip** component is a styled element, usually two lines of t
 ```
 
 
-
-
-## Additional attributes for the caption
+## Additional attributes for the infochip
 | attribute name   | effect |
 |------------------|--------|
 | `infochip`       | Wrapper class for the infochip |
