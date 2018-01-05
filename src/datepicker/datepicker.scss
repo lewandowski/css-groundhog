@@ -81,6 +81,11 @@
   border: 1px solid $turquoise-600;
 }
 
+.datepicker td button[disabled]:hover {
+  border: none;
+  cursor: initial;
+}
+
 .datepicker td button:active,
 .datepicker .btn--selected {
   border-color: $turquoise-800;
