@@ -6,6 +6,18 @@ hideCode: true
 
 # Changelog
 
+
+<a name="5.3.0"></a>
+## [5.3.0](https://github.com/Dynatrace/css-groundhog/compare/v5.2.2...v5.3.0) (2018-01-08)
+
+### Fixes
+
+#### Updated components
+
+* **datepicker:** Updated hover on disabled dates
+* **inputfield:** Updated id in inputfield example
+
+
 <a name="5.2.2"></a>
 ## [5.2.2](https://github.com/Dynatrace/css-groundhog/compare/v5.2.1...v5.2.2) (2018-01-05)
 
