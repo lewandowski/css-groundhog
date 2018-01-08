@@ -12,10 +12,11 @@ hideCode: true
 
 ### Fixes
 
+* **icons:** added clock and arrow icons
+
 #### Updated components
 
-* **datepicker:** Updated hover on disabled dates
-* **inputfield:** Updated id in inputfield example
+* **datepicker:** Styling changes
 
 
 <a name="5.2.2"></a>
