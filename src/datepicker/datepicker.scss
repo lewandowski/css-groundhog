@@ -96,6 +96,10 @@
   color: $gray-300;
 }
 
+.datepicker td .btn--selected:disabled {
+  border-color: $gray-300;
+}
+
 .datepicker td button:focus {
 
   @include focusStyle();
