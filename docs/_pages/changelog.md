@@ -12,8 +12,6 @@ hideCode: true
 
 ### Fixes
 
-* **icons:** added clock and arrow icons
-
 #### Updated components
 
 * **datepicker:** Styling changes

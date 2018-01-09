@@ -8,7 +8,7 @@ since: 5.2.0
 ---
 
 ## Introduction
-The Groundhog **datepicker** component consists of a button that triggers a visual block representing selectable dates.
+The Groundhog **datepicker** component consists of a button that triggers a visual block representing selectable dates. It uses the [icon component](/doc/components/icons/).
 
 ## Including the datepicker component
 
@@ -16,16 +16,23 @@ The Groundhog **datepicker** component consists of a button that triggers a visu
 ```html
 <div>
   <button>
-    Jan 01, 2018
+    <svg role="img" class="icon icon--small">
+      <use xlink:href="#clock"></use>
+    </svg>
+  Jan 01, 2018
   </button>
   <div>
     <div>
       <button>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M189.246 446L364.49 270.758v-29.52L189.245 66l-41.735 41.742L295.764 256 147.51 404.252z"/></svg>        
+        <svg role="img" class="icon icon--small">
+          <use xlink:href="#arrow-left"></use>
+        </svg>
       </button>
-      <span>January</span>
+      <span>January 2018</span>
       <button>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M189.246 446L364.49 270.758v-29.52L189.245 66l-41.735 41.742L295.764 256 147.51 404.252z"/></svg>
+        <svg role="img" class="icon icon--small">
+          <use xlink:href="#arrow-right"></use>
+        </svg>
       </button>
     </div>
     <div>
@@ -62,12 +69,16 @@ The Groundhog **datepicker** component consists of a button that triggers a visu
   </button>
   <div class="datepicker__calendar">
     <div class="datepicker__month">
-      <button class="btn btn--datepicker__previous">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M189.246 446L364.49 270.758v-29.52L189.245 66l-41.735 41.742L295.764 256 147.51 404.252z"/></svg>        
+      <button class="btn btn--datepicker__selectMonth">
+        <svg role="img" class="icon icon--small">
+          <use xlink:href="#arrow-right"></use>
+        </svg>
       </button>
       <span>January</span>
-      <button class="btn btn--datepicker__next">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M189.246 446L364.49 270.758v-29.52L189.245 66l-41.735 41.742L295.764 256 147.51 404.252z"/></svg>
+      <button class="btn btn--datepicker__selectMonth">
+        <svg role="img" class="icon icon--small">
+          <use xlink:href="#arrow-right"></use>
+        </svg>
       </button>
     </div>
     ...
@@ -91,8 +102,7 @@ The Groundhog **datepicker** component consists of a button that triggers a visu
 | `btn--datepicker`      | Enhances the button style like in the examples |
 | `datepicker__calendar`      | Will set the styling for the calendar overlay |
 | `datepicker__month`      | Will enhance the styling of the month, previous and next buttons in the calendar |
-| `btn--datepicker__previous`      | Enhances the styling of the previous button |
-| `btn--datepicker__next`      | Enhances the styling of the next button |
+| `btn--datepicker__selectMonth`      | Enhances the styling of the next/previous buttons |
 | `btn--selected`      | Shows which date is currently selected |
 | `disabled`      | Disabled state for date buttons that are not in the currently selected month |
 
