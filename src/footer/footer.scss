@@ -76,12 +76,8 @@ $column-width: 180px !default;
   height: 2.5rem;
   padding: 0.25rem;
   fill: #fff;
-  margin-top: 1rem;
+  margin: 1rem 0.5rem 0;
   transition: background-color 100ms ease-in-out, fill 100ms ease-in-out;
-}
-
-.footer__sociallink + .footer__sociallink {
-  margin-left: 1rem;
 }
 
 .footer__linklist--horizontal .footer__linkitem {
