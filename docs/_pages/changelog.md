@@ -10,7 +10,7 @@ hideCode: true
 <a name="5.3.2"></a>
 ## [5.3.2](https://github.com/Dynatrace/css-groundhog/compare/v5.3.1...v5.3.2) (2018-01-15)
 
-### Fixes
+### Features
 
 #### Updates
 
