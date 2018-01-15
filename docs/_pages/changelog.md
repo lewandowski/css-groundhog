@@ -7,6 +7,16 @@ hideCode: true
 # Changelog
 
 
+<a name="5.3.2"></a>
+## [5.3.2](https://github.com/Dynatrace/css-groundhog/compare/v5.3.1...v5.3.2) (2018-01-15)
+
+### Features
+
+#### Updates
+
+* **typography:** Text underlines skip ink to improve readability
+
+
 <a name="5.3.1"></a>
 ## [5.3.1](https://github.com/Dynatrace/css-groundhog/compare/v5.3.0...v5.3.1) (2018-01-10)
 
