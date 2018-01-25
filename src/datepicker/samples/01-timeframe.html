@@ -8,36 +8,36 @@
   <div class="datepicker__calendar">
     <div>
       <div class="datepicker__timeframe">
-        <button class="btn btn--datepicker__selectMonth vtn--datepicker">
+        <button class="btn btn--datepicker__changeTime">
           <svg role="img" class="icon icon--small">
             <use xlink:href="#arrow-left"></use>
           </svg>Previous 2h
         </button>
-        <button class="btn btn--datepicker__selectMonth">
+        <button class="btn btn--datepicker__changeTime">
             Next 2h<svg role="img" class="icon icon--small">
             <use xlink:href="#arrow-right"></use>
           </svg>
         </button>
       </div>
       <div class="buttongroup buttongroup--fixedWidth">
-        <a href="#" class="btn">Last 2 hours</a>
-        <a href="#" class="btn">Last 6 hours</a>
-        <a href="#" class="btn">Last 24 hours</a>
-        <a href="#" class="btn">Last 72 hours</a>
-        <a href="#" class="btn">Last 7 days</a>
-        <a href="#" class="btn">Last 30 days</a>
-        <a href="#" class="btn">Last 90 days</a>
-        <a href="#" class="btn">Last 365 days</a>
+        <a href="#noop" class="btn">Last 2 hours</a>
+        <a href="#noop" class="btn">Last 6 hours</a>
+        <a href="#noop" class="btn">Last 24 hours</a>
+        <a href="#noop" class="btn">Last 72 hours</a>
+        <a href="#noop" class="btn">Last 7 days</a>
+        <a href="#noop" class="btn">Last 30 days</a>
+        <a href="#noop" class="btn">Last 90 days</a>
+        <a href="#noop" class="btn">Last 365 days</a>
       </div>
     </div>
     <div class="datepicker__month">
-      <button class="btn btn--datepicker__selectMonth">
+      <button class="btn btn--datepicker__changeTime">
         <svg role="img" class="icon icon--small">
           <use xlink:href="#arrow-left"></use>
         </svg>
       </button>
       <span>January 2018</span>
-      <button class="btn btn--datepicker__selectMonth">
+      <button class="btn btn--datepicker__changeTime">
         <svg role="img" class="icon icon--small">
           <use xlink:href="#arrow-right"></use>
         </svg>
@@ -100,6 +100,12 @@
           <td><button disabled>2</button></td>
         </tr>
       </table>
+    </div>
+    <div class="datepicker__starttime">
+      <label for="st0" class="label">Start time</label>
+      <input type="number" class="inputfield" id="st0" disabled placeholder="06"/>
+      <span class="label">:</span>
+      <input type="number" class="inputfield" id="st1" disabled placeholder="30"/>
     </div>
   </div>
 </div>

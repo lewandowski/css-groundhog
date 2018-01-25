@@ -9,15 +9,19 @@
     margin-top: -1px;
     text-overflow: ellipsis;
   }
+
   .btn:first-child {
     border-radius: 3px 0 0;
   }
+
   .btn:nth-of-type(#{$columns}) {
     border-radius: 0 3px 0 0;
   }
+
   .btn:nth-last-child(#{$columns}) {
     border-radius: 0 0 0 3px;
   }
+
   .btn:last-child {
     border-radius: 0 0 3px 0;
   }
@@ -25,14 +29,39 @@
   .btn:nth-of-type(#{$columns}n+1) {
     margin-left: 0;
   }
+
+  .btn:first-child:nth-last-child(#{$columns}) {
+    border-radius: 3px 0 0 3px;
+  }
+
+  .btn:last-child:nth-of-type(#{$columns}) {
+    border-radius: 0 3px 3px 0;
+  }
 }
 
 .datepicker {
   position: relative;
 
   button {
+    color: $gray-700;
     background-color: $white;
     margin: 0;
+  }
+}
+
+.datepicker__starttime {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+
+  .label {
+    white-space: nowrap;
+    padding: 0 8px;
+  }
+
+  .inputfield {
+    text-align: right;
   }
 }
 
@@ -62,7 +91,7 @@
   max-width: 306px;
 }
 
-.btn--datepicker__selectMonth {
+.btn--datepicker__changeTime {
   border: none;
   width: 32px;
   height: 32px;
@@ -75,11 +104,19 @@
   }
 }
 
-.datepicker__timeframe .btn--datepicker__selectMonth {
+.datepicker__timeframe .btn--datepicker__changeTime {
   width: auto;
 }
 
-.btn--datepicker__selectMonth:hover {
+.datepicker__timeframe .btn--datepicker__changeTime:last-child {
+
+  .icon {
+    margin-right: 0;
+    margin-left: 4px;
+  }
+}
+
+.btn--datepicker__changeTime:hover {
   background-color: $gray-130;
 
   .icon {
@@ -99,10 +136,10 @@
 }
 
 .buttongroup.buttongroup--fixedWidth {
-
+  width: 100%;
   padding-bottom: 1rem;
 
-  @include btngroup__layout(3);
+  @include btngroup__layout(2);
 
 }
 
