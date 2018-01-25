@@ -1,6 +1,32 @@
 @import "../common/variables";
 @import "../common/mixins";
 
+
+@mixin btngroup__layout($columns) {
+
+  .btn {
+    width: calc(100% / #{$columns});
+    margin-top: -1px;
+    text-overflow: ellipsis;
+  }
+  .btn:first-child {
+    border-radius: 3px 0 0;
+  }
+  .btn:nth-of-type(#{$columns}) {
+    border-radius: 0 3px 0 0;
+  }
+  .btn:nth-last-child(#{$columns}) {
+    border-radius: 0 0 0 3px;
+  }
+  .btn:last-child {
+    border-radius: 0 0 3px 0;
+  }
+
+  .btn:nth-of-type(#{$columns}n+1) {
+    margin-left: 0;
+  }
+}
+
 .datepicker {
   position: relative;
 
@@ -33,6 +59,7 @@
   top: 31px;
   left: 0;
   z-index: 9999;
+  max-width: 306px;
 }
 
 .btn--datepicker__selectMonth {
@@ -46,6 +73,10 @@
   .icon {
     fill: $turquoise-600;
   }
+}
+
+.datepicker__timeframe .btn--datepicker__selectMonth {
+  width: auto;
 }
 
 .btn--datepicker__selectMonth:hover {
@@ -65,6 +96,14 @@
 
 .datepicker td {
   text-align: center;
+}
+
+.buttongroup.buttongroup--fixedWidth {
+
+  padding-bottom: 1rem;
+
+  @include btngroup__layout(3);
+
 }
 
 .datepicker td button {
@@ -114,7 +153,8 @@
   display: block;
 }
 
-.datepicker__month {
+.datepicker__month,
+.datepicker__timeframe {
   font-size: 14px;
   display: flex;
   justify-content: space-between;
