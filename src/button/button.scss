@@ -2,49 +2,56 @@
 @import "./button-themes";
 @import "./button-variants";
 
-.btn {
+$includedButton: false !default;
 
-  @include btn-common();
-}
+@if ($includedButton == false) {
 
-/*
-* btn--primary styles
-*/
-.btn--primary {
+  .btn {
 
-  @include btn-primary();
-}
+    @include btn-common();
+  }
 
-/*
-* iconOnly button styles
-*/
-.btn--icon {
+  /*
+  * btn--primary styles
+  */
+  .btn--primary {
 
-  @include btn-icon();
-}
+    @include btn-primary();
+  }
 
-/*
-* buttonSecondary styles
-*/
-.btn--secondary {
+  /*
+  * iconOnly button styles
+  */
+  .btn--icon {
 
-  @include btn-secondary();
-}
+    @include btn-icon();
+  }
 
-/*
-* btn--primary--darktheme styles
-*/
-.btn--primary.theme--dark,
-.theme--dark .btn--primary {
+  /*
+  * buttonSecondary styles
+  */
+  .btn--secondary {
 
-  @include btn-primary-theme-dark();
-}
+    @include btn-secondary();
+  }
 
-/*
-* btn--secondary--darktheme styles
-*/
-.theme--dark .btn--secondary,
-.btn--secondary.theme--dark {
+  /*
+  * btn--primary--darktheme styles
+  */
+  .btn--primary.theme--dark,
+  .theme--dark .btn--primary {
 
-  @include btn-secondary-theme-dark();
+    @include btn-primary-theme-dark();
+  }
+
+  /*
+  * btn--secondary--darktheme styles
+  */
+  .theme--dark .btn--secondary,
+  .btn--secondary.theme--dark {
+
+    @include btn-secondary-theme-dark();
+  }
+
+  $includedButton: true;
 }
