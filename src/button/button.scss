@@ -1,247 +1,50 @@
-@import "../common/variables";
-@import "../common/mixins";
+@import "./button-common";
+@import "./button-themes";
+@import "./button-variants";
 
-$includedButton: false !default;
+.btn {
 
-@if ($includedButton == false) {
+  @include btn-common();
+}
 
-  .btn {
-    font-family: $mainfont;
-    appearance: none;
-    position: relative;
-    display: inline-block;
-    box-sizing: border-box;
-    text-decoration: none;
-    height: 32px;
-    border-style: solid;
-    border-radius: 3px;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 15px;
-    padding-right: 15px;
-    cursor: pointer;
-    font-size: 14px;
-    line-height: 32px;
-    line-height: -moz-block-height;
-    vertical-align: middle;
-    border-width: 1px;
-    border-color: $buttoncolor;
-    white-space: nowrap;
-    text-align: center;
-    overflow: hidden;
-  }
+/*
+* btn--primary styles
+*/
+.btn--primary {
 
-  .btn:hover {
-    text-decoration: none;
-    border-color: $buttonhovercolor;
-  }
+  @include btn-primary();
+}
 
-  .btn:focus {
+/*
+* iconOnly button styles
+*/
+.btn--icon {
 
-    @include focusStyle();
-  }
+  @include btn-icon();
+}
 
-  .btn:active {
-    border-color: $buttonactivecolor;
-  }
+/*
+* buttonSecondary styles
+*/
+.btn--secondary {
 
-  .btn > .icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 4px;
-    margin-top: 5px;
-    vertical-align: top;
-  }
+  @include btn-secondary();
+}
 
-  .btn[disabled] {
-    pointer-events: none;
-    border-color: $disabledcolor;
-    cursor: default;
-    box-shadow: none;
-  }
+/*
+* btn--primary--darktheme styles
+*/
+.btn--primary.theme--dark,
+.theme--dark .btn--primary {
 
-  /*
-  * btn--primary styles
-  */
+  @include btn-primary-theme-dark();
+}
 
-  .btn--primary {
-    background-color: $buttoncolor;
-  }
+/*
+* btn--secondary--darktheme styles
+*/
+.theme--dark .btn--secondary,
+.btn--secondary.theme--dark {
 
-  .btn--primary,
-  .btn--primary:hover,
-  .btn--primary:visited {
-    color: #fff;
-  }
-
-  .btn--primary:hover {
-    background-color: $buttonhovercolor;
-  }
-
-  .btn--primary:active {
-    background-color: $buttonactivecolor;
-  }
-
-  .btn--primary[disabled] {
-    background-color: $disabledcolor;
-    color: rgba(255, 255, 255, 0.6);
-  }
-
-  .btn--primary > .icon,
-  .btn--primary > .icon * {
-    fill: #fff;
-  }
-
-  .btn--primary[disabled] > .icon,
-  .btn--primary[disabled] > .icon * {
-    fill: rgba(255, 255, 255, 0.6);
-  }
-
-  /*
-  * btn--primary--darktheme styles
-  */
-
-  .btn--primary.theme--dark,
-  .theme--dark .btn--primary {
-    border-color: #fff;
-    background-color: $buttoncolor;
-    text-decoration: none;
-  }
-
-  .theme--dark .btn--primary:hover,
-  .btn--primary.theme--dark:hover {
-    background-color: $buttonhovercolor;
-    border-color: #fff;
-  }
-
-  .theme--dark .btn--primary:active,
-  .btn--primary.theme--dark:active {
-    background-color: $buttonactivecolor;
-    border-color: #fff;
-  }
-
-  .theme--dark .btn--primary[disabled],
-  .btn--primary.theme--dark[disabled] {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: rgba(255, 255, 255, 0.6);
-    border-color: transparent;
-  }
-
-  .btn--primary.theme--dark > .icon,
-  .btn--primary.theme--dark > .icon * {
-    fill: #fff;
-  }
-
-  .btn--primary.theme--dark[disabled] > .icon,
-  .btn--primary.theme--dark[disabled] > .icon * {
-    fill: rgba(255, 255, 255, 0.6);
-  }
-
-
-  /*
-  * iconOnly button styles
-  */
-  .btn--icon {
-    padding-left: 0;
-    padding-right: 0;
-    width: 32px;
-    text-align: center;
-  }
-
-  .btn--icon > .icon {
-    margin-right: 0;
-  }
-
-
-  /*
-  * buttonSecondary styles
-  */
-
-  .btn--secondary {
-    background-color: transparent;
-  }
-
-  .btn--secondary,
-  .btn--secondary:hover,
-  .btn--secondary:visited {
-    color: $buttoncolor;
-  }
-
-  .btn--secondary:hover {
-    border-color: $turquoise-700;
-    background-color: $gray-130;
-  }
-
-  .btn--secondary:focus,
-  .btn--secondary:active,
-  .btn--secondary:focus:active {
-    border-color: $buttonactivecolor;
-  }
-
-  .btn--secondary:active {
-    color: $buttonactivecolor;
-    background-color: $gray-130;
-  }
-
-  .btn--secondary[disabled] {
-    color: $disabledcolor;
-  }
-
-  .btn--secondary > .icon,
-  .btn--secondary > .icon * {
-    fill: $buttoncolor;
-  }
-
-  .btn--secondary[disabled] > .icon,
-  .btn--secondary[disabled] > .icon * {
-    fill: $disabledcolor;
-  }
-
-
-  /*
-  * btn--secondary--darktheme styles
-  */
-  .theme--dark .btn--secondary,
-  .btn--secondary.theme--dark {
-    border-color: #fff;
-    color: $gray-130;
-    text-decoration: none;
-  }
-
-  .theme--dark .btn--secondary:hover,
-  .btn--secondary.theme--dark:hover {
-    border-color: #fff;
-    color: $gray-130;
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-
-  .theme--dark .btn--secondary:active,
-  .btn--secondary.theme--dark:active {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-color: #fff;
-    color: #fff;
-  }
-
-  .theme--dark .btn--secondary[disabled],
-  .btn--secondary.theme--dark[disabled] {
-    color: rgba(255, 255, 255, 0.6);
-    border-color: rgba(255, 255, 255, 0.2);
-  }
-
-  .theme--dark .btn--secondary > .icon,
-  .theme--dark .btn--secondary > .icon *,
-  .btn--secondary.theme--dark > .icon,
-  .btn--secondary.theme--dark > .icon * {
-    fill: #fff;
-  }
-
-  .theme--dark .btn--secondary[disabled] > .icon,
-  .theme--dark .btn--secondary[disabled] > .icon *,
-  .btn--secondary.theme--dark[disabled] > .icon,
-  .btn--secondary.theme--dark[disabled] > .icon * {
-    fill: rgba(255, 255, 255, 0.6);
-  }
-
-  $includedButton: true;
-
+  @include btn-secondary-theme-dark();
 }

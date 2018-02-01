@@ -1,0 +1,76 @@
+@import "../common/variables";
+@import "../common/colors";
+@import "../common/mixins";
+
+/*
+* mixin for basic btn styles
+*/
+@mixin btn-common() {
+  font-family: $mainfont;
+  box-sizing: border-box;
+  position: relative;
+
+  // Reset browser <button> styles.
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+
+  // Make anchors render like buttons.
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: middle;
+  text-align: center;
+  overflow: hidden;
+
+  // CI
+  height: 32px;
+  border-style: solid;
+  border-radius: 3px;
+  border-width: 1px;
+  border-color: $turquoise-600;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 14px;
+  line-height: 32px;
+  line-height: -moz-block-height;
+  color: #fff;
+
+  &:hover {
+    text-decoration: none;
+    border-color: $buttonhovercolor;
+  }
+
+  &:active {
+    border-color: $buttonactivecolor;
+  }
+
+  &[disabled] {
+    pointer-events: none;
+    border-color: $disabledcolor;
+    cursor: default;
+    box-shadow: none;
+  }
+
+  &:focus {
+
+    @include focusStyle();
+  }
+
+  & > .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    margin-top: 5px;
+    vertical-align: top;
+  }
+}
+
