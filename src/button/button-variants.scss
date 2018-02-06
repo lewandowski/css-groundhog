@@ -1,9 +1,10 @@
 @import "../common/variables";
 
-/*
-* mixin for btn--primary styles
-*/
-@mixin btn-primary() {
+/**
+ * mixin for btn--primary styles
+ * @param iconSelector (default: .icon)
+ */
+@mixin btn-primary($iconSelector: ".icon") {
   background-color: $buttoncolor;
   color: #fff;
 
@@ -25,31 +26,32 @@
     color: rgba(255, 255, 255, 0.6);
   }
 
-  & > .icon,
-  & > .icon * {
+  & > #{$iconSelector},
+  & > #{$iconSelector} * {
     fill: #fff;
   }
 
-  &[disabled] > .icon,
-  &[disabled] > .icon * {
+  &[disabled] > #{$iconSelector},
+  &[disabled] > #{$iconSelector} * {
     fill: rgba(255, 255, 255, 0.6);
   }
 
-  &.theme--dark > .icon,
-  &.theme--dark > .icon * {
+  &.theme--dark > #{$iconSelector},
+  &.theme--dark > #{$iconSelector} * {
     fill: #fff;
   }
 
-  &.theme--dark[disabled] > .icon,
-  &.theme--dark[disabled] > .icon * {
+  &.theme--dark[disabled] > #{$iconSelector},
+  &.theme--dark[disabled] > #{$iconSelector} * {
     fill: rgba(255, 255, 255, 0.6);
   }
 }
 
-/*
-* mixin for btn--secondary styles
-*/
-@mixin btn-secondary() {
+/**
+ * mixin for btn--secondary styles
+ * @param iconSelector (default: .icon)
+ */
+@mixin btn-secondary($iconSelector: ".icon") {
   background-color: transparent;
   color: $buttoncolor;
 
@@ -79,13 +81,13 @@
     color: $disabledcolor;
   }
 
-  & > .icon,
-  & > .icon * {
+  & > #{$iconSelector},
+  & > #{$iconSelector } * {
     fill: $buttoncolor;
   }
 
-  &[disabled] > .icon,
-  &[disabled] > .icon * {
+  &[disabled] > #{$iconSelector},
+  &[disabled] > #{$iconSelector } * {
     fill: $disabledcolor;
   }
 }
@@ -93,13 +95,9 @@
 /*
 * mixin for btn--icon styles
 */
-@mixin btn-icon {
+@mixin btn-icon() {
   padding-left: 0;
   padding-right: 0;
   width: 32px;
   text-align: center;
-
-  & > .icon {
-    margin-right: 0;
-  }
 }
