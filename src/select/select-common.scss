@@ -1,7 +1,7 @@
 @import "../common/variables";
 @import "../common/mixins";
 
-@mixin select-container () {
+@mixin select-container() {
   font-family: $mainfont;
   appearance: none;
   position: relative;
@@ -24,18 +24,18 @@
   }
 }
 
-@mixin select-container-disabled () {
+@mixin select-container-disabled() {
   background-color: $gray-130;
   color: $gray-300;
 }
 
-@mixin select-trigger () {
+@mixin select-trigger() {
   padding: 0;
   padding-left: 11px;
   padding-right: 11px;
 }
 
-@mixin select-panel () {
+@mixin select-panel() {
   box-sizing: border-box;
   border: 1px solid $gray-300;
   background-color: #fff;
