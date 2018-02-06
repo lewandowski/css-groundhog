@@ -6,6 +6,16 @@ hideCode: true
 
 # Changelog
 
+<a name="5.3.4"></a>
+## [5.3.4](https://github.com/Dynatrace/css-groundhog/compare/v5.3.3...v5.3.4) (2018-02-06)
+
+### Refactor
+
+#### Updates
+
+* **select:** Scss refactoring - styles are now also available via [mixins](../components/select/#available-mixins-for-select)
+
+
 <a name="5.3.3"></a>
 ## [5.3.3](https://github.com/Dynatrace/css-groundhog/compare/v5.3.2...v5.3.3) (2018-02-01)
 
@@ -13,7 +23,7 @@ hideCode: true
 
 #### Updates
 
-* **button:** Scss refactoring 
+* **button:** Scss refactoring - styles are now also available via [mixins](../components/button/#available-mixins-for-button)
 
 
 <a name="5.3.2"></a>
