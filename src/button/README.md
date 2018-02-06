@@ -52,3 +52,14 @@ You can find the code to use an [icon within a button here][sample-icon-with-but
 | `.btn--secondary` | Sets the button as a secondary button |
 | `.btn--icon` | Sets the button to an icon only state |
 | `.theme--dark` | Sets the theme of the button to dark |
+
+
+## Available mixins for button
+| class name | effect |
+|------------|--------|
+| `btn-common` | Base styles for all button variants |
+| `btn-primary` | Primary button styles |
+| `btn-secondary` | Secondary button styles |
+| `btn-icon` | Icon only button styles |
+| `btn-primary-theme-dark` | Priary button on dark bg styles |
+| `btn-secondary-theme-dark` | Secondary button on dark bg styles |

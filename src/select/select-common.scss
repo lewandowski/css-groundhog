@@ -1,0 +1,42 @@
+@import "../common/variables";
+@import "../common/mixins";
+
+@mixin select-container() {
+  font-family: $mainfont;
+  appearance: none;
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  height: 32px;
+  border: 1px solid $disabledcolor;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 32px;
+  line-height: -moz-block-height;
+  white-space: nowrap;
+  text-align: left;
+  overflow: hidden;
+  background-color: #fff;
+
+  &:hover {
+    border-color: $gray-460;
+  }
+}
+
+@mixin select-container-disabled() {
+  background-color: $gray-130;
+  color: $gray-300;
+}
+
+@mixin select-trigger() {
+  padding: 0;
+  padding-left: 11px;
+  padding-right: 11px;
+}
+
+@mixin select-panel() {
+  box-sizing: border-box;
+  border: 1px solid $gray-300;
+  background-color: #fff;
+}
