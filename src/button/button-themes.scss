@@ -1,0 +1,62 @@
+@import "../common/colors";
+
+/*
+* mixin for btn--primary-theme-dark styles
+*/
+@mixin btn-primary-theme-dark() {
+  border-color: #fff;
+  background-color: $buttoncolor;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $buttonhovercolor;
+    border-color: #fff;
+  }
+
+  &:active {
+    background-color: $buttonactivecolor;
+    border-color: #fff;
+  }
+
+  &[disabled] {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.6);
+    border-color: transparent;
+  }
+}
+
+/*
+* mixin for btn--secondary-theme-dark styles
+*/
+@mixin btn-secondary-theme-dark() {
+  border-color: #fff;
+  color: $gray-130;
+  text-decoration: none;
+
+  &:hover {
+    border-color: #fff;
+    color: $gray-130;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &:active {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: #fff;
+    color: #fff;
+  }
+
+  &[disabled] {
+    color: rgba(255, 255, 255, 0.6);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  & > .icon,
+  & > .icon * {
+    fill: #fff;
+  }
+
+  &[disabled] > .icon,
+  &[disabled] > .icon * {
+    fill: rgba(255, 255, 255, 0.6);
+  }
+}

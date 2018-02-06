@@ -1,0 +1,105 @@
+@import "../common/variables";
+
+/*
+* mixin for btn--primary styles
+*/
+@mixin btn-primary() {
+  background-color: $buttoncolor;
+  color: #fff;
+
+  &:hover,
+  &:visited {
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: $buttonhovercolor;
+  }
+
+  &:active {
+    background-color: $buttonactivecolor;
+  }
+
+  &[disabled] {
+    background-color: $disabledcolor;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  & > .icon,
+  & > .icon * {
+    fill: #fff;
+  }
+
+  &[disabled] > .icon,
+  &[disabled] > .icon * {
+    fill: rgba(255, 255, 255, 0.6);
+  }
+
+  &.theme--dark > .icon,
+  &.theme--dark > .icon * {
+    fill: #fff;
+  }
+
+  &.theme--dark[disabled] > .icon,
+  &.theme--dark[disabled] > .icon * {
+    fill: rgba(255, 255, 255, 0.6);
+  }
+}
+
+/*
+* mixin for btn--secondary styles
+*/
+@mixin btn-secondary() {
+  background-color: transparent;
+  color: $buttoncolor;
+
+  &:hover,
+  &:visited {
+    color: $buttoncolor;
+  }
+
+
+  &:hover {
+    border-color: $turquoise-700;
+    background-color: $gray-130;
+  }
+
+  &:focus,
+  &:active,
+  &:focus:active {
+    border-color: $buttonactivecolor;
+  }
+
+  &:active {
+    color: $buttonactivecolor;
+    background-color: $gray-130;
+  }
+
+  &[disabled] {
+    color: $disabledcolor;
+  }
+
+  & > .icon,
+  & > .icon * {
+    fill: $buttoncolor;
+  }
+
+  &[disabled] > .icon,
+  &[disabled] > .icon * {
+    fill: $disabledcolor;
+  }
+}
+
+/*
+* mixin for btn--icon styles
+*/
+@mixin btn-icon {
+  padding-left: 0;
+  padding-right: 0;
+  width: 32px;
+  text-align: center;
+
+  & > .icon {
+    margin-right: 0;
+  }
+}
