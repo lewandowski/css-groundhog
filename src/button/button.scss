@@ -36,10 +36,6 @@ $includedButton: false !default;
   .btn--icon {
 
     @include btn-icon();
-
-    & > .icon {
-      margin-right: 0;
-    }
   }
 
   /*
