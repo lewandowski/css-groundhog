@@ -9,6 +9,17 @@ $includedButton: false !default;
   .btn {
 
     @include btn-common();
+
+    &[disabled] {
+      // Do not include pointer-events: none into btn-common mixin
+      // as it will break click tests in ngx-groundhog
+      pointer-events: none;
+    }
+
+    & > .icon {
+
+      @include btn-icon-element();
+    }
   }
 
   /*
@@ -25,6 +36,10 @@ $includedButton: false !default;
   .btn--icon {
 
     @include btn-icon();
+
+    & > .icon {
+      margin-right: 0;
+    }
   }
 
   /*

@@ -61,5 +61,6 @@ You can find the code to use an [icon within a button here][sample-icon-with-but
 | `btn-primary` | Primary button styles |
 | `btn-secondary` | Secondary button styles |
 | `btn-icon` | Icon only button styles |
+| `btn-icon-element` | Applies styles on icon elements in buttons |
 | `btn-primary-theme-dark` | Priary button on dark bg styles |
 | `btn-secondary-theme-dark` | Secondary button on dark bg styles |
