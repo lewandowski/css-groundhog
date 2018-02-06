@@ -6,6 +6,16 @@ hideCode: true
 
 # Changelog
 
+<a name="5.3.5"></a>
+## [5.3.5](https://github.com/Dynatrace/css-groundhog/compare/v5.3.4...v5.3.5) (2018-02-06)
+
+### Refactor
+
+#### Updates
+
+* **icon button:** Scss refactoring - icon styles are now also available via [mixins](../components/select/#available-mixins-for-select)
+
+
 <a name="5.3.4"></a>
 ## [5.3.4](https://github.com/Dynatrace/css-groundhog/compare/v5.3.3...v5.3.4) (2018-02-06)
 
