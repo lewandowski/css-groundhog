@@ -1,8 +1,12 @@
 @import "../common/variables";
 @import "../common/mixins";
+@import "../base/typography";
 
 @mixin select-container() {
-  font-family: $mainfont;
+
+  @include apply-font-family();
+  @include apply-body-font-size();
+
   appearance: none;
   position: relative;
   display: inline-block;
@@ -11,8 +15,7 @@
   border: 1px solid $disabledcolor;
   border-radius: 3px;
   cursor: pointer;
-  font-size: 14px;
-  line-height: 32px;
+  line-height: 30px;
   line-height: -moz-block-height;
   white-space: nowrap;
   text-align: left;
@@ -30,6 +33,7 @@
 }
 
 @mixin select-trigger() {
+  line-height: 32px;
   padding: 0;
   padding-left: 11px;
   padding-right: 11px;
