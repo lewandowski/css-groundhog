@@ -62,3 +62,12 @@ $columngap: 24px;
     }
   }
 }
+
+@mixin apply-font-family($font: $mainfont) {
+  font-family: $font;
+}
+
+@mixin apply-body-font-size($size: 14px) {
+  font-size: $size;
+  line-height: 1.6;
+}
