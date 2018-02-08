@@ -14,12 +14,7 @@ hideCode: true
 
 #### Updates
 
-* **typography:** Scss refactoring - it's now possible to apply font, body font-size and body line-height via mixins. 
-
-Default values:
-* `font: $mainfont` `("BerninaSans", "Open Sans", sans-serif)`
-* body `font-size: 14px`
-
+* **typography:** Scss refactoring - it's now possible to apply font, body font-size and body line-height via mixins.
 
 <a name="5.3.5"></a>
 ## [5.3.5](https://github.com/Dynatrace/css-groundhog/compare/v5.3.4...v5.3.5) (2018-02-06)
