@@ -6,6 +6,25 @@ hideCode: true
 
 # Changelog
 
+<a name="6.0.0"></a>
+## [6.0.0](https://github.com/Dynatrace/css-groundhog/compare/v5.3.6...v6.0.0) (2018-02-21)
+
+### Refactor
+
+#### Updates
+
+* **color:** Reduced the number of color variables.
+
+* **nav:** Updated menu item hover color.
+* **inputfield:** Updated border color.
+* **textarea:** Updated border color.
+* **pagination:** Updated text color.
+* **select:** Updated border color.
+* **sidebar:** Updated background color.
+* **tile:** Updated border color.
+
+* **button:** Removed text color definition from `.btn` base class. Fixed hover color text for secondary button.
+* **datepicker:** Fixed text color of datepicker button to be visible.
 
 <a name="5.3.6"></a>
 ## [5.3.6](https://github.com/Dynatrace/css-groundhog/compare/v5.3.5...v5.3.6) (2018-02-08)
