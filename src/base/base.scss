@@ -42,7 +42,12 @@ a.theme--dark {
 
 .theme--dark a:hover,
 a.theme--dark:hover {
-  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.theme--dark a:active,
+a.theme--dark:active {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 img {
