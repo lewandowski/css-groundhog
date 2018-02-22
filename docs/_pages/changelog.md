@@ -25,6 +25,7 @@ hideCode: true
 
 * **button:** Removed text color definition from `.btn` base class. Fixed hover color text for secondary button.
 * **datepicker:** Fixed text color of datepicker button to be visible.
+* **link:** Updated link on dark/colored background styles to fit latest design.
 
 <a name="5.3.6"></a>
 ## [5.3.6](https://github.com/Dynatrace/css-groundhog/compare/v5.3.5...v5.3.6) (2018-02-08)
