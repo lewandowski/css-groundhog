@@ -27,7 +27,7 @@ implementations of the components there. Additionally, we created
 extra modules that come in handy when working with websites and web applications: Layouts,
 lightboxes, etc.
 
-If you work in one of our GWT web applications like Dynatrace SaaS or Managed, please use the
+If you work in one of our GWT web applications like Dynatrace, please use the
 Dynatrace widget library instead. This project is just there to be a guideline or a precursor to widgets that
 find their way into GWT.
 
