@@ -4,9 +4,15 @@
 .datepicker {
   position: relative;
 
-  button {
+  .btn--datepicker {
+    border: 1px solid $gray-300;
     background-color: $white;
     margin: 0;
+    color: $turquoise-600;
+
+    .icon {
+      fill: $turquoise-600;
+    }
   }
 }
 
