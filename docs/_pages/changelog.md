@@ -9,7 +9,7 @@ hideCode: true
 <a name="6.0.0"></a>
 ## [6.0.0](https://github.com/Dynatrace/css-groundhog/compare/v5.3.6...v6.0.0) (2018-02-21)
 
-### Refactor
+### Feature
 
 #### Updates
 
