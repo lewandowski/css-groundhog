@@ -28,22 +28,21 @@ $includedButton: false !default;
   .btn--primary {
 
     @include btn-primary();
-    @include btn-primary-variant($buttoncolor, $buttonhovercolor, $buttonactivecolor);
-  }
 
-  .btn--primary.btn--cta {
+    &.btn--cta {
 
-    @include btn-primary-variant($green-600, $green-700, $green-800);
-  }
+      @include btn-primary-variant($green-600, $green-700, $green-800);
+    }
 
-  .btn--primary.btn--error {
+    &.btn--error {
 
-    @include btn-primary-variant($red-600, $red-700, $red-800);
-  }
+      @include btn-primary-variant($red-600, $red-700, $red-800);
+    }
 
-  .btn--primary.btn--warning {
+    &.btn--warning {
 
-    @include btn-primary-variant($yellow-600, $yellow-700, $yellow-800);
+      @include btn-primary-variant($yellow-600, $yellow-700, $yellow-800);
+    }
   }
 
   /*
@@ -64,22 +63,21 @@ $includedButton: false !default;
   .btn--secondary {
 
     @include btn-secondary();
-    @include btn-secondary-variant($buttoncolor, $buttonhovercolor, $buttonactivecolor);
-  }
 
-  .btn--secondary.btn--cta {
+    &.btn--cta {
 
-    @include btn-secondary-variant($green-600, $green-700, $green-800);
-  }
+      @include btn-secondary-variant($green-600, $green-700, $green-800);
+    }
 
-  .btn--secondary.btn--error {
+    &.btn--error {
 
-    @include btn-secondary-variant($red-600, $red-700, $red-800);
-  }
+      @include btn-secondary-variant($red-600, $red-700, $red-800);
+    }
 
-  .btn--secondary.btn--warning {
+    &.btn--warning {
 
-    @include btn-secondary-variant($yellow-600, $yellow-700, $yellow-800);
+      @include btn-secondary-variant($yellow-600, $yellow-700, $yellow-800);
+    }
   }
 
   /*
@@ -89,24 +87,21 @@ $includedButton: false !default;
   .theme--dark .btn--primary {
 
     @include btn-primary-theme-dark();
-  }
 
-  .btn--primary.btn--cta.theme--dark,
-  .theme--dark .btn--primary.btn--cta {
+    &.btn--cta {
 
-    @include btn-primary-variant-theme-dark($green-500, $green-400, $green-300);
-  }
+      @include btn-primary-variant-theme-dark($green-500, $green-400, $green-300);
+    }
 
-  .btn--primary.btn--error.theme--dark,
-  .theme--dark .btn--primary.btn--error {
+    &.btn--error {
 
-    @include btn-primary-variant-theme-dark($red-500, $red-400, $red-300);
-  }
+      @include btn-primary-variant-theme-dark($red-500, $red-400, $red-300);
+    }
 
-  .btn--primary.btn--warning.theme--dark,
-  .theme--dark .btn--primary.btn--warning {
+    &.btn--warning {
 
-    @include btn-primary-variant-theme-dark($yellow-500, $yellow-400, $yellow-300);
+      @include btn-primary-variant-theme-dark($yellow-600, $yellow-500, $yellow-400);
+    }
   }
 
   /*
@@ -116,24 +111,21 @@ $includedButton: false !default;
   .btn--secondary.theme--dark {
 
     @include btn-secondary-theme-dark();
-  }
 
-  .btn--secondary.btn--cta.theme--dark,
-  .theme--dark .btn--secondary.btn--cta {
+    &.btn--cta {
 
-    @include btn-secondary-variant-theme-dark($green-500, $green-400, $green-300);
-  }
+      @include btn-secondary-variant-theme-dark($green-500, $green-400, $green-300);
+    }
 
-  .btn--secondary.btn--error.theme--dark,
-  .theme--dark .btn--secondary.btn--error {
+    &.btn--error {
 
-    @include btn-secondary-variant-theme-dark($red-500, $red-400, $red-300);
-  }
+      @include btn-secondary-variant-theme-dark($red-500, $red-400, $red-300);
+    }
 
-  .btn--secondary.btn--warning.theme--dark,
-  .theme--dark .btn--secondary.btn--warning {
+    &.btn--warning {
 
-    @include btn-secondary-variant-theme-dark($yellow-500, $yellow-400, $yellow-300);
+      @include btn-secondary-variant-theme-dark($yellow-600, $yellow-500, $yellow-400);
+    }
   }
 
   $includedButton: true;

@@ -2,7 +2,7 @@
 
 @mixin btn-primary-variant-theme-dark($default, $hover, $active) {
   background-color: $default;
-  border-color: #fff;
+  // border-color: #fff;
 
   &:hover {
     background-color: $hover;

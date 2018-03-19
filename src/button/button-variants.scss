@@ -45,6 +45,10 @@
  * @param iconSelector (default: .icon)
  */
 @mixin btn-primary($iconSelector: ".icon") {
+
+  // setting default colors for primary btn
+  @include btn-primary-variant($buttoncolor, $buttonhovercolor, $buttonactivecolor);
+
   color: #fff;
 
   &:hover,
@@ -83,6 +87,10 @@
  * @param iconSelector (default: .icon)
  */
 @mixin btn-secondary($iconSelector: ".icon") {
+
+  // setting default colors for secondary btn
+  @include btn-secondary-variant($buttoncolor, $buttonhovercolor, $buttonactivecolor);
+
   background-color: transparent;
 
   &:hover {
