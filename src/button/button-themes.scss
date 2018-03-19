@@ -1,20 +1,44 @@
 @import "../common/colors";
 
+@mixin btn-primary-variant-theme-dark($default, $hover, $active) {
+  background-color: $default;
+  border-color: #fff;
+
+  &:hover {
+    background-color: $hover;
+  }
+
+  &:active {
+    background-color: $active;
+  }
+}
+
+@mixin btn-secondary-variant-theme-dark($default, $hover, $active) {
+  border-color: $default;
+  color: #fff;
+
+  &:hover {
+    border-color: $hover;
+  }
+
+  &:active {
+    border-color: $active;
+    color: #fff;
+  }
+}
+
 /*
 * mixin for btn--primary-theme-dark styles
 */
 @mixin btn-primary-theme-dark() {
   border-color: #fff;
-  background-color: $buttoncolor;
   text-decoration: none;
 
   &:hover {
-    background-color: $buttonhovercolor;
     border-color: #fff;
   }
 
   &:active {
-    background-color: $buttonactivecolor;
     border-color: #fff;
   }
 
@@ -30,19 +54,15 @@
 */
 @mixin btn-secondary-theme-dark() {
   border-color: #fff;
-  color: $gray-130;
   text-decoration: none;
+  color: #fff;
 
   &:hover {
-    border-color: #fff;
-    color: $gray-130;
     background-color: rgba(255, 255, 255, 0.2);
   }
 
   &:active {
     background-color: rgba(255, 255, 255, 0.3);
-    border-color: #fff;
-    color: #fff;
   }
 
   &[disabled] {

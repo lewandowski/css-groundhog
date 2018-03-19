@@ -30,6 +30,21 @@ $includedButton: false !default;
     @include btn-primary();
   }
 
+  .btn--primary.cta {
+
+    @include btn-primary-variant($green-600, $green-700, $green-800);
+  }
+
+  .btn--primary.error {
+
+    @include btn-primary-variant($red-600, $red-700, $red-800);
+  }
+
+  .btn--primary.warning {
+
+    @include btn-primary-variant($yellow-600, $yellow-700, $yellow-800);
+  }
+
   /*
   * iconOnly button styles
   */
@@ -50,6 +65,21 @@ $includedButton: false !default;
     @include btn-secondary();
   }
 
+  .btn--secondary.cta {
+
+    @include btn-secondary-variant($green-600, $green-700, $green-800);
+  }
+
+  .btn--secondary.error {
+
+    @include btn-secondary-variant($red-600, $red-700, $red-800);
+  }
+
+  .btn--secondary.warning {
+
+    @include btn-secondary-variant($yellow-600, $yellow-700, $yellow-800);
+  }
+
   /*
   * btn--primary--darktheme styles
   */
@@ -59,6 +89,24 @@ $includedButton: false !default;
     @include btn-primary-theme-dark();
   }
 
+  .btn--primary.cta.theme--dark,
+  .theme--dark .btn--primary.cta {
+
+    @include btn-primary-variant-theme-dark($green-500, $green-400, $green-300);
+  }
+
+  .btn--primary.error.theme--dark,
+  .theme--dark .btn--primary.error {
+
+    @include btn-primary-variant-theme-dark($red-500, $red-400, $red-300);
+  }
+
+  .btn--primary.warning.theme--dark,
+  .theme--dark .btn--primary.warning {
+
+    @include btn-primary-variant-theme-dark($yellow-500, $yellow-400, $yellow-300);
+  }
+
   /*
   * btn--secondary--darktheme styles
   */
@@ -66,6 +114,24 @@ $includedButton: false !default;
   .btn--secondary.theme--dark {
 
     @include btn-secondary-theme-dark();
+  }
+
+  .btn--secondary.cta.theme--dark,
+  .theme--dark .btn--secondary.cta {
+
+    @include btn-secondary-variant-theme-dark($green-500, $green-400, $green-300);
+  }
+
+  .btn--secondary.error.theme--dark,
+  .theme--dark .btn--secondary.error {
+
+    @include btn-secondary-variant-theme-dark($red-500, $red-400, $red-300);
+  }
+
+  .btn--secondary.warning.theme--dark,
+  .theme--dark .btn--secondary.warning {
+
+    @include btn-secondary-variant-theme-dark($yellow-500, $yellow-400, $yellow-300);
   }
 
   $includedButton: true;

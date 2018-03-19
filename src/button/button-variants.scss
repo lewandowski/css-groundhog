@@ -1,24 +1,60 @@
 @import "../common/variables";
 
+
+@mixin btn-primary-variant($default, $hover, $active) {
+  background-color: $default;
+  border-color: $default;
+
+  &:hover {
+    background-color: $hover;
+  }
+
+  &:active {
+    background-color: $active;
+  }
+}
+
+@mixin btn-secondary-variant($default, $hover, $active, $iconSelector: ".icon") {
+  color: $default;
+  border-color: $default;
+
+  &:visited {
+    color: $default;
+  }
+
+  &:hover {
+    color: $hover;
+    border-color: $hover;
+  }
+
+  &:focus,
+  &:active,
+  &:focus:active {
+    border-color: $active;
+  }
+
+  &:active {
+    color: $active;
+  }
+
+  & > #{$iconSelector},
+  & > #{$iconSelector } * {
+    fill: $default;
+  }
+}
+
 /**
  * mixin for btn--primary styles
  * @param iconSelector (default: .icon)
  */
 @mixin btn-primary($iconSelector: ".icon") {
-  background-color: $buttoncolor;
   color: #fff;
+
+  @include btn-primary-variant($buttoncolor, $buttonhovercolor, $buttonactivecolor);
 
   &:hover,
   &:visited {
     color: #fff;
-  }
-
-  &:hover {
-    background-color: $buttonhovercolor;
-  }
-
-  &:active {
-    background-color: $buttonactivecolor;
   }
 
   &[disabled] {
@@ -53,37 +89,19 @@
  */
 @mixin btn-secondary($iconSelector: ".icon") {
   background-color: transparent;
-  color: $buttoncolor;
 
-  &:hover,
-  &:visited {
-    color: $buttoncolor;
-  }
+  @include btn-secondary-variant($buttoncolor, $buttonhovercolor, $buttonactivecolor);
 
   &:hover {
-    color: $turquoise-700;
-    border-color: $turquoise-700;
     background-color: $gray-130;
   }
 
-  &:focus,
-  &:active,
-  &:focus:active {
-    border-color: $buttonactivecolor;
-  }
-
   &:active {
-    color: $buttonactivecolor;
     background-color: $gray-130;
   }
 
   &[disabled] {
     color: $disabledcolor;
-  }
-
-  & > #{$iconSelector},
-  & > #{$iconSelector } * {
-    fill: $buttoncolor;
   }
 
   &[disabled] > #{$iconSelector},
