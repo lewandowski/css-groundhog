@@ -7,10 +7,12 @@
 
   &:hover {
     background-color: $hover;
+    border-color: $hover;
   }
 
   &:active {
     background-color: $active;
+    border-color: $active;
   }
 }
 
@@ -27,14 +29,9 @@
     border-color: $hover;
   }
 
-  &:focus,
-  &:active,
-  &:focus:active {
-    border-color: $active;
-  }
-
   &:active {
     color: $active;
+    border-color: $active;
   }
 
   & > #{$iconSelector},
@@ -49,8 +46,6 @@
  */
 @mixin btn-primary($iconSelector: ".icon") {
   color: #fff;
-
-  @include btn-primary-variant($buttoncolor, $buttonhovercolor, $buttonactivecolor);
 
   &:hover,
   &:visited {
@@ -89,8 +84,6 @@
  */
 @mixin btn-secondary($iconSelector: ".icon") {
   background-color: transparent;
-
-  @include btn-secondary-variant($buttoncolor, $buttonhovercolor, $buttonactivecolor);
 
   &:hover {
     background-color: $gray-130;
