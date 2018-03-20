@@ -6,7 +6,7 @@ hideCode: true
 
 # Changelog
 
-<a name=".1.0"></a>
+<a name="6.1.0"></a>
 ## [6.1.0](https://github.com/Dynatrace/css-groundhog/compare/v6.0.0...v6.1.0) (2018-03-19)
 
 ### Features
