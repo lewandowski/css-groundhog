@@ -28,6 +28,21 @@ $includedButton: false !default;
   .btn--primary {
 
     @include btn-primary();
+
+    &.btn--cta {
+
+      @include btn-primary-variant($green-600, $green-700, $green-800);
+    }
+
+    &.btn--error {
+
+      @include btn-primary-variant($red-600, $red-700, $red-800);
+    }
+
+    &.btn--warning {
+
+      @include btn-primary-variant($yellow-600, $yellow-700, $yellow-800);
+    }
   }
 
   /*
@@ -48,6 +63,21 @@ $includedButton: false !default;
   .btn--secondary {
 
     @include btn-secondary();
+
+    &.btn--cta {
+
+      @include btn-secondary-variant($green-600, $green-700, $green-800);
+    }
+
+    &.btn--error {
+
+      @include btn-secondary-variant($red-600, $red-700, $red-800);
+    }
+
+    &.btn--warning {
+
+      @include btn-secondary-variant($yellow-600, $yellow-700, $yellow-800);
+    }
   }
 
   /*
@@ -57,6 +87,21 @@ $includedButton: false !default;
   .theme--dark .btn--primary {
 
     @include btn-primary-theme-dark();
+
+    &.btn--cta {
+
+      @include btn-primary-variant-theme-dark($green-500, $green-400, $green-300);
+    }
+
+    &.btn--error {
+
+      @include btn-primary-variant-theme-dark($red-500, $red-400, $red-300);
+    }
+
+    &.btn--warning {
+
+      @include btn-primary-variant-theme-dark($yellow-600, $yellow-500, $yellow-400);
+    }
   }
 
   /*
@@ -66,6 +111,21 @@ $includedButton: false !default;
   .btn--secondary.theme--dark {
 
     @include btn-secondary-theme-dark();
+
+    &.btn--cta {
+
+      @include btn-secondary-variant-theme-dark($green-500, $green-400, $green-300);
+    }
+
+    &.btn--error {
+
+      @include btn-secondary-variant-theme-dark($red-500, $red-400, $red-300);
+    }
+
+    &.btn--warning {
+
+      @include btn-secondary-variant-theme-dark($yellow-600, $yellow-500, $yellow-400);
+    }
   }
 
   $includedButton: true;
