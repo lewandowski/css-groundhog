@@ -1,7 +1,7 @@
 @import "../common/variables";
 @import "../common/nav";
 
-$expandableHeight: 40px;
+$expandableTriggerSize: 40px;
 $includedExpandable: false !default;
 
 @if ($includedExpandable == false) {
@@ -23,7 +23,7 @@ $includedExpandable: false !default;
     padding-left: 32px;
     text-decoration: none;
     color: $turquoise-600;
-    line-height: $expandableHeight;
+    line-height: $expandableTriggerSize;
   }
 
   .expandable__trigger--right {
@@ -36,8 +36,8 @@ $includedExpandable: false !default;
     position: absolute;
     background-image: url(/assets/images/icons/dropdown_open.svg);
     background-size: 1em;
-    width: $expandableHeight;
-    height: $expandableHeight;
+    width: $expandableTriggerSize;
+    height: $expandableTriggerSize;
     background-repeat: no-repeat;
     background-position: center;
     left: 0;

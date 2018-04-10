@@ -15,9 +15,14 @@ hideCode: true
 #### Updates
 
 * **focus state:** Removed the custom focus style from all components to improve accessibility.
+* **expandable:** Adjusted line-height of expandable link.
+
+
+### Bug fixes
+
+#### Updates
 
 * **footer:** Updated hover and active style of links.
-* **expandable:** Adjusted line-height of expandable link.
 
 <a name="6.1.0"></a>
 ## [6.1.0](https://github.com/Dynatrace/css-groundhog/compare/v6.0.0...v6.1.0) (2018-03-19)
