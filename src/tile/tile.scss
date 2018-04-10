@@ -165,13 +165,6 @@
   border-color: $gray-700;
 }
 
-.tile:focus {
-
-  @include focusStyle();
-  border-color: $focuscolor;
-}
-
-
 /*
 * disabled styles
 */

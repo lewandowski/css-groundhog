@@ -74,10 +74,6 @@
   border-color: $turquoise-800;
 }
 
-.switch__label:focus {
-  outline: none;
-}
-
 .to-right + .switch__label {
   padding-left: 0;
   padding-right: 44px;
@@ -128,7 +124,7 @@
 
 .switch[disabled]:checked + .switch__label:before {
   background-color: transparent;
-  outline: none;
+  // outline: none;
 }
 
 .switch[disabled] + .switch__label {
@@ -146,9 +142,4 @@
   background-color: transparent;
   border-color: $gray-300;
   box-shadow: none;
-}
-
-.switch:focus:not(:active) + .switch__label:before {
-
-  @include focusStyle();
 }

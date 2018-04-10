@@ -21,11 +21,6 @@ $columngap: 24px;
   #{$property}: calc(#{$min + "px"} + (#{$max} - #{$min}) * (100vw - 360px) / (1920 - 360));
 }
 
-@mixin focusStyle() {
-  outline: none;
-  box-shadow: 0 0 0 2px $focuscolor;
-}
-
 @mixin columnWidth($noOfColumns) {
 
   @for $i from 1 through $noOfColumns {

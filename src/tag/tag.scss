@@ -52,12 +52,6 @@
   color: $gray-500;
 }
 
-.tag:focus,
-.tag__delete:focus {
-
-  @include focusStyle();
-}
-
 .tag:hover {
   text-decoration: none;
   color: $gray-700;

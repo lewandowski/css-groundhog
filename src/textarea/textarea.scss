@@ -35,11 +35,6 @@
   cursor: text;
 }
 
-.textarea:focus {
-
-  @include focusStyle();
-}
-
 .textarea[disabled] {
   background-color: $gray-130;
   color: $disabledcolor;

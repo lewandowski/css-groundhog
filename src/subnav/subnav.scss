@@ -34,7 +34,7 @@
   display: block;
   color: #fff;
   text-decoration: none;
-  outline: 0;
+  // outline: 0;
   padding: 0.5rem 1.5rem;
 }
 
@@ -42,11 +42,6 @@
   color: #fff;
   text-decoration: none;
   background-color: $turquoise-500;
-}
-
-.subnav__link:focus {
-
-  @include focusStyle();
 }
 
 .expandable--nav .subnav__link {

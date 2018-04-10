@@ -60,12 +60,6 @@
   margin-top: 5px;
 }
 
-.radio__label:focus,
-.radio:focus + .radio__label:before {
-
-  @include focusStyle();
-}
-
 .radio__label:hover:before {
   border-color: $turquoise-700;
 }

@@ -89,7 +89,7 @@
 .nav__link {
   color: $gray-200;
   text-decoration: none;
-  outline: 0;
+  // outline: 0;
   display: block;
   padding: 0.5rem 1rem;
 }
@@ -225,7 +225,7 @@
   appearance: none;
   background-color: transparent;
   border: 0;
-  outline: 0;
+  // outline: 0;
   cursor: pointer;
   line-height: $nav-line-height;
   height: $nav-line-height;
@@ -253,13 +253,6 @@
 
 .nav__btn--cta:hover {
   background-color: $green-600;
-}
-
-.nav__btn:focus,
-.nav__btn--cta:focus,
-.nav__link:focus {
-
-  @include focusStyle();
 }
 
 @media (min-width: $screen-sm) {
@@ -337,7 +330,7 @@
   background-color: $nav-secondary-hover;
   width: $nav-search-width;
   color: #fff;
-  outline: none;
+  // outline: none;
   box-shadow: none;
 }
 
@@ -374,7 +367,7 @@
 
 .nav .search__results a:hover,
 .nav .search__results a:focus {
-  outline: none;
+  // outline: none;
   background-color: $gray-640;
 }
 

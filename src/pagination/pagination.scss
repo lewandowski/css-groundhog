@@ -23,11 +23,6 @@
   text-align: center;
 }
 
-.pagination__item a:focus {
-
-  @include focusStyle();
-}
-
 .pagination__link {
   display: inherit;
   color: $gray-600;

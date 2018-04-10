@@ -66,17 +66,6 @@
   display: none;
 }
 
-.slider:focus {
-  outline: none;
-}
-
-.slider:focus::-webkit-slider-thumb,
-.slider:focus::-moz-range-thumb,
-.slider:focus::-ms-thumb {
-
-  @include focusStyle();
-}
-
 .slider:hover {
   text-decoration: none;
 }

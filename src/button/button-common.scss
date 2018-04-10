@@ -15,7 +15,6 @@
   -ms-user-select: none;
   user-select: none;
   cursor: pointer;
-  outline: none;
   border: none;
   appearance: none;
   -webkit-tap-highlight-color: transparent;
@@ -55,11 +54,6 @@
     border-color: $disabledcolor;
     cursor: default;
     box-shadow: none;
-  }
-
-  &:focus {
-
-    @include focusStyle();
   }
 
   &::-moz-focus-inner {

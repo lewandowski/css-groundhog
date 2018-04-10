@@ -74,14 +74,12 @@ $breadcrumb-active-color: $turquoise-700;
   z-index: 2;
 }
 
-.breadcrumbs__link:focus,
 .breadcrumbs__link:hover {
   color: #fff;
   text-decoration: none;
   background-color: $breadcrumb-active-color;
 }
 
-.breadcrumbs__link:focus:after,
 .breadcrumbs__link:hover:after {
   border-left-color: $breadcrumb-active-color;
 }
@@ -101,12 +99,10 @@ $breadcrumb-active-color: $turquoise-700;
     border-left-color: $link-color;
   }
 
-  .breadcrumbs__link:focus,
   .breadcrumbs__link:hover {
     background-color: $active-color;
   }
 
-  .breadcrumbs__link:focus:after,
   .breadcrumbs__link:hover:after {
     border-left-color: $active-color;
   }

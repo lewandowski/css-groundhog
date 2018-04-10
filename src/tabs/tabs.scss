@@ -39,9 +39,8 @@
   font-family: inherit;
 }
 
-.tab:active,
-.tab:focus {
-  outline: 0;
+.tab:active {
+  // outline: 0;
   box-shadow: none;
 }
 

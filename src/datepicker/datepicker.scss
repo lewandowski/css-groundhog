@@ -106,11 +106,6 @@
   border-color: $gray-300;
 }
 
-.datepicker td button:focus {
-
-  @include focusStyle();
-}
-
 .datepicker.is-active .btn--datepicker {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;

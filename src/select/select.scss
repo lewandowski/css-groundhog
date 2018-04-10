@@ -21,11 +21,6 @@
 
     @include select-container-disabled();
   }
-
-  &:not([disabled]):focus {
-
-    @include focusStyle();
-  }
 }
 
 .select::-ms-expand {
