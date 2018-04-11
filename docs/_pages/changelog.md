@@ -6,6 +6,15 @@ hideCode: true
 
 # Changelog
 
+<a name="6.1.1"></a>
+## [6.1.1](https://github.com/Dynatrace/css-groundhog/compare/v6.1.0...v6.1.1) (2018-04-11)
+
+### Bug fixes
+
+#### Updates
+
+* **footer:** Updated hover and active style of links.
+
 <a name="6.1.0"></a>
 ## [6.1.0](https://github.com/Dynatrace/css-groundhog/compare/v6.0.0...v6.1.0) (2018-03-19)
 
