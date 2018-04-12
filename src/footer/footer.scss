@@ -68,6 +68,7 @@ $column-width: 180px !default;
 .footer__linkitem a:hover {
   cursor: pointer;
   text-decoration: underline;
+  background-color: transparent;
 }
 
 .footer__sociallink.footer__sociallink {
