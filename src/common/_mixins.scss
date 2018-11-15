@@ -32,7 +32,9 @@ $columngap: 24px;
 
     .column--#{$i}-of-#{$noOfColumns} {
       max-width: calc(#{100% / $noOfColumns * $i} - #{$columngap});
-      flex: 1 0 calc(#{100% / $noOfColumns * $i} - #{$columngap});
+      flex-grow: 1;
+      flex-shrink: 0;
+      flex-basis: calc(#{100% / $noOfColumns * $i} - #{$columngap});
     }
   }
 }

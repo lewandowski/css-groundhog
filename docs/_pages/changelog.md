@@ -6,6 +6,13 @@ hideCode: true
 
 # Changelog
 
+<a name="6.1.2"></a>
+## [6.1.2](https://github.com/Dynatrace/css-groundhog/compare/v6.1.1...v6.1.2) (2018-11-15)
+
+### Bug fixes
+
+* **column:** Fixed IE Bug with flexbox calc. Thanks to [internetztube](https://github.com/internetztube) for the fix.
+
 <a name="6.1.1"></a>
 ## [6.1.1](https://github.com/Dynatrace/css-groundhog/compare/v6.1.0...v6.1.1) (2018-04-11)
 
